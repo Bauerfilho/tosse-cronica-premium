@@ -1,0 +1,103 @@
+<h1>A bifurcação que organiza tudo</h1>
+<p class="page-leadin">Um contactante chega na UBS. A primeira pergunta clínica corta o problema em dois caminhos — e cada caminho desce com decisões próprias.</p>
+
+<div data-case-timeline data-case-id="lucita"></div>
+
+<section class="decision-flow" data-decision-flow aria-label="Algoritmo de decisão para contactante de tuberculose">
+  <div class="df-node df-node--root">
+    Contactante chegou na UBS
+  </div>
+
+  <div class="df-node df-node--question">
+    Sintomático respiratório?
+    <small>tosse ≥ 3 semanas (OU qualquer duração se vulnerável)</small>
+  </div>
+
+  <div class="df-branch-group">
+    <div class="df-node df-node--branch">
+      <span class="df-edge-label">SIM</span>
+      Investigar TB ATIVA
+      <small>Rx tórax + escarro / Xpert / baciloscopia</small>
+    </div>
+    <div class="df-node df-node--branch">
+      <span class="df-edge-label">NÃO</span>
+      Investigar TB LATENTE
+      <small>PPD ou IGRA</small>
+    </div>
+  </div>
+
+  <div class="df-node df-node--question">
+    PPD / IGRA positivo?
+  </div>
+
+  <div class="df-branch-group">
+    <div class="df-node df-node--action">
+      <span class="df-edge-label">NEGATIVO</span>
+      Repetir em 8 semanas
+      <small>cobre a janela imunológica</small>
+    </div>
+    <div class="df-node df-node--result">
+      <span class="df-edge-label">POSITIVO</span>
+      ILTB confirmada
+      <small>→ avaliar alto risco</small>
+    </div>
+  </div>
+
+  <div class="df-node df-node--question">
+    Alto risco preenchido?
+    <small>lista canônica do PCDT-ILTB</small>
+  </div>
+
+  <div class="df-branch-group">
+    <div class="df-node df-node--treat">
+      <span class="df-edge-label">SIM</span>
+      TRATAR ILTB
+      <small>escolher esquema (3HP preferido)</small>
+    </div>
+    <div class="df-node df-node--monitor">
+      <span class="df-edge-label">NÃO</span>
+      MONITORAR
+      <small>sem tratar de rotina</small>
+    </div>
+  </div>
+</section>
+
+<article class="card card--conceito">
+  <span class="card-tag">Conceito</span>
+  <h3>Sintomático respiratório — definição BR canônica</h3>
+  <p><strong>Sintomático respiratório = tosse há ≥ 3 semanas</strong>. Gatilho da busca ativa nas unidades básicas: pergunta direta sobre tosse durante qualquer atendimento.</p>
+  <p>Excepcionalidade obrigatória: <strong>pessoa vulnerável (HIV, situação de rua, carcerária, indígena) tossindo qualquer duração → investigar TB ativa</strong>. O corte de 3 semanas é populacional, não individual — em probabilidade pré-teste alta, o threshold cai.</p>
+</article>
+
+<article class="card card--sintese">
+  <span class="card-tag">Síntese</span>
+  <h3>Lucita: assintomática → ramo da latência</h3>
+  <p>Anamnese descartou tosse, febre, perda de peso, hemoptise. A bifurcação envia Lucita pro ramo de investigação de TB latente (PPD/IGRA). Próxima página: como esses exames funcionam e a pegadinha clássica que o algoritmo embute.</p>
+</article>
+
+<article class="interactive-question" data-qid="p-a4-triag-1">
+  <span class="iq-tag">Recuperação ativa · 1</span>
+  <p class="iq-question">Qual a definição operacional de sintomático respiratório no Brasil e qual a excepcionalidade a guardar?</p>
+  <button type="button" class="iq-toggle" aria-expanded="false" aria-controls="ans-triag-1">Mostrar resposta</button>
+  <div class="iq-answer" id="ans-triag-1" hidden>
+    <p><strong>Sintomático respiratório = tosse há ≥ 3 semanas</strong> (definição canônica do Manual MS-TB 2024). É o gatilho da busca ativa nas UBS — pergunta direta sobre tosse durante qualquer atendimento.</p>
+    <p><strong>Excepcionalidade</strong>: pessoa vulnerável (HIV+, situação de rua, carcerária, indígena) tossindo <strong>qualquer duração</strong> → investigar TB ativa. Não esperar 3 semanas.</p>
+    <p>Lógica: nessas populações, a probabilidade pré-teste de TB ativa é tão elevada que o threshold de duração da tosse perde sentido. O corte de 3 semanas é populacional (média da população geral), não regra individual rígida.</p>
+  </div>
+</article>
+
+<article class="interactive-question" data-qid="p-a4-triag-2">
+  <span class="iq-tag">Recuperação ativa · 2</span>
+  <p class="iq-question">Lucita é assintomática. Por que ela vai pro ramo "investigar latente" e não pro ramo "investigar ativa"?</p>
+  <button type="button" class="iq-toggle" aria-expanded="false" aria-controls="ans-triag-2">Mostrar resposta</button>
+  <div class="iq-answer" id="ans-triag-2" hidden>
+    <p>Porque <strong>TB ativa pulmonar quase sempre tem sintomas</strong> (tosse + outros: febre vespertina, sudorese, perda de peso, hemoptise eventual). Sem sintomas + caso recente — probabilidade de ativa pulmonar é baixa o suficiente pra que Rx + escarro de rotina sejam baixo rendimento.</p>
+    <p>A pergunta que sobra em Lucita é: <strong>ela foi infectada</strong> (bacilo está lá, contido por granuloma, sem doença manifesta)? Pra responder, a ferramenta certa é PPD ou IGRA — exames que detectam <strong>resposta imune sensibilizada</strong> contra antígenos do bacilo, não o bacilo no escarro.</p>
+    <p>Se PPD/IGRA der positivo → infecção latente confirmada → próximo passo é decidir tratamento (alto risco?) ou monitoramento.</p>
+  </div>
+</article>
+
+<aside class="a4-meta-checklist">
+  <span class="meta-label">Saindo desta página você sabe</span>
+  <p class="meta-text"><strong>(1)</strong> a bifurcação fundamental (sintomático → ativa; assintomático → latente) · <strong>(2)</strong> a definição BR de sintomático respiratório (≥ 3 semanas) com excepcionalidade dos vulneráveis · <strong>(3)</strong> que o algoritmo organiza toda a aula.</p>
+</aside>
