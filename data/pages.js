@@ -423,7 +423,108 @@ export const PAGES = [
     arquivo: 'pages/a4/sintese-transicao-modulo-micoses.html',
   },
 
-  // Aulas A5-A7 são adicionadas aqui conforme processadas pela pipeline
+  // Aula 5 — Aspergilose (3 formas) · abre Módulo 4 (Micoses Granulomatosas)
+  {
+    id: 'a5-1',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 1,
+    slug: 'aspergilose-introducao',
+    titulo: 'Um fungo, três doenças: o hospedeiro define',
+    arquivo: 'pages/a5/aspergilose-introducao.html',
+  },
+  {
+    id: 'a5-2',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 2,
+    slug: 'abpa-hipersensibilidade-asma',
+    titulo: 'ABPA — quando a asma piora e a IgE explica',
+    arquivo: 'pages/a5/abpa-hipersensibilidade-asma.html',
+  },
+  {
+    id: 'a5-3',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 3,
+    slug: 'abpa-criterios-isham-tratamento',
+    titulo: 'Critérios ISHAM 2013 e a base é corticoide',
+    arquivo: 'pages/a5/abpa-criterios-isham-tratamento.html',
+  },
+  {
+    id: 'a5-4',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 4,
+    slug: 'aspergilose-cronica-aspergiloma-introducao',
+    titulo: 'Cavidade prévia: o terreno do aspergiloma',
+    arquivo: 'pages/a5/aspergilose-cronica-aspergiloma-introducao.html',
+  },
+  {
+    id: 'a5-5',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 5,
+    slug: 'aspergilose-cronica-sinal-menisco-manejo',
+    titulo: 'Lua crescente, IgG e a decisão por gravidade',
+    arquivo: 'pages/a5/aspergilose-cronica-sinal-menisco-manejo.html',
+  },
+  {
+    id: 'a5-6',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 6,
+    slug: 'aspergilose-invasiva-imunossuprimido-triade',
+    titulo: 'Imunossuprimido + tríade = invasiva até prova contrária',
+    arquivo: 'pages/a5/aspergilose-invasiva-imunossuprimido-triade.html',
+  },
+  {
+    id: 'a5-7',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 7,
+    slug: 'aspergilose-invasiva-diagnostico-tratamento',
+    titulo: 'Do escarro à biópsia: o algoritmo da invasiva',
+    arquivo: 'pages/a5/aspergilose-invasiva-diagnostico-tratamento.html',
+  },
+  {
+    id: 'a5-8',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 8,
+    slug: 'hemoptise-grave-manejo-transversal',
+    titulo: 'Quando a hemoptise vira urgência: ≥ 150 mL/24h',
+    arquivo: 'pages/a5/hemoptise-grave-manejo-transversal.html',
+  },
+  {
+    id: 'a5-9',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 9,
+    slug: 'aspergilose-matriz-comparativa-3-formas',
+    titulo: 'Três formas, cinco eixos: a matriz que organiza tudo',
+    arquivo: 'pages/a5/aspergilose-matriz-comparativa-3-formas.html',
+  },
+  {
+    id: 'a5-10',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 10,
+    slug: 'aspergilose-erros-comuns-recuperacao-ativa',
+    titulo: 'Quatro armadilhas e recuperação ativa',
+    arquivo: 'pages/a5/aspergilose-erros-comuns-recuperacao-ativa.html',
+  },
+  {
+    id: 'a5-11',
+    aula: 'A5',
+    aulaTitulo: 'Aspergilose — 3 formas',
+    ordem: 11,
+    slug: 'aspergilose-sintese-transicao-paracoco',
+    titulo: 'Aspergilose fechada — paracoco abre',
+    arquivo: 'pages/a5/aspergilose-sintese-transicao-paracoco.html',
+  },
+
+  // Aulas A6-A7 são adicionadas aqui conforme processadas pela pipeline
 ];
 
 export const AULAS = [
@@ -431,6 +532,7 @@ export const AULAS = [
   { id: 'A2', titulo: 'Dinâmica e diagnóstico da TB', subtitulo: 'Aula 2 · Pilar central' },
   { id: 'A3', titulo: 'Tratamento da TB', subtitulo: 'Aula 3 · RIPE e adversos' },
   { id: 'A4', titulo: 'Contactantes e controle da TB', subtitulo: 'Aula 4 · Vigilância' },
+  { id: 'A5', titulo: 'Aspergilose — 3 formas', subtitulo: 'Aula 5 · Módulo 4 abre' },
 ];
 
 export function getPageBySlug(slug) {

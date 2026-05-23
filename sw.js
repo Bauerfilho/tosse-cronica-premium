@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tb-bauer-v4';
+const CACHE_NAME = 'tb-bauer-v5';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
@@ -24,6 +24,7 @@ const PRECACHE_ASSETS = [
   './css/pages/a2.css',
   './css/pages/a3.css',
   './css/pages/a4.css',
+  './css/pages/a5.css',
   './js/app.js',
   './js/router.js',
   './js/state.js',
@@ -69,6 +70,16 @@ const PRECACHE_ASSETS = [
   './assets/illustrations/bcg-cicatriz-evolucao.svg',
   './assets/illustrations/icone-hiv-tb-coinfeccao.svg',
   './assets/illustrations/icone-tdo-supervisao.svg',
+  './assets/illustrations/aspergilose-3-formas-comparativo.svg',
+  './assets/illustrations/bronquiectasias-centrais-abpa.svg',
+  './assets/illustrations/sinal-lua-crescente-aspergiloma.svg',
+  './assets/illustrations/infiltrado-bilateral-invasiva.svg',
+  './assets/illustrations/triade-invasiva-diagrama.svg',
+  './assets/illustrations/esquema-galactomanana-diagnostico.svg',
+  './assets/illustrations/icone-voriconazol.svg',
+  './assets/illustrations/icone-isavuconazol.svg',
+  './assets/illustrations/icone-caspofungina.svg',
+  './assets/illustrations/icone-itraconazol.svg',
   './pages/a1/porta-clinica.html',
   './pages/a1/classificacao-duracao.html',
   './pages/a1/tres-causas-mais-tb.html',
@@ -115,6 +126,17 @@ const PRECACHE_ASSETS = [
   './pages/a4/hiv-tb-co-infeccao.html',
   './pages/a4/bcg-operacional.html',
   './pages/a4/sintese-transicao-modulo-micoses.html',
+  './pages/a5/aspergilose-introducao.html',
+  './pages/a5/abpa-hipersensibilidade-asma.html',
+  './pages/a5/abpa-criterios-isham-tratamento.html',
+  './pages/a5/aspergilose-cronica-aspergiloma-introducao.html',
+  './pages/a5/aspergilose-cronica-sinal-menisco-manejo.html',
+  './pages/a5/aspergilose-invasiva-imunossuprimido-triade.html',
+  './pages/a5/aspergilose-invasiva-diagnostico-tratamento.html',
+  './pages/a5/hemoptise-grave-manejo-transversal.html',
+  './pages/a5/aspergilose-matriz-comparativa-3-formas.html',
+  './pages/a5/aspergilose-erros-comuns-recuperacao-ativa.html',
+  './pages/a5/aspergilose-sintese-transicao-paracoco.html',
 ];
 
 self.addEventListener('install', event => {
