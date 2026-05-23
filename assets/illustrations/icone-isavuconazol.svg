@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title">
+  <title id="title">Isavuconazol — azólico estendido (cápsula)</title>
+  <defs>
+    <linearGradient id="isaBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="isaHalf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4F7FB"/>
+      <stop offset="100%" stop-color="#B8C0CC"/>
+    </linearGradient>
+  </defs>
+  <!-- Cápsula girada -->
+  <g transform="translate(40,40) rotate(-30)">
+    <rect x="-26" y="-11" width="26" height="22" rx="11" fill="url(#isaHalf)" stroke="rgba(11,18,32,0.4)" stroke-width="1"/>
+    <rect x="0" y="-11" width="26" height="22" rx="11" fill="url(#isaBody)" stroke="rgba(11,18,32,0.4)" stroke-width="1"/>
+    <line x1="0" y1="-11" x2="0" y2="11" stroke="rgba(11,18,32,0.5)" stroke-width="0.8"/>
+    <ellipse cx="-16" cy="-5" rx="6" ry="3" fill="rgba(255,255,255,0.5)"/>
+    <ellipse cx="10" cy="-5" rx="6" ry="3" fill="rgba(255,255,255,0.2)"/>
+  </g>
+  <!-- Estrela de atualização -->
+  <g transform="translate(64,16)">
+    <polygon points="0,-7 2,-2 7,-2 3,1 5,7 0,3 -5,7 -3,1 -7,-2 -2,-2" fill="#FBBF24" opacity="0.95"/>
+  </g>
+  <text x="40" y="70" text-anchor="middle" fill="#A78BFA" font-family="-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">ISA</text>
+</svg>

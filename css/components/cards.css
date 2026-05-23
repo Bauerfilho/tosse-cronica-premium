@@ -259,6 +259,127 @@
   .card--capsule .capsule-icon svg { width: 28px; height: 28px; }
 }
 
+/* Card clinical-case — caso clínico one-shot estático (A5: HCPA / UFRJ / TMO) */
+
+.card--clinical-case {
+  padding: var(--sp-5) var(--sp-6);
+  background: linear-gradient(135deg, rgba(96, 165, 250, .08), var(--c-bg-elev-1));
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--c-info);
+  border-radius: var(--r-md);
+  margin: var(--sp-5) 0;
+  position: relative;
+}
+
+.card--clinical-case[data-case-origin="ufrj"] {
+  border-left-color: var(--c-secondary);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="tmo"] {
+  border-left-color: var(--c-danger);
+  background: linear-gradient(135deg, rgba(248, 113, 113, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case .case-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.card--clinical-case .case-card__badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: var(--sp-2);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px var(--sp-3);
+  border-radius: 999px;
+  background: rgba(96, 165, 250, .14);
+  color: var(--c-info);
+}
+
+.card--clinical-case[data-case-origin="ufrj"] .case-card__badge {
+  background: rgba(251, 191, 36, .18);
+  color: var(--c-secondary);
+}
+
+.card--clinical-case[data-case-origin="tmo"] .case-card__badge {
+  background: rgba(248, 113, 113, .14);
+  color: var(--c-danger);
+}
+
+.card--clinical-case .case-card__badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.card--clinical-case .case-card__title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.card--clinical-case .case-card__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4) var(--sp-5);
+}
+
+.card--clinical-case .case-card__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.card--clinical-case .case-card__section h4 {
+  margin: 0;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+
+.card--clinical-case .case-card__section p {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.card--clinical-case .case-card__section p strong {
+  color: var(--c-text-strong);
+}
+
+@media (max-width: 720px) {
+  .card--clinical-case .case-card__body {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+}
+
+@media (max-width: 540px) {
+  .card--clinical-case {
+    padding: var(--sp-4) var(--sp-5);
+  }
+  .card--clinical-case .case-card__title {
+    font-size: 1rem;
+  }
+}
+
 /* Card-motivational — fechamento autoral discreto (A4) */
 
 .card--motivational {

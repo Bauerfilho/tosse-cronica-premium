@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 420" role="img" aria-labelledby="title desc">
+  <title id="title">Tríade clínica da aspergilose invasiva</title>
+  <desc id="desc">Diagrama radial com três sintomas convergindo num centro: febre, dor pleurítica e hemoptise. No centro, o conceito de imunossuprimido obriga a pensar em aspergilose invasiva como hipótese principal.</desc>
+
+  <defs>
+    <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(248,113,113,0.35)"/>
+      <stop offset="60%" stop-color="rgba(248,113,113,0.12)"/>
+      <stop offset="100%" stop-color="rgba(248,113,113,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="540" height="420" fill="#0E2A2F"/>
+
+  <!-- Halo radial central -->
+  <circle cx="270" cy="210" r="130" fill="url(#centerGrad)"/>
+
+  <!-- Núcleo central — imunossuprimido -->
+  <circle cx="270" cy="210" r="62" fill="#16383F" stroke="#F87171" stroke-width="2.5"/>
+  <text x="270" y="200" text-anchor="middle" fill="#F87171" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700">IMUNOSSUPRIMIDO</text>
+  <text x="270" y="217" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="10">tríade até prova</text>
+  <text x="270" y="230" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="10">contrária = invasiva</text>
+
+  <!-- Linhas radiais (3 vértices da tríade) -->
+  <g stroke="#F87171" stroke-width="2" opacity="0.55" stroke-dasharray="4,3">
+    <!-- Vértice 1: febre (topo) -->
+    <line x1="270" y1="148" x2="270" y2="80"/>
+    <!-- Vértice 2: dor pleurítica (inferior-esquerda) -->
+    <line x1="220" y1="245" x2="130" y2="320"/>
+    <!-- Vértice 3: hemoptise (inferior-direita) -->
+    <line x1="320" y1="245" x2="410" y2="320"/>
+  </g>
+
+  <!-- Vértice 1: Febre -->
+  <g transform="translate(270,55)">
+    <circle cx="0" cy="0" r="32" fill="#FBBF24" opacity="0.18" stroke="#FBBF24" stroke-width="2"/>
+    <!-- Ícone termômetro -->
+    <g stroke="#FBBF24" stroke-width="2" fill="none">
+      <line x1="0" y1="-15" x2="0" y2="8"/>
+      <circle cx="0" cy="12" r="6" fill="#FBBF24"/>
+    </g>
+    <text x="0" y="42" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="12" font-weight="700">FEBRE</text>
+    <text x="0" y="56" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">persistente sem foco</text>
+  </g>
+
+  <!-- Vértice 2: Dor pleurítica -->
+  <g transform="translate(105,345)">
+    <circle cx="0" cy="0" r="32" fill="#A78BFA" opacity="0.18" stroke="#A78BFA" stroke-width="2"/>
+    <!-- Ícone pulmão estilizado com seta -->
+    <g stroke="#A78BFA" stroke-width="2" fill="none">
+      <path d="M-8,-8 C-12,-2 -10,8 -4,12"/>
+      <path d="M8,-8 C12,-2 10,8 4,12"/>
+      <polygon points="0,-12 -4,-8 4,-8" fill="#A78BFA"/>
+    </g>
+    <text x="0" y="-44" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="12" font-weight="700">DOR PLEURÍTICA</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">início súbito · localizada</text>
+  </g>
+
+  <!-- Vértice 3: Hemoptise -->
+  <g transform="translate(435,345)">
+    <circle cx="0" cy="0" r="32" fill="#F87171" opacity="0.18" stroke="#F87171" stroke-width="2"/>
+    <!-- Ícone gota de sangue -->
+    <g fill="#F87171" stroke="#F87171" stroke-width="2">
+      <path d="M0,-12 Q-9,0 -7,8 Q0,14 7,8 Q9,0 0,-12 Z"/>
+    </g>
+    <text x="0" y="-44" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="12" font-weight="700">HEMOPTISE</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">qualquer volume</text>
+  </g>
+
+  <!-- Sensibilidade nota inferior -->
+  <text x="270" y="395" text-anchor="middle" fill="#FBBF24" font-family="-apple-system,sans-serif" font-size="11" font-weight="600">Sensibilidade da tríade completa ~ 40-50%</text>
+  <text x="270" y="410" text-anchor="middle" fill="#8FA1A6" font-family="-apple-system,sans-serif" font-size="9" font-style="italic">pode estar incompleta em corticoide alto · não esperar tríade pra tratar empiricamente</text>
+</svg>

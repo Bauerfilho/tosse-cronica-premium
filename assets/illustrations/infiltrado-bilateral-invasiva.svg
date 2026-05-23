@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 380" role="img" aria-labelledby="title desc">
+  <title id="title">Infiltrado bilateral em aspergilose invasiva — sinal do halo</title>
+  <desc id="desc">Corte axial torácico esquemático com opacidades difusas bilaterais, nódulos com vidro fosco circunjacente (sinal do halo precoce em paciente neutropênico) e área tardia com sinal do crescente aéreo.</desc>
+
+  <defs>
+    <radialGradient id="lungInv" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#16383F"/>
+      <stop offset="100%" stop-color="#0E2A2F"/>
+    </radialGradient>
+    <radialGradient id="haloSign" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(248,113,113,0)"/>
+      <stop offset="40%" stop-color="rgba(248,113,113,0.45)"/>
+      <stop offset="75%" stop-color="rgba(248,113,113,0.18)"/>
+      <stop offset="100%" stop-color="rgba(248,113,113,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="540" height="380" fill="#0E2A2F"/>
+
+  <!-- Contorno torácico axial -->
+  <ellipse cx="270" cy="195" rx="220" ry="160" fill="none" stroke="#8FA1A6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="270" y1="35" x2="270" y2="355" stroke="#8FA1A6" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+
+  <!-- Pulmão direito -->
+  <path d="M80,140 C70,180 75,260 110,310 C145,330 175,325 200,310 C220,260 220,200 215,140 C200,120 175,115 145,118 C115,115 90,125 80,140 Z" fill="url(#lungInv)" stroke="#34D399" stroke-width="2" opacity="0.9"/>
+
+  <!-- Pulmão esquerdo -->
+  <path d="M340,140 C330,200 330,260 350,310 C375,325 405,330 440,310 C475,260 480,180 470,140 C460,125 435,115 405,118 C375,115 350,120 340,140 Z" fill="url(#lungInv)" stroke="#34D399" stroke-width="2" opacity="0.9"/>
+
+  <!-- Infiltrado bilateral difuso (sombreado de fundo) -->
+  <g fill="#F87171" opacity="0.12">
+    <ellipse cx="120" cy="180" rx="40" ry="30"/>
+    <ellipse cx="170" cy="240" rx="35" ry="25"/>
+    <ellipse cx="100" cy="260" rx="30" ry="20"/>
+    <ellipse cx="380" cy="190" rx="38" ry="28"/>
+    <ellipse cx="430" cy="250" rx="35" ry="25"/>
+  </g>
+
+  <!-- Pulmão direito: Nódulo com SINAL DO HALO (precoce, primeira semana) -->
+  <g>
+    <circle cx="130" cy="180" r="28" fill="url(#haloSign)"/>
+    <circle cx="130" cy="180" r="12" fill="#F87171" stroke="#92313D" stroke-width="1.5"/>
+  </g>
+
+  <!-- Pulmão direito: nódulo menor com halo -->
+  <g>
+    <circle cx="180" cy="245" r="22" fill="url(#haloSign)"/>
+    <circle cx="180" cy="245" r="9" fill="#F87171" stroke="#92313D" stroke-width="1.5"/>
+  </g>
+
+  <!-- Pulmão esquerdo: outro nódulo com halo -->
+  <g>
+    <circle cx="385" cy="195" r="25" fill="url(#haloSign)"/>
+    <circle cx="385" cy="195" r="11" fill="#F87171" stroke="#92313D" stroke-width="1.5"/>
+  </g>
+
+  <!-- Pulmão esquerdo: lesão com SINAL DO CRESCENTE AÉREO (tardia) -->
+  <g>
+    <!-- Cavidade tardia (recuperação neutrofílica) -->
+    <ellipse cx="420" cy="260" rx="28" ry="22" fill="#0B1220" stroke="#34D399" stroke-width="1.8"/>
+    <!-- Nódulo necrótico interno -->
+    <ellipse cx="420" cy="265" rx="20" ry="14" fill="#92313D" opacity="0.7"/>
+    <!-- Ar dissecando (crescente aéreo superior) -->
+    <path d="M395,255 Q395,238 420,238 Q448,238 448,255 Q438,250 420,250 Q400,250 395,255 Z" fill="#0B1220"/>
+  </g>
+
+  <!-- Anotações -->
+  <!-- Sinal do halo -->
+  <line x1="130" y1="155" x2="40" y2="100" stroke="#F87171" stroke-width="1" opacity="0.7"/>
+  <text x="20" y="92" fill="#F87171" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600">sinal do halo</text>
+  <text x="20" y="105" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">PRECOCE · vidro fosco</text>
+  <text x="20" y="116" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">em torno de nódulo</text>
+
+  <!-- Sinal do crescente aéreo -->
+  <line x1="445" y1="245" x2="510" y2="200" stroke="#34D399" stroke-width="1" opacity="0.7"/>
+  <text x="430" y="195" fill="#34D399" font-family="-apple-system,sans-serif" font-size="11" font-weight="600">crescente aéreo</text>
+  <text x="430" y="208" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">TARDIO · recuperação</text>
+  <text x="430" y="219" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">neutrofílica · bom px</text>
+
+  <!-- Infiltrado bilateral difuso (anotação) -->
+  <text x="270" y="80" text-anchor="middle" fill="#F87171" font-family="-apple-system,sans-serif" font-size="11" font-weight="600">Infiltrado bilateral difuso</text>
+  <text x="270" y="93" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">opacidades múltiplas + nódulos + cavidades</text>
+
+  <!-- Coluna vertebral -->
+  <circle cx="270" cy="320" r="20" fill="#16383F" stroke="#8FA1A6" stroke-width="1.5"/>
+
+  <!-- Coração silhueta -->
+  <path d="M240,180 C235,200 245,230 270,245 C295,230 305,200 300,180 C290,170 280,168 270,172 C260,168 250,170 240,180 Z" fill="#0E2A2F" stroke="#8FA1A6" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Legenda -->
+  <text x="270" y="365" text-anchor="middle" fill="#8FA1A6" font-family="-apple-system,sans-serif" font-size="10" font-style="italic">Aspergilose invasiva · halo (precoce) e crescente aéreo (tardio) coexistindo em fases distintas</text>
+</svg>

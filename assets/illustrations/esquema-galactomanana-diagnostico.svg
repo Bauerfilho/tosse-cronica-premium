@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Galactomanana — fluxo diagnóstico em aspergilose invasiva</title>
+  <desc id="desc">Esquema mostrando como a galactomanana, polissacarídeo da parede celular do Aspergillus, é liberada durante invasão tecidual, coletada em soro/escarro/BAL, e detectada por ELISA com cutoffs específicos.</desc>
+
+  <defs>
+    <linearGradient id="arrow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(52,211,153,0.7)"/>
+      <stop offset="100%" stop-color="rgba(52,211,153,0.3)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="360" fill="#0E2A2F"/>
+
+  <!-- ==== Etapa 1: Parede fúngica + invasão ==== -->
+  <g transform="translate(20,80)">
+    <text x="80" y="-12" text-anchor="middle" fill="#F87171" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="700">1 · INVASÃO</text>
+
+    <!-- Hifa fúngica -->
+    <g stroke="#FBBF24" stroke-width="2" fill="none">
+      <line x1="30" y1="50" x2="90" y2="50"/>
+      <line x1="60" y1="50" x2="60" y2="35"/>
+      <line x1="90" y1="50" x2="120" y2="35"/>
+      <line x1="90" y1="50" x2="110" y2="65"/>
+      <circle cx="60" cy="50" r="3" fill="#FBBF24"/>
+      <circle cx="90" cy="50" r="3" fill="#FBBF24"/>
+      <circle cx="120" cy="35" r="3" fill="#FBBF24"/>
+    </g>
+    <text x="80" y="85" text-anchor="middle" fill="#FBBF24" font-family="-apple-system,sans-serif" font-size="10" font-style="italic">hifa septada · 45°</text>
+
+    <!-- Parede celular com galactomanana destacada -->
+    <g fill="#34D399" opacity="0.85">
+      <circle cx="40" cy="120" r="4"/>
+      <circle cx="55" cy="118" r="4"/>
+      <circle cx="70" cy="121" r="4"/>
+      <circle cx="85" cy="119" r="4"/>
+      <circle cx="100" cy="122" r="4"/>
+      <circle cx="115" cy="120" r="4"/>
+    </g>
+    <line x1="32" y1="130" x2="125" y2="130" stroke="#34D399" stroke-width="1.5" opacity="0.6"/>
+    <text x="80" y="155" text-anchor="middle" fill="#34D399" font-family="-apple-system,sans-serif" font-size="10" font-weight="600">galactomanana</text>
+    <text x="80" y="167" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">(polissacarídeo da parede)</text>
+
+    <!-- Tecido invadido -->
+    <rect x="20" y="190" width="120" height="14" rx="3" fill="#F87171" opacity="0.25"/>
+    <text x="80" y="220" text-anchor="middle" fill="#F87171" font-family="-apple-system,sans-serif" font-size="9">parênquima invadido</text>
+    <text x="80" y="232" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="8">libera antígeno na corrente</text>
+  </g>
+
+  <!-- Seta 1→2 -->
+  <g transform="translate(180,170)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="url(#arrow)" stroke-width="2.5"/>
+    <polygon points="40,0 32,-5 32,5" fill="#34D399"/>
+  </g>
+
+  <!-- ==== Etapa 2: Coleta (3 compartimentos) ==== -->
+  <g transform="translate(240,80)">
+    <text x="100" y="-12" text-anchor="middle" fill="#34D399" font-family="-apple-system,sans-serif" font-size="12" font-weight="700">2 · COLETA</text>
+
+    <!-- Soro -->
+    <g transform="translate(0,30)">
+      <rect x="0" y="0" width="55" height="50" rx="6" fill="#16383F" stroke="#FBBF24" stroke-width="1.5"/>
+      <rect x="6" y="22" width="43" height="22" fill="#FBBF24" opacity="0.4"/>
+      <text x="27" y="65" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="10" font-weight="600">SORO</text>
+    </g>
+
+    <!-- Escarro -->
+    <g transform="translate(70,30)">
+      <rect x="0" y="0" width="55" height="50" rx="6" fill="#16383F" stroke="#34D399" stroke-width="1.5"/>
+      <path d="M8,30 Q15,20 28,28 Q40,18 48,30 L48,42 L8,42 Z" fill="#34D399" opacity="0.4"/>
+      <text x="27" y="65" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="10" font-weight="600">ESCARRO</text>
+    </g>
+
+    <!-- BAL -->
+    <g transform="translate(140,30)">
+      <rect x="0" y="0" width="55" height="50" rx="6" fill="#16383F" stroke="#60A5FA" stroke-width="1.5"/>
+      <rect x="6" y="25" width="43" height="19" fill="#60A5FA" opacity="0.4"/>
+      <line x1="27" y1="6" x2="27" y2="25" stroke="#60A5FA" stroke-width="1.5"/>
+      <text x="27" y="65" text-anchor="middle" fill="#F4F7FB" font-family="-apple-system,sans-serif" font-size="10" font-weight="600">BAL</text>
+    </g>
+
+    <text x="100" y="200" text-anchor="middle" fill="#8FA1A6" font-family="-apple-system,sans-serif" font-size="9" font-style="italic">3 compartimentos possíveis</text>
+    <text x="100" y="215" text-anchor="middle" fill="#8FA1A6" font-family="-apple-system,sans-serif" font-size="9" font-style="italic">sequência: do menos ao mais invasivo</text>
+  </g>
+
+  <!-- Seta 2→3 -->
+  <g transform="translate(460,170)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="url(#arrow)" stroke-width="2.5"/>
+    <polygon points="40,0 32,-5 32,5" fill="#34D399"/>
+  </g>
+
+  <!-- ==== Etapa 3: ELISA com cutoffs ==== -->
+  <g transform="translate(520,80)">
+    <text x="90" y="-12" text-anchor="middle" fill="#FBBF24" font-family="-apple-system,sans-serif" font-size="12" font-weight="700">3 · ELISA + CUTOFFS</text>
+
+    <!-- Placa ELISA esquemática -->
+    <g>
+      <rect x="10" y="20" width="160" height="60" rx="6" fill="#16383F" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+      <!-- Poços coloridos -->
+      <g>
+        <circle cx="30" cy="40" r="6" fill="#16383F" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="55" cy="40" r="6" fill="rgba(251,191,36,0.3)" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="80" cy="40" r="6" fill="rgba(251,191,36,0.6)" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="105" cy="40" r="6" fill="#FBBF24" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="130" cy="40" r="6" fill="#FBBF24" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="155" cy="40" r="6" fill="#FBBF24" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="30" cy="60" r="6" fill="#16383F" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="55" cy="60" r="6" fill="rgba(251,191,36,0.45)" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="80" cy="60" r="6" fill="rgba(251,191,36,0.7)" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="105" cy="60" r="6" fill="#FBBF24" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="130" cy="60" r="6" fill="#FBBF24" stroke="rgba(255,255,255,0.3)"/>
+        <circle cx="155" cy="60" r="6" fill="#FBBF24" stroke="rgba(255,255,255,0.3)"/>
+      </g>
+    </g>
+
+    <!-- Cutoffs (EORTC/MSGERC 2020) -->
+    <g transform="translate(0,105)">
+      <rect x="0" y="0" width="180" height="30" rx="4" fill="rgba(251,191,36,0.1)" stroke="rgba(251,191,36,0.45)" stroke-width="1"/>
+      <text x="90" y="12" text-anchor="middle" fill="#FBBF24" font-family="-apple-system,sans-serif" font-size="9" font-weight="700">SORO · ≥ 0,5 ODI</text>
+      <text x="90" y="24" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="8">cutoff EORTC/MSGERC 2020</text>
+    </g>
+
+    <g transform="translate(0,145)">
+      <rect x="0" y="0" width="180" height="30" rx="4" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.45)" stroke-width="1"/>
+      <text x="90" y="12" text-anchor="middle" fill="#60A5FA" font-family="-apple-system,sans-serif" font-size="9" font-weight="700">BAL · ≥ 1,0 ODI</text>
+      <text x="90" y="24" text-anchor="middle" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="8">rendimento maior que sérica</text>
+    </g>
+  </g>
+
+  <!-- Legenda final -->
+  <text x="360" y="340" text-anchor="middle" fill="#8FA1A6" font-family="-apple-system,sans-serif" font-size="10" font-style="italic">Galactomanana é marcador específico da forma INVASIVA · NÃO se usa em ABPA nem em crônica/aspergiloma</text>
+</svg>

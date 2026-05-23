@@ -1,0 +1,109 @@
+/* a5.css — overrides específicos das páginas A5 (Aspergilose — 3 formas) */
+
+/* Meta-checklist do final das páginas A5 (espelha padrão a4-meta-checklist) */
+.a5-meta-checklist {
+  margin-top: var(--sp-7);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px dashed var(--glass-border-strong);
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, .02);
+}
+
+.a5-meta-checklist .meta-label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-2);
+}
+
+.a5-meta-checklist .meta-text {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--c-text);
+  line-height: 1.6;
+}
+
+.a5-meta-checklist .meta-text strong {
+  color: var(--c-text-strong);
+}
+
+/* Mini-tabela DDx (estilo discreto pra DDx massa intracavitária na pág 9) */
+.a5-mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--sp-3) 0 0;
+  font-size: .88rem;
+}
+
+.a5-mini-table thead th {
+  text-align: left;
+  padding: var(--sp-2) var(--sp-3);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.a5-mini-table tbody td {
+  padding: var(--sp-3);
+  vertical-align: top;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--c-text);
+  line-height: 1.5;
+}
+
+.a5-mini-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--c-text-strong);
+  white-space: nowrap;
+}
+
+.a5-mini-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Figura de esquema/radiografia: largura confortável + caption claro (A5 padroniza) */
+.illu-schema,
+.illu-rx {
+  margin: var(--sp-5) 0;
+}
+
+.illu-schema img,
+.illu-rx img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, .02);
+  border: 1px solid var(--glass-border);
+}
+
+.illu-schema figcaption,
+.illu-rx figcaption {
+  margin-top: var(--sp-3);
+  font-size: .85rem;
+  line-height: 1.55;
+  color: var(--c-text-muted);
+  text-align: center;
+  font-style: italic;
+  padding: 0 var(--sp-3);
+}
+
+.illu-schema figcaption strong,
+.illu-rx figcaption strong {
+  color: var(--c-text-strong);
+  font-style: normal;
+}
+
+@media (max-width: 540px) {
+  .illu-schema img,
+  .illu-rx img {
+    max-width: 100%;
+  }
+}

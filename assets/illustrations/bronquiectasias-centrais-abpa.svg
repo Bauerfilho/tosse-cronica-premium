@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 380" role="img" aria-labelledby="title desc">
+  <title id="title">Bronquiectasias centrais na ABPA — TC torácica esquemática</title>
+  <desc id="desc">Corte axial torácico simplificado mostrando brônquios proximais dilatados em padrão de anel e trilho de trem nos segmentos superiores, com impacção mucoide sugerida (finger-in-glove), característico de aspergilose broncopulmonar alérgica.</desc>
+
+  <defs>
+    <radialGradient id="lungParenchyma" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#16383F"/>
+      <stop offset="100%" stop-color="#0E2A2F"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="540" height="380" fill="#0E2A2F"/>
+
+  <!-- Contorno torácico -->
+  <ellipse cx="270" cy="195" rx="220" ry="160" fill="none" stroke="#8FA1A6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="270" y1="35" x2="270" y2="355" stroke="#8FA1A6" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
+
+  <!-- Pulmão direito -->
+  <path d="M80,140 C70,180 75,260 110,310 C145,330 175,325 200,310 C220,260 220,200 215,140 C200,120 175,115 145,118 C115,115 90,125 80,140 Z" fill="url(#lungParenchyma)" stroke="#34D399" stroke-width="2" opacity="0.9"/>
+
+  <!-- Pulmão esquerdo -->
+  <path d="M340,140 C330,200 330,260 350,310 C375,325 405,330 440,310 C475,260 480,180 470,140 C460,125 435,115 405,118 C375,115 350,120 340,140 Z" fill="url(#lungParenchyma)" stroke="#34D399" stroke-width="2" opacity="0.9"/>
+
+  <!-- ==== Pulmão direito: bronquiectasias centrais ==== -->
+  <!-- Brônquio principal + dilatações em anel -->
+  <g stroke="#FBBF24" stroke-width="2.5" fill="none">
+    <path d="M150,140 L150,200"/>
+    <path d="M150,200 L120,230"/>
+    <path d="M150,200 L180,230"/>
+    <path d="M120,230 L100,260"/>
+    <path d="M180,230 L195,260"/>
+  </g>
+
+  <!-- Dilatações brônquicas (cilíndricas e císticas) -->
+  <g fill="rgba(251,191,36,0.25)" stroke="#FBBF24" stroke-width="2">
+    <!-- Cística (anel grande) -->
+    <circle cx="150" cy="200" r="14"/>
+    <!-- Varicosa (oval) -->
+    <ellipse cx="120" cy="230" rx="10" ry="7"/>
+    <!-- Cilíndrica (tubular) -->
+    <rect x="170" y="220" width="22" height="14" rx="6"/>
+    <!-- Cística menor -->
+    <circle cx="100" cy="260" r="9"/>
+    <circle cx="195" cy="260" r="8"/>
+  </g>
+
+  <!-- Impacção mucoide "finger-in-glove" -->
+  <g fill="#FBBF24" opacity="0.65">
+    <path d="M148,260 Q145,275 148,290 Q151,285 154,290 Q152,275 151,260 Z"/>
+    <path d="M115,275 Q113,285 115,295 L121,290 Q120,280 119,275 Z"/>
+  </g>
+  <text x="160" y="305" fill="#FBBF24" font-family="-apple-system,sans-serif" font-size="9" font-style="italic">finger-in-glove ↑</text>
+  <text x="160" y="316" fill="#FBBF24" font-family="-apple-system,sans-serif" font-size="9" font-style="italic">(impacção mucoide)</text>
+
+  <!-- Anotação "anel" -->
+  <line x1="150" y1="200" x2="55" y2="180" stroke="#34D399" stroke-width="1" opacity="0.6"/>
+  <text x="20" y="178" fill="#34D399" font-family="-apple-system,sans-serif" font-size="10" font-weight="600">anel</text>
+  <text x="20" y="190" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">(brônquio dilatado)</text>
+
+  <!-- ==== Pulmão esquerdo: trilho de trem ==== -->
+  <g stroke="#FBBF24" stroke-width="2.5" fill="none">
+    <!-- Brônquio principal -->
+    <path d="M400,140 L400,200"/>
+    <!-- "Trilho de trem" — dilatação tubular paralela -->
+    <line x1="392" y1="200" x2="392" y2="280" stroke-width="2"/>
+    <line x1="408" y1="200" x2="408" y2="280" stroke-width="2"/>
+    <line x1="392" y1="200" x2="408" y2="200"/>
+    <line x1="392" y1="280" x2="408" y2="280"/>
+  </g>
+  <!-- Sombreado interno do tubo -->
+  <rect x="394" y="202" width="12" height="76" fill="rgba(251,191,36,0.18)"/>
+
+  <!-- Brônquio secundário dilatado -->
+  <g stroke="#FBBF24" stroke-width="2.5" fill="none">
+    <path d="M400,200 L430,230"/>
+  </g>
+  <ellipse cx="430" cy="230" rx="9" ry="6" fill="rgba(251,191,36,0.25)" stroke="#FBBF24" stroke-width="2"/>
+
+  <!-- Anotação "trilho de trem" -->
+  <line x1="400" y1="240" x2="495" y2="220" stroke="#34D399" stroke-width="1" opacity="0.6"/>
+  <text x="500" y="216" fill="#34D399" font-family="-apple-system,sans-serif" font-size="10" font-weight="600">trilho de trem</text>
+  <text x="500" y="228" fill="#C9D6D9" font-family="-apple-system,sans-serif" font-size="9">(corte axial)</text>
+
+  <!-- Coluna vertebral -->
+  <circle cx="270" cy="320" r="20" fill="#16383F" stroke="#8FA1A6" stroke-width="1.5"/>
+
+  <!-- Coração silhueta esquemática -->
+  <path d="M240,180 C235,200 245,230 270,245 C295,230 305,200 300,180 C290,170 280,168 270,172 C260,168 250,170 240,180 Z" fill="#0E2A2F" stroke="#8FA1A6" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Legenda inferior -->
+  <text x="270" y="365" text-anchor="middle" fill="#8FA1A6" font-family="-apple-system,sans-serif" font-size="10" font-style="italic">Corte axial · bronquiectasias centrais (a partir do 3º brônquio segmentar) — achado-âncora da ABPA</text>
+</svg>
