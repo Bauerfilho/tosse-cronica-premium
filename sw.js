@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tb-bauer-v9';
+const CACHE_NAME = 'tb-bauer-v10';
 const PRECACHE_ASSETS = [
   './',
   './index.html',

@@ -9,7 +9,9 @@ function bootSW() {
   if (!('serviceWorker' in navigator)) return;
 
   navigator.serviceWorker.register('./sw.js').then(registration => {
-    // Verifica atualização a cada 1h
+    // Força check de update em toda visita (não esperar 24h do default do browser)
+    registration.update().catch(() => {});
+    // Verifica atualização periodicamente também
     setInterval(() => registration.update(), 60 * 60 * 1000);
 
     registration.addEventListener('updatefound', () => {
