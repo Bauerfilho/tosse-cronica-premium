@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-labelledby="title-molusco">
+  <title id="title-molusco">Lesões cutâneas tipo molusco contagioso com umbilicação central — forma disseminada crônica da histoplasmose</title>
+  <defs>
+    <radialGradient id="skin" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0" stop-color="#FCD9B7"/>
+      <stop offset="1" stop-color="#D89B6D"/>
+    </radialGradient>
+    <radialGradient id="papula" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#F5C8A5"/>
+      <stop offset="0.85" stop-color="#C97D4F"/>
+      <stop offset="1" stop-color="#9A5530"/>
+    </radialGradient>
+    <radialGradient id="umbilicacao" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6B2D14"/>
+      <stop offset="1" stop-color="#3F1A0A"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="280" rx="12" fill="#15202B"/>
+
+  <!-- Quadrante de pele simulada -->
+  <ellipse cx="200" cy="155" rx="170" ry="105" fill="url(#skin)" opacity="0.95"/>
+
+  <!-- 5 pápulas com umbilicação central característica -->
+  <g>
+    <!-- Pápula 1 -->
+    <circle cx="115" cy="115" r="22" fill="url(#papula)"/>
+    <circle cx="115" cy="115" r="5" fill="url(#umbilicacao)"/>
+
+    <!-- Pápula 2 -->
+    <circle cx="200" cy="100" r="26" fill="url(#papula)"/>
+    <circle cx="200" cy="100" r="6" fill="url(#umbilicacao)"/>
+
+    <!-- Pápula 3 -->
+    <circle cx="285" cy="125" r="20" fill="url(#papula)"/>
+    <circle cx="285" cy="125" r="4.5" fill="url(#umbilicacao)"/>
+
+    <!-- Pápula 4 -->
+    <circle cx="155" cy="195" r="18" fill="url(#papula)"/>
+    <circle cx="155" cy="195" r="4" fill="url(#umbilicacao)"/>
+
+    <!-- Pápula 5 -->
+    <circle cx="255" cy="195" r="24" fill="url(#papula)"/>
+    <circle cx="255" cy="195" r="5.5" fill="url(#umbilicacao)"/>
+  </g>
+
+  <!-- Seta + legenda indicando umbilicação central -->
+  <g stroke="#FBBF24" stroke-width="1.3" fill="#FBBF24">
+    <line x1="340" y1="100" x2="226" y2="100"/>
+    <polygon points="226,100 232,96 232,104"/>
+    <text x="345" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FBBF24">umbilicação</text>
+    <text x="345" y="111" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FBBF24">central</text>
+  </g>
+
+  <g stroke="#34D399" stroke-width="1.3" fill="#34D399">
+    <line x1="55" y1="195" x2="135" y2="195"/>
+    <polygon points="135,195 129,191 129,199"/>
+    <text x="20" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#34D399">pápula</text>
+    <text x="20" y="203" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#34D399">eritêmato-</text>
+    <text x="20" y="216" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#34D399">amarronzada</text>
+  </g>
+
+  <!-- Título/legenda inferior -->
+  <text x="200" y="265" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94A3B8">
+    Lesões cutâneas tipo molusco contagioso · histoplasmose disseminada crônica (imunossuprimido)
+  </text>
+</svg>

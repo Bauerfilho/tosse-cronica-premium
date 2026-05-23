@@ -113,3 +113,229 @@
   .iq-answer { animation: none; }
   .iq-toggle:hover { transform: none; }
 }
+
+/* ============================================================== */
+/* Variante --exam-breakdown — 4 alternativas com desmontagem      */
+/* (A6 caso #1 e caso #2 da UFRJ)                                  */
+/* ============================================================== */
+
+.interactive-question--exam-breakdown {
+  background: linear-gradient(135deg, rgba(251, 191, 36, .06), var(--c-bg-elev-1));
+  border-color: rgba(251, 191, 36, .35);
+  padding: var(--sp-6);
+}
+
+.interactive-question--exam-breakdown .iq-header {
+  margin-bottom: var(--sp-4);
+}
+
+.interactive-question--exam-breakdown .iq-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px var(--sp-3);
+  background: rgba(251, 191, 36, .18);
+  color: var(--c-secondary);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  margin-bottom: var(--sp-3);
+}
+
+.interactive-question--exam-breakdown .iq-badge::before {
+  content: "★";
+  margin-right: var(--sp-2);
+  font-size: .85rem;
+}
+
+.interactive-question--exam-breakdown .iq-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.interactive-question--exam-breakdown .iq-enunciado {
+  margin: var(--sp-3) 0 var(--sp-5);
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(255, 255, 255, .03);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--c-text-muted);
+}
+
+.interactive-question--exam-breakdown .iq-enunciado p {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--c-text);
+}
+
+.interactive-question--exam-breakdown .iq-alternativas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.interactive-question--exam-breakdown .iq-alt-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.interactive-question--exam-breakdown .iq-alt {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  min-height: 44px;
+  width: 100%;
+  text-align: left;
+  background: var(--c-bg-elev-2);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  color: var(--c-text);
+  font-size: .92rem;
+  line-height: 1.5;
+  transition: background .15s ease, border-color .15s ease, transform .12s ease;
+}
+
+.interactive-question--exam-breakdown .iq-alt:hover {
+  background: var(--c-bg-elev-1);
+  border-color: var(--glass-border-strong);
+}
+
+.interactive-question--exam-breakdown .iq-alt:focus-visible {
+  outline: 2px solid var(--c-secondary);
+  outline-offset: 3px;
+}
+
+.interactive-question--exam-breakdown .iq-alt-letra {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: var(--glass-bg-strong);
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: .95rem;
+  color: var(--c-text-strong);
+}
+
+.interactive-question--exam-breakdown .iq-alt-texto {
+  flex: 1;
+}
+
+.interactive-question--exam-breakdown .iq-alt-texto strong {
+  color: var(--c-text-strong);
+}
+
+/* Estados de alternativa após clique */
+
+.interactive-question--exam-breakdown .iq-alt[aria-pressed="true"][data-correta="true"] {
+  background: rgba(52, 211, 153, .12);
+  border-color: var(--c-primary);
+}
+
+.interactive-question--exam-breakdown .iq-alt[aria-pressed="true"][data-correta="true"] .iq-alt-letra {
+  background: var(--c-primary);
+  color: #0E2A2F;
+}
+
+.interactive-question--exam-breakdown .iq-alt[aria-pressed="true"][data-correta="false"] {
+  background: rgba(248, 113, 113, .08);
+  border-color: var(--c-danger);
+}
+
+.interactive-question--exam-breakdown .iq-alt[aria-pressed="true"][data-correta="false"] .iq-alt-letra {
+  background: var(--c-danger);
+  color: #fff;
+}
+
+.interactive-question--exam-breakdown .iq-comentario {
+  margin: 0;
+  padding: var(--sp-3) var(--sp-4);
+  font-size: .9rem;
+  line-height: 1.6;
+  color: var(--c-text);
+  background: rgba(255, 255, 255, .04);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--c-text-muted);
+  animation: iqReveal .25s ease-out;
+}
+
+.interactive-question--exam-breakdown .iq-comentario[hidden] {
+  display: none;
+}
+
+.interactive-question--exam-breakdown .iq-alt[data-correta="true"] + .iq-comentario {
+  border-left-color: var(--c-primary);
+  background: rgba(52, 211, 153, .05);
+}
+
+.interactive-question--exam-breakdown .iq-alt[data-correta="false"] + .iq-comentario {
+  border-left-color: var(--c-danger);
+  background: rgba(248, 113, 113, .04);
+}
+
+.interactive-question--exam-breakdown .iq-comentario strong {
+  color: var(--c-text-strong);
+}
+
+.interactive-question--exam-breakdown .iq-reveal-all {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-5);
+  padding: var(--sp-3) var(--sp-5);
+  min-height: 44px;
+  background: var(--c-secondary);
+  color: #0B1220;
+  font-weight: 700;
+  font-size: .88rem;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  letter-spacing: .02em;
+  transition: background .15s ease, transform .12s ease;
+}
+
+.interactive-question--exam-breakdown .iq-reveal-all:hover {
+  background: #FCD34D;
+  transform: translateY(-1px);
+}
+
+.interactive-question--exam-breakdown .iq-reveal-all:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 3px;
+}
+
+.interactive-question--exam-breakdown .iq-reveal-all[aria-expanded="true"] {
+  background: var(--glass-bg-strong);
+  color: var(--c-text-strong);
+  border: 1px solid var(--glass-border-strong);
+}
+
+@media (max-width: 540px) {
+  .interactive-question--exam-breakdown .iq-alt {
+    padding: var(--sp-3) var(--sp-4);
+    font-size: .88rem;
+  }
+  .interactive-question--exam-breakdown .iq-alt-letra {
+    width: 28px;
+    height: 28px;
+    font-size: .85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-question--exam-breakdown .iq-comentario { animation: none; }
+  .interactive-question--exam-breakdown .iq-reveal-all:hover { transform: none; }
+}

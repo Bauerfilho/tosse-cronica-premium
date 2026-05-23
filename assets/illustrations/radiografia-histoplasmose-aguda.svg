@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="title-histo-aguda">
+  <title id="title-histo-aguda">Radiografia esquemática da histoplasmose aguda — infiltrado retículo-nodular bilateral + adenopatia hilar e mediastinal</title>
+  <defs>
+    <radialGradient id="rx-bg" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#1B232E"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="360" rx="12" fill="url(#rx-bg)"/>
+
+  <!-- Silhueta torácica PA -->
+  <g stroke="#7C8B9F" stroke-width="1.4" fill="none">
+    <!-- Caixa torácica externa -->
+    <path d="M65 70 C 55 60 55 200 75 280 L80 295 L130 305 L200 308 L270 305 L320 295 L325 280 C 345 200 345 60 335 70"/>
+    <!-- Mediastino central -->
+    <path d="M195 78 L195 290" stroke-width="0.8" opacity="0.7"/>
+    <!-- Diafragma -->
+    <path d="M75 290 C 130 320 270 320 325 290" opacity="0.7"/>
+    <!-- Costelas estilizadas -->
+    <path d="M85 110 C 130 100 150 100 195 95" opacity="0.35"/>
+    <path d="M85 140 C 130 130 150 130 195 125" opacity="0.35"/>
+    <path d="M85 175 C 130 165 150 165 195 160" opacity="0.35"/>
+    <path d="M85 210 C 130 200 150 200 195 195" opacity="0.35"/>
+    <path d="M85 245 C 130 235 150 235 195 230" opacity="0.35"/>
+    <path d="M205 95 C 250 100 270 100 315 110" opacity="0.35"/>
+    <path d="M205 125 C 250 130 270 130 315 140" opacity="0.35"/>
+    <path d="M205 160 C 250 165 270 165 315 175" opacity="0.35"/>
+    <path d="M205 195 C 250 200 270 200 315 210" opacity="0.35"/>
+    <path d="M205 230 C 250 235 270 235 315 245" opacity="0.35"/>
+  </g>
+
+  <!-- Adenomegalia hilar bilateral (núcleos densos paramediastínicos) -->
+  <g fill="#94A3B8" opacity="0.55">
+    <ellipse cx="155" cy="155" rx="25" ry="18"/>
+    <ellipse cx="240" cy="155" rx="25" ry="18"/>
+  </g>
+  <g stroke="#CBD5E1" stroke-width="1.2" fill="none" opacity="0.7">
+    <ellipse cx="155" cy="155" rx="25" ry="18"/>
+    <ellipse cx="240" cy="155" rx="25" ry="18"/>
+  </g>
+
+  <!-- Adenomegalia mediastinal (acima do hilo, à direita da silhueta) -->
+  <ellipse cx="195" cy="118" rx="32" ry="14" fill="#94A3B8" opacity="0.4"/>
+  <ellipse cx="195" cy="118" rx="32" ry="14" fill="none" stroke="#CBD5E1" stroke-width="1.1" opacity="0.65"/>
+
+  <!-- Infiltrado retículo-nodular bilateral -->
+  <g fill="#FBBF24" opacity="0.55">
+    <circle cx="110" cy="190" r="3"/>
+    <circle cx="125" cy="200" r="2.5"/>
+    <circle cx="100" cy="215" r="3"/>
+    <circle cx="135" cy="225" r="2"/>
+    <circle cx="115" cy="240" r="3"/>
+    <circle cx="105" cy="260" r="2.5"/>
+    <circle cx="130" cy="265" r="2"/>
+    <circle cx="145" cy="245" r="2"/>
+    <circle cx="155" cy="225" r="2.5"/>
+    <circle cx="160" cy="200" r="2"/>
+    <circle cx="170" cy="218" r="2.2"/>
+
+    <circle cx="290" cy="190" r="3"/>
+    <circle cx="275" cy="200" r="2.5"/>
+    <circle cx="300" cy="215" r="3"/>
+    <circle cx="265" cy="225" r="2"/>
+    <circle cx="285" cy="240" r="3"/>
+    <circle cx="295" cy="260" r="2.5"/>
+    <circle cx="270" cy="265" r="2"/>
+    <circle cx="255" cy="245" r="2"/>
+    <circle cx="245" cy="225" r="2.5"/>
+    <circle cx="240" cy="200" r="2"/>
+    <circle cx="225" cy="218" r="2.2"/>
+  </g>
+  <!-- Reticulado fino conectando os nódulos -->
+  <g stroke="#FBBF24" stroke-width="0.5" opacity="0.35" fill="none">
+    <path d="M100 215 L125 200 L155 225 L130 265 L105 260 L115 240 L135 225 L160 200"/>
+    <path d="M300 215 L275 200 L245 225 L270 265 L295 260 L285 240 L265 225 L240 200"/>
+  </g>
+
+  <!-- Legendas -->
+  <g font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#F4F7FB">
+    <text x="20" y="32">RX TÓRAX PA · Histoplasmose aguda</text>
+  </g>
+  <g font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#94A3B8" letter-spacing="0.3">
+    <text x="20" y="48">Infiltrado retículo-nodular bilateral · Adenopatia hilar e mediastinal</text>
+  </g>
+
+  <!-- Setas indicativas -->
+  <g stroke="#34D399" stroke-width="1.2" fill="#34D399">
+    <!-- Seta pra adenopatia hilar esquerda -->
+    <line x1="50" y1="155" x2="125" y2="155"/>
+    <polygon points="125,155 119,151 119,159"/>
+    <text x="22" y="150" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#34D399">linfonodo</text>
+    <text x="22" y="161" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#34D399">hilar</text>
+  </g>
+  <g stroke="#FBBF24" stroke-width="1.2" fill="#FBBF24">
+    <!-- Seta pro infiltrado retículo-nodular -->
+    <line x1="380" y1="225" x2="320" y2="225"/>
+    <polygon points="320,225 326,221 326,229"/>
+    <text x="350" y="218" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FBBF24" text-anchor="middle">retículo</text>
+    <text x="350" y="229" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FBBF24" text-anchor="middle">nodular</text>
+  </g>
+  <g stroke="#94A3B8" stroke-width="1.2" fill="#94A3B8">
+    <!-- Seta pra adenopatia mediastinal -->
+    <line x1="195" y1="60" x2="195" y2="105"/>
+    <polygon points="195,105 191,99 199,99"/>
+    <text x="200" y="58" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#94A3B8">linfonodo mediastinal</text>
+  </g>
+</svg>

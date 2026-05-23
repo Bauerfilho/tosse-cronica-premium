@@ -144,11 +144,12 @@ export function renderAulaNav(target, currentAulaId = 'A1') {
         </a>
       </li>
     `).join('');
+    const bonusBadge = aula.bonus ? '<span class="aula-nav-bonus" aria-label="aula bônus">bônus</span>' : '';
     return `
       <section class="aula-nav-section${isCurrent ? ' is-current' : ''}">
         <h4 class="aula-nav-section-title">
           <span class="aula-nav-section-id">${aula.id}</span>
-          <span>${aula.titulo}</span>
+          <span>${aula.titulo}${bonusBadge}</span>
         </h4>
         <ol>${items}</ol>
       </section>

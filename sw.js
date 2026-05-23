@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tb-bauer-v6';
+const CACHE_NAME = 'tb-bauer-v7';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
@@ -26,6 +26,7 @@ const PRECACHE_ASSETS = [
   './css/pages/a4.css',
   './css/pages/a5.css',
   './css/pages/a7.css',
+  './css/pages/a6.css',
   './js/app.js',
   './js/router.js',
   './js/state.js',
@@ -158,6 +159,23 @@ const PRECACHE_ASSETS = [
   './pages/a7/ddx-denso-tabela-comparativa.html',
   './pages/a7/tratamento-escalonado-gravidade.html',
   './pages/a7/sintese-cura-recidiva-transicao-a6.html',
+  './pages/a6/histoplasmose-introducao.html',
+  './pages/a6/forma-aguda-autolimitada.html',
+  './pages/a6/manifestacoes-inflamatorias-reativas-ufrj.html',
+  './pages/a6/forma-cronica-mimetiza-tb.html',
+  './pages/a6/forma-disseminada-imunossuprimido.html',
+  './pages/a6/diagnostico-4-metodos.html',
+  './pages/a6/tratamento-escalonado-gravidade-histo.html',
+  './pages/a6/mediastinite-fibrosante-hierarquia-br.html',
+  './pages/a6/caso-prova-1-caverna-morcego.html',
+  './pages/a6/caso-prova-2-centro-oeste-desmontagem.html',
+  './pages/a6/sintese-a6-transicao-modulo-4.html',
+  './pages/a6/sintese-modulo-4-comparativa.html',
+  './assets/illustrations/caverna-morcego-cenario.svg',
+  './assets/illustrations/radiografia-histoplasmose-aguda.svg',
+  './assets/illustrations/lesoes-molusco-umbilicacao.svg',
+  './assets/illustrations/triade-cenarios-exposicao.svg',
+  './assets/illustrations/quatro-doencas-modulo4.svg',
 ];
 
 self.addEventListener('install', event => {

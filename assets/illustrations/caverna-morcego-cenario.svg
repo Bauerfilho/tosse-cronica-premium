@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title-caverna">
+  <title id="title-caverna">Cenário de exposição típica — caverna com morcegos</title>
+  <defs>
+    <linearGradient id="caverna-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F2937"/>
+      <stop offset="1" stop-color="#0E1822"/>
+    </linearGradient>
+    <radialGradient id="caverna-int" cx="0.5" cy="0.6" r="0.6">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#caverna-bg)" rx="12"/>
+
+  <!-- Chão -->
+  <path d="M0 220 L400 220 L400 260 L0 260 Z" fill="#0B1220" opacity="0.7"/>
+
+  <!-- Silhueta de montanha com entrada de caverna -->
+  <path d="M20 220 C 40 130 90 60 200 50 C 310 60 360 130 380 220 Z" fill="#2C3849" stroke="#3D4A5C" stroke-width="1.5"/>
+
+  <!-- Entrada da caverna -->
+  <path d="M155 220 C 158 160 175 130 200 125 C 225 130 242 160 245 220 Z" fill="url(#caverna-int)"/>
+
+  <!-- Estalactites -->
+  <path d="M165 130 L168 145 L171 130 Z" fill="#1C2530"/>
+  <path d="M180 122 L182 138 L184 122 Z" fill="#1C2530"/>
+  <path d="M218 122 L220 140 L222 122 Z" fill="#1C2530"/>
+  <path d="M233 130 L235 142 L238 130 Z" fill="#1C2530"/>
+
+  <!-- Morcegos em voo -->
+  <g fill="#FBBF24" opacity="0.85">
+    <path d="M280 75 L290 70 L295 78 L300 70 L310 75 L302 82 L295 80 L288 82 Z"/>
+    <path d="M325 50 L335 46 L340 52 L345 46 L355 50 L347 56 L340 54 L333 56 Z" opacity="0.7"/>
+    <path d="M85 90 L95 86 L100 92 L105 86 L115 90 L107 96 L100 94 L93 96 Z" opacity="0.75"/>
+    <path d="M50 130 L57 127 L60 131 L63 127 L70 130 L65 134 L60 133 L55 134 Z" opacity="0.6"/>
+  </g>
+
+  <!-- Esporos sutis em suspensão (representação esquemática de Histoplasma) -->
+  <g fill="#34D399" opacity="0.4">
+    <circle cx="200" cy="170" r="1.5"/>
+    <circle cx="195" cy="180" r="1"/>
+    <circle cx="210" cy="175" r="1.2"/>
+    <circle cx="190" cy="190" r="1"/>
+    <circle cx="215" cy="195" r="1.3"/>
+    <circle cx="200" cy="200" r="1.1"/>
+    <circle cx="205" cy="185" r="0.9"/>
+  </g>
+
+  <!-- Legenda discreta dos esporos -->
+  <text x="200" y="245" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#8F9BAD" letter-spacing="0.5">
+    Esporos de H. capsulatum em suspensão no ar
+  </text>
+</svg>

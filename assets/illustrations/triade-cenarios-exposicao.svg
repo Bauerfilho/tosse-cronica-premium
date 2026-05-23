@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" role="img" aria-labelledby="title-triade-exposicao">
+  <title id="title-triade-exposicao">Tríade de cenários-âncora de exposição na histoplasmose — caverna, galinheiro, viveiro de aves</title>
+  <defs>
+    <linearGradient id="card-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B232E"/>
+      <stop offset="1" stop-color="#101822"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 3 cards lado a lado -->
+
+  <!-- Card 1 — Caverna -->
+  <g transform="translate(15, 25)">
+    <rect width="180" height="150" rx="10" fill="url(#card-bg)" stroke="#34D399" stroke-width="1.2" opacity="0.95"/>
+    <!-- Ícone: montanha com entrada -->
+    <g transform="translate(40, 30)">
+      <path d="M0 90 C 10 50 40 25 50 25 C 60 25 90 50 100 90 Z" fill="#2C3849" stroke="#3D4A5C" stroke-width="1.2"/>
+      <path d="M35 90 C 38 60 45 50 50 50 C 55 50 62 60 65 90 Z" fill="#0B1220"/>
+      <!-- 2 morceguinhos -->
+      <path d="M65 15 L70 13 L72 16 L75 13 L80 15 L77 18 L72 17 L67 18 Z" fill="#FBBF24"/>
+      <path d="M20 25 L25 23 L27 25 L30 23 L35 25 L32 28 L27 27 L22 28 Z" fill="#FBBF24" opacity="0.7"/>
+    </g>
+    <text x="90" y="135" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#F4F7FB" letter-spacing="0.5">CAVERNA</text>
+  </g>
+
+  <!-- Card 2 — Galinheiro -->
+  <g transform="translate(210, 25)">
+    <rect width="180" height="150" rx="10" fill="url(#card-bg)" stroke="#FBBF24" stroke-width="1.2" opacity="0.95"/>
+    <g transform="translate(35, 30)">
+      <!-- Telhado triangular -->
+      <path d="M5 35 L55 5 L105 35 Z" fill="#8C5A2A" stroke="#6B4220" stroke-width="1.2"/>
+      <!-- Estrutura -->
+      <rect x="15" y="35" width="80" height="55" fill="#4A3520" stroke="#6B4220" stroke-width="1.2"/>
+      <!-- Porta -->
+      <rect x="46" y="55" width="18" height="35" fill="#0B1220"/>
+      <!-- Cerca lateral -->
+      <line x1="15" y1="90" x2="15" y2="105" stroke="#6B4220" stroke-width="1.5"/>
+      <line x1="30" y1="90" x2="30" y2="105" stroke="#6B4220" stroke-width="1.5"/>
+      <line x1="45" y1="90" x2="45" y2="105" stroke="#6B4220" stroke-width="1.5"/>
+      <line x1="60" y1="90" x2="60" y2="105" stroke="#6B4220" stroke-width="1.5"/>
+      <line x1="75" y1="90" x2="75" y2="105" stroke="#6B4220" stroke-width="1.5"/>
+      <line x1="90" y1="90" x2="90" y2="105" stroke="#6B4220" stroke-width="1.5"/>
+      <line x1="10" y1="98" x2="100" y2="98" stroke="#6B4220" stroke-width="1.2"/>
+      <!-- Galinha estilizada -->
+      <circle cx="32" cy="103" r="3.5" fill="#FBBF24"/>
+      <circle cx="78" cy="103" r="3.5" fill="#FBBF24" opacity="0.8"/>
+    </g>
+    <text x="90" y="135" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#F4F7FB" letter-spacing="0.5">GALINHEIRO</text>
+  </g>
+
+  <!-- Card 3 — Viveiro de aves -->
+  <g transform="translate(405, 25)">
+    <rect width="180" height="150" rx="10" fill="url(#card-bg)" stroke="#A78BFA" stroke-width="1.2" opacity="0.95"/>
+    <g transform="translate(35, 28)">
+      <!-- Gaiola/viveiro -->
+      <rect x="10" y="15" width="90" height="80" rx="8" fill="none" stroke="#A78BFA" stroke-width="1.8"/>
+      <line x1="20" y1="15" x2="20" y2="95" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="35" y1="15" x2="35" y2="95" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="50" y1="15" x2="50" y2="95" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="65" y1="15" x2="65" y2="95" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="80" y1="15" x2="80" y2="95" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="95" y1="15" x2="95" y2="95" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="10" y1="40" x2="100" y2="40" stroke="#A78BFA" stroke-width="0.9"/>
+      <line x1="10" y1="65" x2="100" y2="65" stroke="#A78BFA" stroke-width="0.9"/>
+      <!-- Aves -->
+      <g fill="#F4F7FB">
+        <ellipse cx="28" cy="55" rx="5" ry="3.5"/>
+        <circle cx="32" cy="52" r="2"/>
+        <ellipse cx="58" cy="78" rx="5" ry="3.5"/>
+        <circle cx="62" cy="75" r="2"/>
+        <ellipse cx="78" cy="55" rx="5" ry="3.5"/>
+        <circle cx="82" cy="52" r="2"/>
+      </g>
+      <!-- Base do viveiro -->
+      <rect x="5" y="93" width="100" height="8" fill="#4A3520"/>
+    </g>
+    <text x="90" y="135" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#F4F7FB" letter-spacing="0.5">VIVEIRO DE AVES</text>
+  </g>
+
+  <text x="300" y="195" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8F9BAD" font-style="italic">
+    Cenário-âncora no enunciado → pensar histoplasmose
+  </text>
+</svg>

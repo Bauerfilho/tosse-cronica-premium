@@ -347,6 +347,38 @@
   color: var(--c-primary);
 }
 
+/* A6 — variantes pra casos histoplasmose (caverna-aguda / centro-oeste-nodulo / disseminada-hiv-sintetico) */
+
+.card--clinical-case[data-case-origin="caverna-aguda"] {
+  border-left-color: #6366F1;
+  background: linear-gradient(135deg, rgba(99, 102, 241, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="caverna-aguda"] .case-card__badge {
+  background: rgba(99, 102, 241, .16);
+  color: #818CF8;
+}
+
+.card--clinical-case[data-case-origin="centro-oeste-nodulo"] {
+  border-left-color: var(--c-secondary);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="centro-oeste-nodulo"] .case-card__badge {
+  background: rgba(251, 191, 36, .18);
+  color: var(--c-secondary);
+}
+
+.card--clinical-case[data-case-origin="disseminada-hiv-sintetico"] {
+  border-left-color: var(--c-danger);
+  background: linear-gradient(135deg, rgba(248, 113, 113, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="disseminada-hiv-sintetico"] .case-card__badge {
+  background: rgba(248, 113, 113, .14);
+  color: var(--c-danger);
+}
+
 .card--clinical-case .case-card__badge::before {
   content: "";
   width: 6px;

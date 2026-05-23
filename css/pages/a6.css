@@ -1,0 +1,399 @@
+/* a6.css — estilos específicos da Aula 6 (Histoplasmose — aula bônus) e página de síntese transversal Módulo 4 */
+
+/* Meta-checklist padronizado (herdado de A4-A5-A7) */
+
+.a6-meta-checklist {
+  display: block;
+  margin: var(--sp-7) 0 var(--sp-6);
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(52, 211, 153, .04);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--r-md);
+}
+
+.a6-meta-checklist .meta-label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: var(--sp-2);
+}
+
+.a6-meta-checklist .meta-text {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--c-text);
+  line-height: 1.7;
+}
+
+.a6-meta-checklist .meta-text strong {
+  color: var(--c-text-strong);
+}
+
+/* Wrap pra ilustrações autorais centralizadas com legenda (herdado padrão A5-A7) */
+
+.a6-figure {
+  margin: var(--sp-5) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  max-width: 720px;
+}
+
+.a6-figure img,
+.a6-figure svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-md);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+}
+
+.a6-figure figcaption {
+  font-size: .85rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* Badge "aula bônus" no menu lateral (renderizado pelo router em AULAS com bonus:true) */
+
+.aula-nav-bonus {
+  display: inline-block;
+  margin-left: var(--sp-2);
+  padding: 1px 8px;
+  background: rgba(251, 191, 36, .18);
+  color: var(--c-secondary);
+  border: 1px solid rgba(251, 191, 36, .4);
+  border-radius: 999px;
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* Badge "aula bônus" — discreto, paleta âmbar mantendo identidade */
+
+.badge--bonus {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 3px var(--sp-3);
+  background: rgba(251, 191, 36, .16);
+  color: var(--c-secondary);
+  border: 1px solid rgba(251, 191, 36, .35);
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.badge--bonus::before {
+  content: "★";
+  font-size: .85rem;
+  line-height: 1;
+}
+
+/* Card de abertura A6 com glow âmbar leve preservando identidade da plataforma */
+
+.card--bonus-opener {
+  position: relative;
+  padding: var(--sp-6);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .08), var(--c-bg-elev-1));
+  border: 1px solid rgba(251, 191, 36, .25);
+  border-radius: var(--r-lg);
+  box-shadow: 0 0 28px rgba(251, 191, 36, .12);
+  margin: var(--sp-5) 0;
+}
+
+.card--bonus-opener .badge--bonus {
+  margin-bottom: var(--sp-3);
+}
+
+.card--bonus-opener h2 {
+  margin: 0 0 var(--sp-3);
+  font-size: 1.4rem;
+  color: var(--c-text-strong);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.card--bonus-opener p {
+  margin: 0;
+  color: var(--c-text);
+  font-size: .98rem;
+  line-height: 1.6;
+}
+
+/* Cenários-âncora — grid de 3 ícones lado a lado em desktop */
+
+.a6-cenarios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  margin: var(--sp-5) 0;
+}
+
+@media (min-width: 720px) {
+  .a6-cenarios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.a6-cenarios-grid .card--capsule {
+  margin: 0;
+}
+
+/* 3 sub-formas da disseminada — destaque visual em cada cor */
+
+.a6-subforma-card {
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--r-md);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--c-text-muted);
+  margin: var(--sp-3) 0;
+}
+
+.a6-subforma-card.is-aguda {
+  border-left-color: var(--c-danger);
+  background: linear-gradient(135deg, rgba(248, 113, 113, .06), var(--c-bg-elev-1));
+}
+
+.a6-subforma-card.is-subaguda {
+  border-left-color: var(--c-secondary);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .06), var(--c-bg-elev-1));
+}
+
+.a6-subforma-card.is-cronica {
+  border-left-color: var(--c-primary);
+  background: linear-gradient(135deg, rgba(52, 211, 153, .06), var(--c-bg-elev-1));
+}
+
+.a6-subforma-card h4 {
+  margin: 0 0 var(--sp-2);
+  font-size: .92rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.a6-subforma-card.is-aguda h4 { color: var(--c-danger); }
+.a6-subforma-card.is-subaguda h4 { color: var(--c-secondary); }
+.a6-subforma-card.is-cronica h4 { color: var(--c-primary); }
+
+.a6-subforma-card p {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+/* Hierarquia BR visual — 3 medalhas */
+
+.a6-hierarquia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+  margin: var(--sp-5) 0;
+}
+
+.a6-hierarquia-card {
+  text-align: center;
+  padding: var(--sp-5) var(--sp-3);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  position: relative;
+}
+
+.a6-hierarquia-card.is-first {
+  background: linear-gradient(180deg, rgba(251, 191, 36, .14), var(--c-bg-elev-1));
+  border-color: rgba(251, 191, 36, .35);
+}
+
+.a6-hierarquia-card.is-second {
+  background: linear-gradient(180deg, rgba(167, 139, 250, .1), var(--c-bg-elev-1));
+}
+
+.a6-hierarquia-card.is-third {
+  background: linear-gradient(180deg, rgba(96, 165, 250, .08), var(--c-bg-elev-1));
+}
+
+.a6-hierarquia-pos {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+  line-height: 1;
+  margin-bottom: var(--sp-2);
+}
+
+.a6-hierarquia-card.is-first .a6-hierarquia-pos { color: var(--c-secondary); }
+.a6-hierarquia-card.is-second .a6-hierarquia-pos { color: #A78BFA; }
+.a6-hierarquia-card.is-third .a6-hierarquia-pos { color: var(--c-info); }
+
+.a6-hierarquia-doenca {
+  display: block;
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+  margin-bottom: var(--sp-1);
+}
+
+.a6-hierarquia-nota {
+  display: block;
+  font-size: .78rem;
+  color: var(--c-text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 540px) {
+  .a6-hierarquia-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cenários patognomônicos sintéticos — síntese final */
+
+.a6-cenarios-finais {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+  margin: var(--sp-5) 0;
+}
+
+.a6-cenario-icone {
+  text-align: center;
+  padding: var(--sp-4);
+  background: linear-gradient(180deg, rgba(52, 211, 153, .06), var(--c-bg-elev-1));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+}
+
+.a6-cenario-icone .ci-emoji {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--sp-2);
+  filter: saturate(.8);
+}
+
+.a6-cenario-icone .ci-nome {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+}
+
+@media (max-width: 540px) {
+  .a6-cenarios-finais {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Box informativo padrão (doses, interações) — herdado padrão clean */
+
+.a6-info-box {
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  margin: var(--sp-4) 0;
+}
+
+.a6-info-box h4 {
+  margin: 0 0 var(--sp-3);
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+  letter-spacing: -0.005em;
+}
+
+.a6-info-box ul {
+  margin: 0;
+  padding-left: var(--sp-4);
+}
+
+.a6-info-box ul li {
+  margin-bottom: var(--sp-2);
+  font-size: .9rem;
+  line-height: 1.55;
+  color: var(--c-text);
+}
+
+.a6-info-box ul li:last-child {
+  margin-bottom: 0;
+}
+
+.a6-info-box ul li strong {
+  color: var(--c-text-strong);
+}
+
+/* Síntese transversal — paleta neutra; tabela em destaque */
+
+.sintese-m4-header {
+  text-align: center;
+  margin: var(--sp-5) 0 var(--sp-7);
+  padding: var(--sp-6);
+  background: linear-gradient(135deg, var(--c-primary-soft), var(--c-secondary-soft));
+  border-radius: var(--r-xl);
+  border: 1px solid var(--glass-border-strong);
+}
+
+.sintese-m4-header h2 {
+  margin: 0 0 var(--sp-3);
+  font-size: 1.4rem;
+  color: var(--c-text-strong);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.sintese-m4-header p {
+  margin: 0;
+  color: var(--c-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Costura clínica entre as 4 doenças — lista em card */
+
+.sintese-m4-costura {
+  padding: var(--sp-5);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--r-md);
+  margin: var(--sp-5) 0;
+}
+
+.sintese-m4-costura h3 {
+  margin: 0 0 var(--sp-3);
+  font-size: 1.05rem;
+  color: var(--c-text-strong);
+}
+
+.sintese-m4-costura ul {
+  margin: 0;
+  padding-left: var(--sp-4);
+}
+
+.sintese-m4-costura ul li {
+  margin-bottom: var(--sp-3);
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--c-text);
+}
+
+.sintese-m4-costura ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sintese-m4-costura ul li strong {
+  color: var(--c-text-strong);
+}

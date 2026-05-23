@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" role="img" aria-labelledby="title-quatro-doencas">
+  <title id="title-quatro-doencas">Síntese transversal do Módulo 4 — TB, Aspergilose, Histoplasmose e Paracoco com seus achados radiológico-âncora</title>
+  <defs>
+    <linearGradient id="m4-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B232E"/>
+      <stop offset="1" stop-color="#0F1822"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 4 mini-radiografias em linha (estilizadas, esquemáticas) -->
+
+  <!-- TB — cavitação apical -->
+  <g transform="translate(20, 25)">
+    <rect width="130" height="150" rx="10" fill="url(#m4-card)" stroke="#60A5FA" stroke-width="1.4"/>
+    <!-- Mini RX -->
+    <g transform="translate(15, 15)" stroke="#94A3B8" stroke-width="1.1" fill="none">
+      <path d="M15 18 C 10 12 10 80 18 110 L20 115 L45 118 L65 118 L85 118 L100 115 L100 110 C 108 80 108 12 100 18"/>
+      <path d="M58 22 L58 116" stroke-width="0.6" opacity="0.6"/>
+      <path d="M20 115 C 45 124 75 124 100 115" opacity="0.6"/>
+    </g>
+    <!-- Cavitação apical bilateral -->
+    <circle cx="50" cy="55" r="9" fill="#1B232E" stroke="#60A5FA" stroke-width="1.5"/>
+    <circle cx="95" cy="55" r="8" fill="#1B232E" stroke="#60A5FA" stroke-width="1.5"/>
+    <text x="65" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#60A5FA">TB</text>
+  </g>
+
+  <!-- Aspergilose — sinal lua crescente -->
+  <g transform="translate(170, 25)">
+    <rect width="130" height="150" rx="10" fill="url(#m4-card)" stroke="#A78BFA" stroke-width="1.4"/>
+    <g transform="translate(15, 15)" stroke="#94A3B8" stroke-width="1.1" fill="none">
+      <path d="M15 18 C 10 12 10 80 18 110 L20 115 L45 118 L65 118 L85 118 L100 115 L100 110 C 108 80 108 12 100 18"/>
+      <path d="M58 22 L58 116" stroke-width="0.6" opacity="0.6"/>
+      <path d="M20 115 C 45 124 75 124 100 115" opacity="0.6"/>
+    </g>
+    <!-- Cavidade + bola fúngica (lua crescente) -->
+    <circle cx="50" cy="60" r="14" fill="#0B1220" stroke="#A78BFA" stroke-width="1.4"/>
+    <circle cx="50" cy="63" r="8" fill="#A78BFA" opacity="0.85"/>
+    <text x="65" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#A78BFA">ASPERGILOSE</text>
+  </g>
+
+  <!-- Histoplasmose — retículo-nodular + adeno hilar -->
+  <g transform="translate(320, 25)">
+    <rect width="130" height="150" rx="10" fill="url(#m4-card)" stroke="#FBBF24" stroke-width="1.4"/>
+    <g transform="translate(15, 15)" stroke="#94A3B8" stroke-width="1.1" fill="none">
+      <path d="M15 18 C 10 12 10 80 18 110 L20 115 L45 118 L65 118 L85 118 L100 115 L100 110 C 108 80 108 12 100 18"/>
+      <path d="M58 22 L58 116" stroke-width="0.6" opacity="0.6"/>
+      <path d="M20 115 C 45 124 75 124 100 115" opacity="0.6"/>
+    </g>
+    <!-- Adenopatia hilar -->
+    <ellipse cx="48" cy="60" rx="8" ry="6" fill="#FBBF24" opacity="0.55"/>
+    <ellipse cx="78" cy="60" rx="8" ry="6" fill="#FBBF24" opacity="0.55"/>
+    <!-- Retículo-nodular -->
+    <g fill="#FBBF24" opacity="0.65">
+      <circle cx="35" cy="80" r="1.5"/>
+      <circle cx="45" cy="90" r="1.5"/>
+      <circle cx="55" cy="100" r="1.5"/>
+      <circle cx="40" cy="100" r="1.2"/>
+      <circle cx="50" cy="85" r="1"/>
+      <circle cx="75" cy="80" r="1.5"/>
+      <circle cx="85" cy="90" r="1.5"/>
+      <circle cx="95" cy="100" r="1.2"/>
+      <circle cx="80" cy="100" r="1"/>
+      <circle cx="90" cy="85" r="1"/>
+    </g>
+    <text x="65" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#FBBF24">HISTOPLASMOSE</text>
+  </g>
+
+  <!-- Paracoco — asa de morcego -->
+  <g transform="translate(470, 25)">
+    <rect width="130" height="150" rx="10" fill="url(#m4-card)" stroke="#34D399" stroke-width="1.4"/>
+    <g transform="translate(15, 15)" stroke="#94A3B8" stroke-width="1.1" fill="none">
+      <path d="M15 18 C 10 12 10 80 18 110 L20 115 L45 118 L65 118 L85 118 L100 115 L100 110 C 108 80 108 12 100 18"/>
+      <path d="M58 22 L58 116" stroke-width="0.6" opacity="0.6"/>
+      <path d="M20 115 C 45 124 75 124 100 115" opacity="0.6"/>
+    </g>
+    <!-- Asa de morcego — peribroncovascular bilateral simétrico -->
+    <path d="M58 50 C 45 55 32 70 28 88 C 35 80 50 75 58 75 Z" fill="#34D399" opacity="0.45"/>
+    <path d="M58 50 C 71 55 84 70 88 88 C 81 80 66 75 58 75 Z" fill="#34D399" opacity="0.45"/>
+    <path d="M58 50 C 45 55 32 70 28 88 C 35 80 50 75 58 75 Z" fill="none" stroke="#34D399" stroke-width="1.1" opacity="0.7"/>
+    <path d="M58 50 C 71 55 84 70 88 88 C 81 80 66 75 58 75 Z" fill="none" stroke="#34D399" stroke-width="1.1" opacity="0.7"/>
+    <text x="65" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#34D399">PARACOCO</text>
+  </g>
+
+  <text x="300" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8F9BAD" font-style="italic">
+    Tosse crônica → 4 diagnósticos diferenciais com 4 padrões radiológicos âncora
+  </text>
+</svg>
