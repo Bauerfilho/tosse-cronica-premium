@@ -1,7 +1,7 @@
 /* app.js — entrypoint da plataforma */
 
 import { start, renderAulaNav } from './router.js';
-import { initMobileMenu } from './interactions.js';
+import { initMobileMenu, initHeaderAutoHide } from './interactions.js';
 import { initPWAInstall } from './components/pwa-install.js';
 import { showUpdateToast } from './components/update-toast.js';
 
@@ -40,6 +40,9 @@ function bootUI() {
 
   // Inicializa interações de menu mobile
   initMobileMenu();
+
+  // Auto-hide do header ao rolar pra baixo
+  initHeaderAutoHide();
 
   // PWA install button
   initPWAInstall(document.querySelector('[data-pwa-install]'));

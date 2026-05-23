@@ -38,3 +38,53 @@ export function initMobileMenu() {
     }
   });
 }
+
+/* Auto-hide do header: some ao rolar pra baixo, reaparece ao rolar pra cima.
+   Sempre visível perto do topo. Não esconde quando o drawer mobile está aberto
+   (usuário precisa do hamburger pra fechar). Respeita prefers-reduced-motion. */
+export function initHeaderAutoHide() {
+  const header = document.querySelector('.app-header');
+  if (!header) return;
+
+  const nav = document.querySelector('.aula-nav');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  const TOP_GUARD = 80;   // px: abaixo disso, header sempre visível
+  const DELTA_MIN = 4;    // px: ignora micro-scrolls (inércia de trackpad)
+
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  function update() {
+    const currentY = window.scrollY;
+    const delta = currentY - lastY;
+    ticking = false;
+
+    if (Math.abs(delta) < DELTA_MIN) return;
+
+    // Drawer mobile aberto → mantém header visível pro usuário fechar
+    if (nav && nav.classList.contains('is-open')) {
+      header.classList.remove('is-hidden');
+      lastY = currentY;
+      return;
+    }
+
+    if (currentY < TOP_GUARD) {
+      header.classList.remove('is-hidden');
+    } else if (delta > 0) {
+      header.classList.add('is-hidden');     // rolando pra baixo → esconde
+    } else {
+      header.classList.remove('is-hidden');  // rolando pra cima → mostra
+    }
+
+    lastY = currentY;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+}
