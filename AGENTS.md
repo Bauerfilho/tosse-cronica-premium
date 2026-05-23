@@ -17,7 +17,7 @@ Este arquivo herda integralmente os contratos:
 | Aula | Status | Páginas | Componentes novos |
 |---|---|---|---|
 | A1 — Tosse crônica e TB (intro) | ✅ implementada | 6 | case-timeline, duration-table, interactive-question, roadmap-card |
-| A2 — Dinâmica e diagnóstico TB | pendente | — | — |
+| A2 — Dinâmica e diagnóstico TB | ✅ implementada | 14 | comparison-table, score-diagram, cross-link-card |
 | A3 — Tratamento TB | pendente | — | — |
 | A4 — Contactantes e controle | pendente | — | — |
 | A5 — Aspergilose | pendente | — | — |
@@ -26,10 +26,15 @@ Este arquivo herda integralmente os contratos:
 
 ## Hooks pra aulas futuras
 
-- **Adicionar página**: criar `pages/a{N}/{slug}.html` + acrescentar entry em `data/pages.js`. Service worker faz cache no próximo deploy se entrada estiver listada em `PRECACHE_ASSETS` de `sw.js`.
-- **Estender caso Mariana**: acrescentar beats em `data/cases/mariana.js` com `aula: 'A2'`/`A3'`/`A4'` + `pagina: '<slug>'`. Componente `case-timeline` renderiza filtrando por `pagina`.
+- **Adicionar página**: criar `pages/a{N}/{slug}.html` + acrescentar entry em `data/pages.js`. Service worker faz cache no próximo deploy se entrada estiver listada em `PRECACHE_ASSETS` de `sw.js`. Incrementar `CACHE_NAME` em `sw.js` (tb-bauer-vN → tb-bauer-vN+1) pra disparar update-toast em usuários da versão anterior.
+- **Adicionar aula ao menu lateral**: acrescentar entry no array `AULAS` exportado por `data/pages.js`. Router re-renderiza nav lateral por loadPage destacando aula atual (`is-current`).
+- **Estender caso Mariana**: acrescentar beats em `data/cases/mariana.js` com `aula: 'A3'`/`A4'` + `pagina: '<slug>'` + `ordem` sequencial a partir de 16. Componente `case-timeline` renderiza filtrando por `pagina`.
 - **Lucita (A4)**: criar `data/cases/lucita.js` no mesmo formato; reaproveitar `case-timeline.js` (ele aceita qualquer caso desde que o adapter inverta `mariana` por parâmetro — atualmente hardcoded em `case-timeline.js`, refatorar em A4 antes de adicionar Lucita).
-- **Componentes adicionais previstos**: `comparison-table` (A2: primária × pós-primária), `decision-tree` (A4: contactante chegou na UBS), `drug-grid` (A3: RIPE).
+- **Componentes reusáveis prontos (A2 criou)**:
+  - `comparison-table` (2-5 colunas, responsiva) → A3 (RIPE × adversos), A4 (esquemas latente), A5 (3 formas), A6 (3 formas), A7 (aguda × crônica)
+  - `score-diagram` (escore interativo configurável via `SCORE_CONFIGS` em `score-diagram.js`) → adicionar config nova: CURB-65, ABPA Bedside Index, qualquer escore com 3-7 componentes pontuáveis + 3 zonas de interpretação
+  - `cross-link-card` → todas as aulas que cruzem com outros módulos (link aponta pra slug futura; router cai em fallback estilizado se módulo destino não estiver pronto)
+- **Componentes adicionais previstos**: `decision-tree` (A4: contactante chegou na UBS), `drug-grid` (A3: RIPE).
 
 ## Convenções aplicadas
 
@@ -46,7 +51,11 @@ Este arquivo herda integralmente os contratos:
 - Avatar Mariana: SVG inline em `case-timeline.js` (autoral, sem foto)
 - "Máscara bico de pato": SVG em `assets/illustrations/mascara-bico-de-pato.svg`
 - Ícones do roadmap: SVG inline na própria página (4 pilares com glifos lineares stroke 1.75)
-- Quiz universal: não populado em A1 (planejado pra A2+)
+- Quiz universal: ativado em A2 (28 perguntas, 2 por página)
+- Mariana ganhou 6 beats novos em A2 (ordens 10-15) cobrindo TB pós-primária + PCR/Xpert + isolamento por aerossol + transição A3; estrutura preservada por extensão
+- Anti-metalinguagem grep validado em A2 (zero hits proibidos); "conforme" e "de acordo com" aparecem apenas em uso técnico válido ("conforme protocolo MS", "conforme A3")
+- Service worker incrementado v1→v2 em A2 (dispara update-toast em quem usou A1)
+- Cross-link cards apontam pra slugs futuras (A5 `aspergilose-formas`); router cai em fallback estilizado de "Página não encontrada" enquanto módulo destino não existe — quando entrar em `pages.js` ativa automaticamente
 
 ## Servir local
 
