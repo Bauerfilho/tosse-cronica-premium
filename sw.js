@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tb-bauer-v8';
+const CACHE_NAME = 'tb-bauer-v9';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
@@ -179,6 +179,7 @@ const PRECACHE_ASSETS = [
 ];
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_ASSETS))
   );
@@ -192,23 +193,59 @@ self.addEventListener('activate', event => {
   );
 });
 
+function isNavigationOrData(req) {
+  if (req.mode === 'navigate') return true;
+  const dest = req.destination;
+  return dest === 'document' || dest === '' && req.url.endsWith('.html');
+}
+
+function isStaticAsset(req) {
+  const dest = req.destination;
+  return dest === 'style' || dest === 'script' || dest === 'image' || dest === 'font';
+}
+
 self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
 
-  event.respondWith(
-    caches.match(req).then(cached => {
-      if (cached) return cached;
-      return fetch(req).then(res => {
-        if (!res || res.status !== 200 || res.type !== 'basic') return res;
-        const copy = res.clone();
-        caches.open(CACHE_NAME).then(cache => cache.put(req, copy));
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  if (isNavigationOrData(req)) {
+    event.respondWith(
+      fetch(req).then(res => {
+        if (res && res.status === 200 && res.type === 'basic') {
+          const copy = res.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(req, copy));
+        }
         return res;
-      }).catch(() => {
-        if (req.mode === 'navigate') return caches.match('./index.html');
-        return new Response('', { status: 504 });
-      });
-    })
+      }).catch(() =>
+        caches.match(req).then(cached => cached || caches.match('./index.html'))
+      )
+    );
+    return;
+  }
+
+  if (isStaticAsset(req)) {
+    event.respondWith(
+      caches.match(req).then(cached => {
+        const networkFetch = fetch(req).then(res => {
+          if (res && res.status === 200 && res.type === 'basic') {
+            const copy = res.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(req, copy));
+          }
+          return res;
+        }).catch(() => cached);
+        return cached || networkFetch;
+      })
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(req).then(cached => cached || fetch(req).catch(() =>
+      new Response('', { status: 504 })
+    ))
   );
 });
 
