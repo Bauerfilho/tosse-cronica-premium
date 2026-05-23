@@ -1,9 +1,10 @@
-/* router.js — hash routing simples */
+/* router.js — hash routing simples + nav dinâmico multi-aula */
 
-import { PAGES, getPageBySlug, getNeighbors } from '../data/pages.js';
+import { PAGES, AULAS, getPageBySlug, getPagesByAula, getNeighbors } from '../data/pages.js';
 import * as stateMod from './state.js';
 import { renderCaseTimeline } from './components/case-timeline.js';
 import { initInteractiveQuestions } from './components/interactive-question.js';
+import { initScoreDiagrams } from './components/score-diagram.js';
 
 const HOME_SLUG = 'porta-clinica';
 
@@ -33,6 +34,7 @@ async function loadPage(slug) {
 
     document.title = `${page.titulo} — TB Bauer`;
     stateMod.setCurrent(slug, page.aula);
+    renderAulaNav(document.querySelector('[data-aula-nav]'), page.aula);
     updateNav(slug);
     enhancePage(slug);
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -43,10 +45,11 @@ async function loadPage(slug) {
 
 function wrapPage(page, contentHtml) {
   const neighbors = getNeighbors(page.slug);
+  const total = getPagesByAula(page.aula).length;
   return `
     <article class="page" id="page-${page.slug}">
       <header class="page-header">
-        <span class="page-eyebrow">${page.aula} · Página ${page.ordem} de 6</span>
+        <span class="page-eyebrow">${page.aula} · Página ${page.ordem} de ${total}</span>
         ${contentHtml.includes('<h1') ? '' : `<h1>${page.titulo}</h1>`}
       </header>
       ${contentHtml}
@@ -75,7 +78,8 @@ function renderNotFound(slug) {
   return `
     <article class="page">
       <h1>Página não encontrada</h1>
-      <p>A página <code>${escapeHtml(slug)}</code> não existe nesta plataforma.</p>
+      <p>A página <code>${escapeHtml(slug)}</code> ainda não existe nesta plataforma.</p>
+      <p>Se você chegou aqui por um link cruzado vindo de outra aula, esta seção pode estar em construção. Volte ao início e siga pelas aulas disponíveis no menu.</p>
       <p><a href="#/${HOME_SLUG}">Voltar ao início</a></p>
     </article>
   `;
@@ -113,6 +117,7 @@ function enhancePage(slug) {
     renderCaseTimeline(el, paginaSlug || slug);
   });
   initInteractiveQuestions(document.querySelector('[data-app-root]'));
+  initScoreDiagrams(document.querySelector('[data-app-root]'));
 }
 
 export function start() {
@@ -120,23 +125,37 @@ export function start() {
   window.addEventListener('hashchange', () => loadPage(parseHash()));
 }
 
-export function renderAulaNav(target) {
-  const aulaPages = PAGES.filter(p => p.aula === 'A1');
+export function renderAulaNav(target, currentAulaId = 'A1') {
+  if (!target) return;
+  const sections = AULAS.map(aula => {
+    const pages = getPagesByAula(aula.id);
+    if (!pages.length) return '';
+    const isCurrent = aula.id === currentAulaId;
+    const items = pages.map(p => `
+      <li>
+        <a href="#/${p.slug}" data-slug="${p.slug}">
+          <span class="nav-num">${p.ordem}</span>
+          <span>${p.titulo}</span>
+        </a>
+      </li>
+    `).join('');
+    return `
+      <section class="aula-nav-section${isCurrent ? ' is-current' : ''}">
+        <h4 class="aula-nav-section-title">
+          <span class="aula-nav-section-id">${aula.id}</span>
+          <span>${aula.titulo}</span>
+        </h4>
+        <ol>${items}</ol>
+      </section>
+    `;
+  }).join('');
+
   target.innerHTML = `
     <div class="aula-nav-handle" aria-hidden="true"></div>
     <h3>
-      <span>Aula 1 · Tosse Crônica</span>
+      <span>Plataforma · Tuberculose</span>
       <button type="button" class="aula-nav-close" aria-label="Fechar menu" hidden>×</button>
     </h3>
-    <ol>
-      ${aulaPages.map(p => `
-        <li>
-          <a href="#/${p.slug}" data-slug="${p.slug}">
-            <span class="nav-num">${p.ordem}</span>
-            <span>${p.titulo}</span>
-          </a>
-        </li>
-      `).join('')}
-    </ol>
+    ${sections}
   `;
 }

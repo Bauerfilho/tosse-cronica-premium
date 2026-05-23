@@ -34,7 +34,7 @@ function bootSW() {
 }
 
 function bootUI() {
-  // Renderiza nav lateral
+  // Renderiza nav lateral (router re-renderiza com aula atual após cada loadPage)
   const navTarget = document.querySelector('[data-aula-nav]');
   if (navTarget) renderAulaNav(navTarget);
 

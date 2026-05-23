@@ -106,7 +106,68 @@ export const mariana = {
       nota: '"Máscara bico de pato" é como popularmente se chamam respiradores N95/PFF2 — equipamentos para precaução por aerossol, conduta clássica em paciente bacilífero de tuberculose.',
       ancoragens: ['N95', 'precaução por aerossol', 'isolamento respiratório'],
     },
-    // Beats das aulas A2/A3/A4 acrescentados pelos executors respectivos
+    // A2 — Dinâmica e Diagnóstico
+    {
+      id: 'm-a2-b1',
+      aula: 'A2',
+      pagina: 'tb-pos-primaria-adulto',
+      ordem: 10,
+      titulo: 'Da hipótese ao raciocínio fisiopatológico',
+      texto:
+        'Aos 25 anos, com tosse > 8 semanas + hemoptise + perda de peso + exposição ocupacional em plantões de emergência, Mariana entra no algoritmo de <strong>TB pulmonar pós-primária</strong>. A reativação de foco latente em ápices é o cenário mais provável. A exposição hospitalar amplifica o risco de reativação em quem fez algum contato prévio com o bacilo — talvez na infância, talvez nos próprios plantões.',
+      ancoragens: ['pós-primária', 'reativação', 'foco latente', 'exposição ocupacional'],
+    },
+    {
+      id: 'm-a2-b2',
+      aula: 'A2',
+      pagina: 'tb-pos-primaria-adulto',
+      ordem: 11,
+      titulo: 'Radiografia de tórax',
+      texto:
+        'A radiografia mostra <strong>infiltrado em ápice direito com cavitação</strong> — achado clássico de TB pós-primária. Não há adenopatia hilar bilateral (DDx sarcoidose descartado pelo padrão).',
+      ancoragens: ['cavitação apical', 'Rx tórax', 'ápice direito'],
+    },
+    {
+      id: 'm-a2-b3',
+      aula: 'A2',
+      pagina: 'metodos-pcr-genexpert',
+      ordem: 12,
+      titulo: 'Coleta de escarro pra PCR',
+      texto:
+        'Escarro <strong>caseoso, brancacento</strong> coletado. O hospital realiza <strong>teste molecular rápido (Xpert MTB/RIF Ultra)</strong> como exame inicial — exame de escolha por velocidade (~2h) + sensibilidade + detecção de resistência à rifampicina. Em paralelo, amostra é enviada pra cultura (antibiograma completo, resultado em semanas).',
+      ancoragens: ['escarro caseoso', 'PCR', 'GeneXpert', 'Xpert Ultra'],
+    },
+    {
+      id: 'm-a2-b4',
+      aula: 'A2',
+      pagina: 'metodos-pcr-genexpert',
+      ordem: 13,
+      titulo: 'Resultado',
+      texto:
+        'PCR <strong>positivo para M. tuberculosis, sensível à rifampicina</strong>. Diagnóstico de TB pulmonar pós-primária confirmado. Cultura segue em andamento (semanas), mas o tratamento pode começar — não há rifampicina-resistência sinalizada, então RIPE empírico é o esquema adequado.',
+      ancoragens: ['diagnóstico confirmado', 'sensível à rifampicina', 'início RIPE'],
+    },
+    {
+      id: 'm-a2-b5',
+      aula: 'A2',
+      pagina: 'tb-miliar-bcg-sintese',
+      ordem: 14,
+      titulo: 'Isolamento por aerossol',
+      texto:
+        'Com diagnóstico confirmado de TB pulmonar pós-primária cavitária bacilífera, Mariana é colocada em <strong>precaução por aerossol</strong>: quarto privativo + <strong>N95 / "máscara bico de pato"</strong> (a mesma máscara que a amiga puxou da bolsa Louis Vuitton, agora em uso clínico estruturado) pra equipe e visitas. A precaução é mantida até completar 15 dias de RIPE com melhora clínica OU até 3 baciloscopias seriadas negativas — assunto que a próxima aula aborda em detalhe.',
+      ancoragens: ['precaução por aerossol', 'isolamento', 'N95', 'máscara bico de pato'],
+    },
+    {
+      id: 'm-a2-b6',
+      aula: 'A2',
+      pagina: 'tb-miliar-bcg-sintese',
+      ordem: 15,
+      titulo: 'Transição pra próximo módulo',
+      texto:
+        'Diagnóstico confirmado. Cultura segue em andamento pra antibiograma completo, mas o tratamento pode começar — não há rifampicina-resistência sinalizada. Mariana recebe <strong>alta hospitalar com encaminhamento pra Unidade Básica de Saúde</strong> pra início do <strong>RIPE</strong> (rifampicina + isoniazida + pirazinamida + etambutol) — o que estrutura o próximo módulo da plataforma.',
+      ancoragens: ['transição A3', 'RIPE', 'alta hospitalar'],
+    },
+    // Beats das aulas A3/A4 acrescentados pelos executors respectivos
   ],
   perguntas: [
     {
@@ -126,6 +187,15 @@ export const mariana = {
         'Qual é a hipótese que deve ser obrigatoriamente descartada nesse momento, e quais são as formas clínicas dessa doença?',
       resposta:
         '<p>Hipótese a descartar obrigatoriamente: <strong>Tuberculose</strong>.</p><p>Formas clínicas: pulmonares (primária e pós-primária) e extrapulmonares (pleural, meníngea, ganglionar, osteoarticular, entre outras) — desenvolvidas em detalhe no próximo módulo desta plataforma (Dinâmica e Diagnóstico da TB).</p>',
+    },
+    {
+      id: 'p-a2-q1',
+      aula: 'A2',
+      pagina: 'metodos-pcr-genexpert',
+      enunciado:
+        'Por que o teste molecular rápido (Xpert MTB/RIF Ultra) é preferido como exame inicial em vez da baciloscopia tradicional, especialmente em paciente bacilífero como Mariana?',
+      resposta:
+        '<p>Três razões principais:</p><ol><li><strong>Velocidade</strong>: resultado em ~2 horas (vs 14-60 dias da cultura, e horas-dias da baciloscopia técnico-dependente);</li><li><strong>Sensibilidade superior</strong>: detecta cargas bacilares menores que a baciloscopia (~88-98% em escarro positivo, ~77% em paucibacilar; vs ~50-60% da BAR);</li><li><strong>Detecção de resistência à rifampicina</strong> simultânea — informação crítica que muda imediatamente a decisão terapêutica.</li></ol><p>A cultura segue obrigatória <strong>em paralelo</strong> pra antibiograma completo, mas o início do RIPE não precisa esperar.</p>',
     },
   ],
 };
