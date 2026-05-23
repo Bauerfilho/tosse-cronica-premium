@@ -10,6 +10,8 @@ const VARIANT_CAPTIONS = {
   'diaria-4m': 'Esquema 4R · rifampicina diária · 4 meses · 120 doses',
   'diaria-3m-combinada': 'Esquema 3HR · isoniazida + rifampicina diárias · 3 meses · 90 doses',
   'rn-qpp-bcg': 'Quimioprofilaxia RN · rifampicina 4 meses → BCG ao final',
+  'antifungico-longo': 'Esquema antifúngico longo · itraconazol VO · 9-18 meses (PCM leve-moderado)',
+  'antifungico-grave': 'Esquema antifúngico grave · anfo B IV 2-4 sem → itraconazol VO ≥ 24 meses (PCM grave)',
 };
 
 const VARIANT_ARIA = {
@@ -31,6 +33,10 @@ const VARIANT_ARIA = {
     'Esquema 3HR de tratamento da tuberculose latente: isoniazida mais rifampicina diárias durante três meses, totalizando noventa doses.',
   'rn-qpp-bcg':
     'Quimioprofilaxia primária no recém-nascido contactante de bacilífera: rifampicina diária durante quatro meses, seguida da vacinação com BCG ao final dos quatro meses. Inversão da ordem padrão (BCG normalmente nas primeiras horas de vida).',
+  'antifungico-longo':
+    'Esquema antifúngico longo para paracoccidioidomicose leve a moderada: itraconazol via oral, dose padrão de 200 miligramas por dia, durante nove a dezoito meses, em regime ambulatorial.',
+  'antifungico-grave':
+    'Esquema antifúngico para paracoccidioidomicose grave: anfotericina B intravenosa por duas a quatro semanas em ambiente hospitalar até melhora clínica, seguida de switch para itraconazol via oral em regime ambulatorial por pelo menos vinte e quatro meses no total.',
 };
 
 function ensureCaption(el, variant) {
