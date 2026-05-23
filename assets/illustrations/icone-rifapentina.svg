@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cápsula de rifapentina">
+  <defs>
+    <linearGradient id="rfp-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+    <linearGradient id="rfp-bot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4F7FB"/>
+      <stop offset="100%" stop-color="#C9D6D9"/>
+    </linearGradient>
+  </defs>
+  <!-- Cápsula bipartida (rosa-magenta + branca) -->
+  <g transform="rotate(40 32 32)">
+    <path d="M16 22 L32 22 L32 42 L16 42 Q6 42, 6 32 Q6 22, 16 22 Z" fill="url(#rfp-top)" stroke="#9F1239" stroke-width="1"/>
+    <path d="M32 22 L48 22 Q58 22, 58 32 Q58 42, 48 42 L32 42 Z" fill="url(#rfp-bot)" stroke="#8FA1A6" stroke-width="1"/>
+    <!-- Brilho -->
+    <ellipse cx="12" cy="28" rx="4" ry="2" fill="#FFF" opacity=".4"/>
+    <!-- Letra R -->
+    <text x="20" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#F4F7FB" font-weight="800">RFP</text>
+  </g>
+</svg>

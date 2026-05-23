@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Tubo de coleta de sangue para exame IGRA">
+  <defs>
+    <linearGradient id="igra-blood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+    <linearGradient id="igra-glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.25)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.08)"/>
+    </linearGradient>
+  </defs>
+  <!-- Tubo (corpo) -->
+  <rect x="44" y="20" width="40" height="80" rx="3" fill="#0E2A2F" stroke="#C9D6D9" stroke-width="2"/>
+  <!-- Tampa colorida (verde — padrão IGRA QuantiFERON) -->
+  <rect x="42" y="14" width="44" height="14" rx="3" fill="#34D399" stroke="#1F8C66" stroke-width="1.5"/>
+  <rect x="42" y="14" width="44" height="4" fill="#4EE3AB"/>
+  <!-- Sangue dentro (~70% do tubo) -->
+  <rect x="46" y="50" width="36" height="48" fill="url(#igra-blood)"/>
+  <!-- Brilho do vidro -->
+  <rect x="44" y="20" width="40" height="80" rx="3" fill="url(#igra-glass)"/>
+  <!-- Marca de volume -->
+  <line x1="44" y1="45" x2="50" y2="45" stroke="#F4F7FB" stroke-width="1"/>
+  <line x1="44" y1="60" x2="50" y2="60" stroke="#F4F7FB" stroke-width="1"/>
+  <line x1="44" y1="75" x2="50" y2="75" stroke="#F4F7FB" stroke-width="1"/>
+  <!-- Etiqueta -->
+  <rect x="50" y="62" width="28" height="20" fill="#F4F7FB" opacity=".9" rx="1"/>
+  <text x="64" y="71" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="7" fill="#0E2A2F" font-weight="700">IGRA</text>
+  <text x="64" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="5" fill="#0E2A2F">QuantiFERON</text>
+  <!-- Legenda -->
+  <text x="64" y="118" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#8FA1A6">Sangue venoso · 1 coleta</text>
+</svg>

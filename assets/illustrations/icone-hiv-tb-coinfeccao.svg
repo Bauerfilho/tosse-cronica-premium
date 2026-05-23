@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Co-infecção HIV e tuberculose: representação esquemática">
+  <defs>
+    <linearGradient id="coi-bac" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#B97A0E"/>
+    </linearGradient>
+    <linearGradient id="coi-virus" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bacilo (TB) — bastonete dourado -->
+  <g transform="translate(40 64) rotate(-30)">
+    <rect x="-22" y="-5" width="44" height="10" rx="5" fill="url(#coi-bac)" stroke="#92400E" stroke-width="1.5"/>
+    <line x1="-12" y1="-1" x2="12" y2="-1" stroke="#F4F7FB" stroke-width=".8" opacity=".4"/>
+    <line x1="-12" y1="2" x2="12" y2="2" stroke="#F4F7FB" stroke-width=".8" opacity=".4"/>
+    <text x="0" y="3" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="7" fill="#0E2A2F" font-weight="800">TB</text>
+  </g>
+
+  <!-- Vírus HIV — hexágono com spikes -->
+  <g transform="translate(88 64)">
+    <circle r="18" fill="url(#coi-virus)" stroke="#7F1D1D" stroke-width="1.5"/>
+    <!-- Spikes -->
+    <line x1="0" y1="-18" x2="0" y2="-24" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="0" cy="-25" r="2" fill="#F87171"/>
+    <line x1="13" y1="-13" x2="17" y2="-17" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="18" cy="-18" r="2" fill="#F87171"/>
+    <line x1="18" y1="0" x2="24" y2="0" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="25" cy="0" r="2" fill="#F87171"/>
+    <line x1="13" y1="13" x2="17" y2="17" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="18" cy="18" r="2" fill="#F87171"/>
+    <line x1="0" y1="18" x2="0" y2="24" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="0" cy="25" r="2" fill="#F87171"/>
+    <line x1="-13" y1="13" x2="-17" y2="17" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="-18" cy="18" r="2" fill="#F87171"/>
+    <line x1="-18" y1="0" x2="-24" y2="0" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="-25" cy="0" r="2" fill="#F87171"/>
+    <line x1="-13" y1="-13" x2="-17" y2="-17" stroke="#7F1D1D" stroke-width="2"/>
+    <circle cx="-18" cy="-18" r="2" fill="#F87171"/>
+    <text x="0" y="4" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#F4F7FB" font-weight="800">HIV</text>
+  </g>
+
+  <!-- Indicador de interação (risco amplificado) -->
+  <text x="64" y="20" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#F87171" font-weight="800">28×</text>
+  <text x="64" y="32" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#F87171" font-weight="600">co-infecção</text>
+
+  <!-- Mecanismo: CD4 destruído -->
+  <text x="64" y="110" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">CD4 destruído</text>
+  <text x="64" y="120" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">→ granuloma frágil</text>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 128" role="img" aria-label="Linha do tempo: RN contactante recebe rifampicina por 4 meses e depois é vacinado com BCG">
+  <defs>
+    <linearGradient id="rn-rif" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity=".95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Marcador NASCIMENTO -->
+  <circle cx="30" cy="64" r="14" fill="#16383F" stroke="#F4F7FB" stroke-width="2"/>
+  <text x="30" y="68" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="14" fill="#F4F7FB" font-weight="700">RN</text>
+  <text x="30" y="36" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#8FA1A6" font-weight="600">contactante</text>
+
+  <!-- Cruz vermelha sobre BCG (= NÃO vacinar inicialmente) -->
+  <text x="30" y="100" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#F87171" font-weight="700">✕ NÃO BCG</text>
+  <text x="30" y="110" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="7" fill="#F87171">inicialmente</text>
+
+  <!-- Conector -->
+  <path d="M44 64 L66 64" stroke="#8FA1A6" stroke-width="2" stroke-dasharray="3 2"/>
+
+  <!-- Barra rifampicina (4 meses) -->
+  <rect x="66" y="52" width="180" height="24" rx="4" fill="url(#rn-rif)" stroke="#B97A0E" stroke-width="1.5"/>
+  <text x="156" y="68" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0E2A2F" font-weight="700">Rifampicina · 4 meses</text>
+  <text x="156" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#FBBF24" font-weight="600">10–20 mg/kg/dia VO</text>
+
+  <!-- Marcadores temporais -->
+  <text x="66" y="92" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">Mês 0</text>
+  <text x="111" y="92" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">Mês 1</text>
+  <text x="156" y="92" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">Mês 2</text>
+  <text x="201" y="92" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">Mês 3</text>
+  <text x="246" y="92" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="8" fill="#8FA1A6">Mês 4</text>
+
+  <!-- Conector pra BCG -->
+  <path d="M246 64 L266 64" stroke="#8FA1A6" stroke-width="2" stroke-dasharray="3 2"/>
+
+  <!-- Marcador BCG final -->
+  <circle cx="290" cy="64" r="20" fill="#34D399" stroke="#1F8C66" stroke-width="2"/>
+  <text x="290" y="60" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0E2A2F" font-weight="800">BCG</text>
+  <text x="290" y="72" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="7" fill="#0E2A2F" font-weight="600">vacinar</text>
+  <text x="290" y="36" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#34D399" font-weight="700">SEM PPD</text>
+  <text x="290" y="110" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="7" fill="#34D399">vacinar TODOS</text>
+</svg>
