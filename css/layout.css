@@ -252,6 +252,13 @@ main.app-main {
     padding: var(--sp-5) var(--sp-4) calc(var(--sp-7) + 70px);
   }
 
+  .menu-toggle {
+    display: grid;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 60;
+  }
+
   .aula-nav {
     position: fixed;
     bottom: 0;
