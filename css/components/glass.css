@@ -1,0 +1,32 @@
+/* glass.css — utilitários de profundidade translúcida */
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--r-lg);
+}
+
+.glass-strong {
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border-strong);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: var(--r-lg);
+}
+
+.surface {
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+}
+
+.surface-strong {
+  background: var(--c-bg-elev-2);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  box-shadow: var(--shadow-2);
+}

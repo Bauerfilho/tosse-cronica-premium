@@ -1,0 +1,83 @@
+/* theme.css — Paleta infectologia: verde-âmbar */
+
+:root {
+  /* Base dark */
+  --c-bg: #0E2A2F;
+  --c-bg-elev-1: #112F35;
+  --c-bg-elev-2: #16383F;
+
+  /* Texto */
+  --c-text: #C9D6D9;
+  --c-text-strong: #F4F7FB;
+  --c-text-muted: #8FA1A6;
+
+  /* Paleta especialidade */
+  --c-primary: #34D399;
+  --c-primary-hover: #4EE3AB;
+  --c-primary-soft: rgba(52, 211, 153, .14);
+  --c-primary-glow: rgba(52, 211, 153, .35);
+
+  --c-secondary: #FBBF24;
+  --c-secondary-soft: rgba(251, 191, 36, .14);
+  --c-secondary-glow: rgba(251, 191, 36, .3);
+
+  /* Semânticos */
+  --c-success: #34D399;
+  --c-warning: #FBBF24;
+  --c-danger: #F87171;
+  --c-info: #60A5FA;
+
+  /* Glass borders */
+  --glass-border: rgba(255, 255, 255, .12);
+  --glass-border-strong: rgba(255, 255, 255, .18);
+  --glass-bg: rgba(255, 255, 255, .04);
+  --glass-bg-strong: rgba(255, 255, 255, .08);
+
+  /* Sombra */
+  --shadow-1: 0 2px 8px rgba(0, 0, 0, .25);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, .35);
+  --shadow-3: 0 18px 48px rgba(0, 0, 0, .45);
+  --shadow-glow: 0 0 32px var(--c-primary-glow);
+
+  /* Espaçamentos */
+  --sp-1: .25rem;
+  --sp-2: .5rem;
+  --sp-3: .75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+
+  /* Raios */
+  --r-sm: .5rem;
+  --r-md: 1rem;
+  --r-lg: 1.5rem;
+  --r-xl: 2rem;
+
+  /* Layout */
+  --header-h: 64px;
+  --container-max: 1080px;
+  --content-max: 760px;
+}
+
+body {
+  background:
+    radial-gradient(60% 60% at 12% 0%, var(--c-primary-soft), transparent 60%),
+    radial-gradient(50% 70% at 95% 6%, var(--c-secondary-soft), transparent 65%),
+    var(--c-bg);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .08);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, .14);
+}

@@ -1,0 +1,90 @@
+/* roadmap-card.css — grade de pilares/módulos */
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+  margin: var(--sp-6) 0;
+}
+
+.roadmap-card {
+  position: relative;
+  padding: var(--sp-5);
+  background: linear-gradient(135deg, rgba(52, 211, 153, .04), var(--c-bg-elev-1));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  transition: all .2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.roadmap-card:hover {
+  border-color: var(--c-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.rc-num {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  letter-spacing: .08em;
+}
+
+.rc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
+  background: var(--c-primary-soft);
+  display: grid;
+  place-items: center;
+  color: var(--c-primary);
+  border: 1px solid rgba(52, 211, 153, .3);
+}
+
+.rc-icon svg { width: 26px; height: 26px; }
+
+.rc-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+  letter-spacing: -0.01em;
+}
+
+.rc-desc {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.rc-question {
+  margin: var(--sp-3) 0 0;
+  padding: var(--sp-3);
+  background: rgba(251, 191, 36, .08);
+  border-left: 3px solid var(--c-secondary);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  font-size: .88rem;
+  color: var(--c-text-strong);
+  font-style: italic;
+}
+
+.rc-question strong {
+  color: var(--c-secondary);
+  font-style: normal;
+  display: block;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 720px) {
+  .roadmap-grid { grid-template-columns: 1fr; }
+}

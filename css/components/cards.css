@@ -1,0 +1,116 @@
+/* cards.css — cards didáticos canônicos por função */
+
+.card {
+  position: relative;
+  padding: var(--sp-5);
+  border-radius: var(--r-lg);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  margin: var(--sp-5) 0;
+  transition: border-color .18s ease;
+}
+
+.card:hover {
+  border-color: var(--glass-border-strong);
+}
+
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 2px var(--sp-2);
+  border-radius: 999px;
+  margin-bottom: var(--sp-3);
+}
+
+.card-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.card h3,
+.card-title {
+  margin: 0 0 var(--sp-3);
+  font-size: 1.05rem;
+  color: var(--c-text-strong);
+  font-weight: 600;
+}
+
+.card p:last-child { margin-bottom: 0; }
+.card ul:last-child, .card ol:last-child { margin-bottom: 0; }
+
+/* Variantes por função */
+
+.card--conceito {
+  border-left: 3px solid var(--c-info);
+}
+.card--conceito .card-tag { color: var(--c-info); background: rgba(96, 165, 250, .12); }
+
+.card--mecanismo {
+  border-left: 3px solid #A78BFA;
+}
+.card--mecanismo .card-tag { color: #A78BFA; background: rgba(167, 139, 250, .12); }
+
+.card--clinico {
+  border-left: 3px solid var(--c-primary);
+}
+.card--clinico .card-tag { color: var(--c-primary); background: var(--c-primary-soft); }
+
+.card--decisao {
+  border-left: 3px solid #38BDF8;
+}
+.card--decisao .card-tag { color: #38BDF8; background: rgba(56, 189, 248, .12); }
+
+.card--prova {
+  border-left: 3px solid var(--c-secondary);
+  background: linear-gradient(135deg, var(--c-secondary-soft), var(--c-bg-elev-1));
+}
+.card--prova .card-tag { color: var(--c-secondary); background: rgba(251, 191, 36, .18); }
+
+.card--alerta {
+  border-left: 3px solid var(--c-warning);
+  background: rgba(251, 191, 36, .06);
+}
+.card--alerta .card-tag { color: var(--c-warning); background: rgba(251, 191, 36, .18); }
+
+.card--sintese {
+  border-left: 3px solid var(--c-primary);
+  background: var(--c-primary-soft);
+}
+.card--sintese .card-tag { color: var(--c-primary); background: rgba(52, 211, 153, .2); }
+
+/* Card-conceito destacado (frase-mãe) */
+
+.card--destaque {
+  padding: var(--sp-6);
+  background: linear-gradient(135deg, var(--c-primary-soft), var(--c-secondary-soft));
+  border: 1px solid var(--c-primary);
+  border-left-width: 4px;
+  box-shadow: var(--shadow-glow);
+}
+
+.card--destaque blockquote {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-style: normal;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--c-text-strong);
+  margin: 0 0 var(--sp-4);
+}
+
+.card--destaque blockquote p {
+  margin: 0 0 var(--sp-2);
+}
+
+.card--destaque blockquote strong {
+  color: var(--c-primary);
+}

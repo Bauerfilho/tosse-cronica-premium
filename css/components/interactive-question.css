@@ -1,0 +1,115 @@
+/* interactive-question.css — card de pergunta com revelar/ocultar */
+
+.interactive-question {
+  margin: var(--sp-5) 0;
+  padding: var(--sp-5);
+  background: linear-gradient(135deg, rgba(52, 211, 153, .06), var(--c-bg-elev-1));
+  border: 1px solid var(--c-primary);
+  border-radius: var(--r-lg);
+  transition: box-shadow .2s ease;
+}
+
+.interactive-question[data-revealed="true"] {
+  box-shadow: 0 0 0 3px var(--c-primary-soft);
+}
+
+.iq-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: var(--sp-3);
+}
+
+.iq-tag::before {
+  content: "?";
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  background: var(--c-primary);
+  color: #0B1220;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.iq-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+  margin: 0 0 var(--sp-4);
+  line-height: 1.5;
+}
+
+.iq-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-5);
+  min-height: 44px;
+  background: var(--c-primary);
+  color: #0B1220;
+  font-weight: 600;
+  font-size: .9rem;
+  border-radius: var(--r-md);
+  border: none;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.iq-toggle:hover {
+  background: var(--c-primary-hover);
+  transform: translateY(-1px);
+}
+
+.iq-toggle:focus-visible {
+  outline: 2px solid var(--c-secondary);
+  outline-offset: 3px;
+}
+
+.iq-toggle::after {
+  content: "→";
+  transition: transform .2s ease;
+}
+
+.iq-toggle[aria-expanded="true"]::after {
+  transform: rotate(90deg);
+}
+
+.iq-toggle[aria-expanded="true"] {
+  background: var(--glass-bg);
+  color: var(--c-text);
+  border: 1px solid var(--glass-border);
+}
+
+.iq-answer {
+  margin-top: var(--sp-4);
+  padding: var(--sp-4);
+  background: rgba(255, 255, 255, .04);
+  border-left: 3px solid var(--c-primary);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  color: var(--c-text);
+  font-size: .95rem;
+  line-height: 1.6;
+  animation: iqReveal .25s ease-out;
+}
+
+.iq-answer[hidden] { display: none; }
+
+.iq-answer strong { color: var(--c-text-strong); }
+
+.iq-answer p:last-child { margin-bottom: 0; }
+
+@keyframes iqReveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iq-answer { animation: none; }
+  .iq-toggle:hover { transform: none; }
+}

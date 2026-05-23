@@ -1,0 +1,118 @@
+/* base.css — Reset + tokens globais */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--c-text);
+  background: var(--c-bg);
+  min-height: 100dvh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  transition: color .18s ease;
+}
+
+a:hover, a:focus-visible {
+  color: var(--c-primary-hover);
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+  border-radius: .25rem;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 .8em;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  color: var(--c-text-strong);
+}
+
+h1 { font-size: clamp(1.8rem, 4vw + 1rem, 2.8rem); font-weight: 800; letter-spacing: -0.025em; }
+h2 { font-size: clamp(1.4rem, 2vw + .8rem, 2rem); }
+h3 { font-size: clamp(1.15rem, 1vw + .8rem, 1.45rem); font-weight: 600; }
+h4 { font-size: 1.1rem; font-weight: 600; }
+
+p { margin: 0 0 1.1em; }
+
+ul, ol {
+  margin: 0 0 1.1em;
+  padding-left: 1.5em;
+}
+
+li { margin-bottom: .3em; }
+
+strong, b {
+  font-weight: 600;
+  color: var(--c-text-strong);
+}
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: .9em;
+}
+
+pre {
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid var(--glass-border);
+  border-radius: .75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+::selection {
+  background: var(--c-primary);
+  color: #0B1220;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

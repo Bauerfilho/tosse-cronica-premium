@@ -1,0 +1,131 @@
+/* pwa-install.css — botão install + toast de atualização */
+
+#pwaInstallBtn {
+  display: none;
+}
+
+#pwaInstallBtn.is-visible {
+  display: grid;
+  animation: pwaFadeIn .22s ease-out;
+}
+
+@keyframes pwaFadeIn {
+  from { opacity: 0; transform: scale(.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Toast de atualização (canto inferior, glass) */
+
+.update-toast {
+  position: fixed;
+  bottom: calc(var(--sp-5) + env(safe-area-inset-bottom));
+  right: var(--sp-5);
+  left: var(--sp-5);
+  max-width: 380px;
+  margin-left: auto;
+  z-index: 100;
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(14, 42, 47, .92);
+  border: 1px solid var(--c-primary);
+  border-radius: var(--r-md);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-3), 0 0 24px var(--c-primary-glow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1), opacity .2s ease;
+}
+
+.update-toast.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.update-toast[hidden] { display: none; }
+
+.update-toast-msg {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: .92rem;
+  color: var(--c-text-strong);
+  font-weight: 500;
+}
+
+.update-toast-msg::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--c-primary);
+  box-shadow: 0 0 12px var(--c-primary);
+  flex-shrink: 0;
+  animation: utPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes utPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
+
+.update-toast-actions {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.update-toast-btn {
+  flex: 1;
+  min-height: 40px;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-sm);
+  font-size: .88rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all .15s ease;
+}
+
+.update-toast-btn--primary {
+  background: var(--c-primary);
+  color: #0B1220;
+}
+
+.update-toast-btn--primary:hover {
+  background: var(--c-primary-hover);
+}
+
+.update-toast-btn--secondary {
+  background: transparent;
+  color: var(--c-text);
+  border-color: var(--glass-border-strong);
+}
+
+.update-toast-btn--secondary:hover {
+  background: var(--glass-bg);
+  color: var(--c-text-strong);
+}
+
+/* Badge de atualização pendente no header */
+
+.update-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--c-primary);
+  box-shadow: 0 0 8px var(--c-primary);
+  display: none;
+}
+
+.icon-btn.has-update .update-badge { display: block; }
+.icon-btn.has-update { position: relative; }
+
+@media (prefers-reduced-motion: reduce) {
+  .update-toast-msg::before { animation: none; }
+  .update-toast { transition: none; }
+}

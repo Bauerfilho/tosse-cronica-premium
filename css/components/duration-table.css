@@ -1,0 +1,81 @@
+/* duration-table.css — tabela responsiva de classificação por duração */
+
+.duration-table {
+  margin: var(--sp-5) 0;
+}
+
+.dt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.dt-cell {
+  padding: var(--sp-5);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.dt-cell:hover {
+  border-color: var(--c-primary);
+  transform: translateY(-2px);
+}
+
+.dt-cell--aguda { border-top: 3px solid #60A5FA; }
+.dt-cell--subaguda { border-top: 3px solid var(--c-secondary); }
+.dt-cell--cronica { border-top: 3px solid var(--c-primary); }
+
+.dt-category {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  margin: 0;
+}
+
+.dt-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+}
+
+.dt-duration {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--c-primary);
+  padding: 2px 8px;
+  background: var(--c-primary-soft);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.dt-cell--aguda .dt-duration { color: #60A5FA; background: rgba(96, 165, 250, .12); }
+.dt-cell--subaguda .dt-duration { color: var(--c-secondary); background: var(--c-secondary-soft); }
+
+.dt-section {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--c-text-muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+.dt-content {
+  font-size: .92rem;
+  color: var(--c-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.dt-content strong { color: var(--c-text-strong); }
+
+@media (max-width: 880px) {
+  .dt-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" role="img" aria-label="Ilustração esquemática de respirador N95/PFF2 do tipo bico de pato">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity=".06"/>
+    </linearGradient>
+    <linearGradient id="mfill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4F7FB"/>
+      <stop offset="100%" stop-color="#C9D6D9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="280" height="200" rx="14" fill="url(#mbg)"/>
+
+  <g transform="translate(140, 100)">
+    <!-- Corpo principal do bico de pato -->
+    <path d="M -80,-20 L -50,-50 L 50,-50 L 80,-20 L 60,40 L -60,40 Z"
+          fill="url(#mfill)" stroke="#34D399" stroke-width="1.8" stroke-linejoin="round"/>
+
+    <!-- Linhas de dobra que dão a forma de bico -->
+    <line x1="-60" y1="-25" x2="60" y2="-25" stroke="#8FA1A6" stroke-width="1" opacity=".5"/>
+    <line x1="-50" y1="-5" x2="50" y2="-5" stroke="#8FA1A6" stroke-width="1" opacity=".4"/>
+    <line x1="-45" y1="15" x2="45" y2="15" stroke="#8FA1A6" stroke-width="1" opacity=".4"/>
+
+    <!-- Tira nasal metálica -->
+    <rect x="-25" y="-46" width="50" height="6" rx="3" fill="#8FA1A6" opacity=".5"/>
+
+    <!-- Tiras elásticas -->
+    <path d="M -80,-20 Q -120,-10 -130,30" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 80,-20 Q 120,-10 130,30" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M -80,30 Q -115,40 -125,55" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 80,30 Q 115,40 125,55" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <text x="140" y="180" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="11" fill="#8FA1A6" letter-spacing=".05em">
+    N95 / PFF2 · Precaução por aerossol
+  </text>
+</svg>

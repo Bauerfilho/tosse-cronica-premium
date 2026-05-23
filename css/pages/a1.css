@@ -1,0 +1,61 @@
+/* a1.css — estilos específicos da aula 1 */
+
+.fluxograma {
+  margin: var(--sp-5) 0;
+  padding: var(--sp-5);
+  background: var(--c-bg-elev-2);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  overflow-x: auto;
+}
+
+.fluxograma pre {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: .82rem;
+  line-height: 1.7;
+  color: var(--c-text);
+  white-space: pre;
+}
+
+.epigraph {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: .78rem;
+  color: var(--c-primary);
+  letter-spacing: .08em;
+  background: var(--c-primary-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: var(--sp-3);
+}
+
+.illu-mascara {
+  display: block;
+  max-width: 240px;
+  margin: var(--sp-4) auto;
+}
+
+.illu-mascara figcaption {
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  text-align: center;
+  margin-top: var(--sp-2);
+  font-style: italic;
+}
+
+.note-tag {
+  display: inline-block;
+  background: rgba(96, 165, 250, .12);
+  color: var(--c-info);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-right: 4px;
+}
