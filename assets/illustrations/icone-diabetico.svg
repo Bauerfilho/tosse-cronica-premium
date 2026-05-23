@@ -1,0 +1,7 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ícone diabetes" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L 12 8 M 9 5 L 15 5"/>
+  <path d="M7 9 L 17 9 L 16 22 L 8 22 Z"/>
+  <line x1="9.5" y1="13" x2="14.5" y2="13"/>
+  <line x1="9.5" y1="16" x2="14.5" y2="16"/>
+  <line x1="9.5" y1="19" x2="14.5" y2="19"/>
+</svg>

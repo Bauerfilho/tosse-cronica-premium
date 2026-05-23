@@ -1,0 +1,21 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cápsula didática representando pirazinamida">
+  <defs>
+    <linearGradient id="pzaGradTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="pzaGradBottom" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BFDBFE"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+  <g transform="rotate(-32 32 32)">
+    <rect x="14" y="22" width="36" height="20" rx="10" fill="url(#pzaGradTop)" stroke="#0E2A2F" stroke-width="1.25" stroke-linejoin="round"/>
+    <path d="M14 32 Q 14 22 24 22 L 24 42 Q 14 42 14 32 Z" fill="url(#pzaGradTop)" opacity="0.85"/>
+    <path d="M32 22 L 50 22 Q 50 42 32 42 Z" fill="url(#pzaGradBottom)"/>
+    <rect x="32" y="22" width="1.5" height="20" fill="#0E2A2F" opacity="0.5"/>
+    <circle cx="20" cy="29" r="1.8" fill="#FFF" opacity="0.65"/>
+    <circle cx="42" cy="35" r="1.6" fill="#FFF" opacity="0.55"/>
+  </g>
+  <text x="32" y="58" text-anchor="middle" font-family="-apple-system, SF Pro Text, Inter, sans-serif" font-size="9" font-weight="700" fill="#93C5FD" letter-spacing="0.5">P</text>
+</svg>
