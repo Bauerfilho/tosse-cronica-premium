@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tb-bauer-v5';
+const CACHE_NAME = 'tb-bauer-v6';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
@@ -25,6 +25,7 @@ const PRECACHE_ASSETS = [
   './css/pages/a3.css',
   './css/pages/a4.css',
   './css/pages/a5.css',
+  './css/pages/a7.css',
   './js/app.js',
   './js/router.js',
   './js/state.js',
@@ -80,6 +81,14 @@ const PRECACHE_ASSETS = [
   './assets/illustrations/icone-isavuconazol.svg',
   './assets/illustrations/icone-caspofungina.svg',
   './assets/illustrations/icone-itraconazol.svg',
+  './assets/illustrations/roda-de-leme-microscopia.svg',
+  './assets/illustrations/asa-de-morcego-radiografia.svg',
+  './assets/illustrations/estomatite-moriforme-oral.svg',
+  './assets/illustrations/triade-mnemonica-pcm.svg',
+  './assets/illustrations/esquema-termodimorfico-pcm.svg',
+  './assets/illustrations/adrenais-tropismo-pcm.svg',
+  './assets/illustrations/icone-anfo-b-iv.svg',
+  './assets/illustrations/icone-bactrim.svg',
   './pages/a1/porta-clinica.html',
   './pages/a1/classificacao-duracao.html',
   './pages/a1/tres-causas-mais-tb.html',
@@ -137,6 +146,18 @@ const PRECACHE_ASSETS = [
   './pages/a5/aspergilose-matriz-comparativa-3-formas.html',
   './pages/a5/aspergilose-erros-comuns-recuperacao-ativa.html',
   './pages/a5/aspergilose-sintese-transicao-paracoco.html',
+  './pages/a7/paracoco-introducao.html',
+  './pages/a7/agente-ciclo-termodimorfico.html',
+  './pages/a7/duas-formas-comparativo.html',
+  './pages/a7/forma-aguda-juvenil-crianca5a.html',
+  './pages/a7/forma-cronica-adulto-moriforme.html',
+  './pages/a7/patognomonico-roda-de-leme.html',
+  './pages/a7/patognomonico-asa-de-morcego.html',
+  './pages/a7/acometimento-adrenal-caso-addison.html',
+  './pages/a7/diagnostico-laboratorial-sorologico.html',
+  './pages/a7/ddx-denso-tabela-comparativa.html',
+  './pages/a7/tratamento-escalonado-gravidade.html',
+  './pages/a7/sintese-cura-recidiva-transicao-a6.html',
 ];
 
 self.addEventListener('install', event => {

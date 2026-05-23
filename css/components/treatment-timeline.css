@@ -199,6 +199,40 @@
   border-left: 2px solid #0E2A2F;
 }
 
+/* A7 — variantes antifúngicas pra paracoccidioidomicose */
+
+.tt-phase--antifungico-longo {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-primary) 70%, var(--c-secondary)),
+    color-mix(in srgb, var(--c-primary) 40%, var(--c-secondary)));
+}
+
+.tt-phase--antifungico-grave-iv {
+  background: linear-gradient(135deg, var(--c-danger), color-mix(in srgb, var(--c-danger) 70%, #0E2A2F));
+}
+
+.tt-phase--antifungico-grave-vo {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-primary) 65%, transparent),
+    color-mix(in srgb, var(--c-primary) 35%, transparent));
+}
+
+.tt-legend-swatch--antifungico-longo {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-primary) 70%, var(--c-secondary)),
+    color-mix(in srgb, var(--c-primary) 40%, var(--c-secondary)));
+}
+
+.tt-legend-swatch--antifungico-grave-iv {
+  background: linear-gradient(135deg, var(--c-danger), color-mix(in srgb, var(--c-danger) 70%, #0E2A2F));
+}
+
+.tt-legend-swatch--antifungico-grave-vo {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-primary) 65%, transparent),
+    color-mix(in srgb, var(--c-primary) 35%, transparent));
+}
+
 /* Variante "sequencial" pra reintrodução R → H → P */
 .treatment-timeline--sequential .tt-track {
   height: 64px;

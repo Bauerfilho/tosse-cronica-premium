@@ -1,0 +1,220 @@
+/* a7.css — estilos específicos da Aula 7 (Paracoccidioidomicose) */
+
+/* Meta-checklist padronizado (herdado de A4-A5) */
+
+.a7-meta-checklist {
+  display: block;
+  margin: var(--sp-7) 0 var(--sp-6);
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(52, 211, 153, .04);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--r-md);
+}
+
+.a7-meta-checklist .meta-label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: var(--sp-2);
+}
+
+.a7-meta-checklist .meta-text {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--c-text);
+  line-height: 1.7;
+}
+
+.a7-meta-checklist .meta-text strong {
+  color: var(--c-text-strong);
+}
+
+/* Grid pra 3 cards clínicos lado a lado em desktop / empilhados em mobile */
+
+.a7-casos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+
+@media (min-width: 1000px) {
+  .a7-casos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .a7-casos-grid .card--clinical-case {
+    margin: 0;
+  }
+
+  .a7-casos-grid .case-card__body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Wrap pra ilustrações autorais centralizadas com legenda */
+
+.a7-figure {
+  margin: var(--sp-5) auto;
+  padding: var(--sp-4);
+  background: rgba(255, 255, 255, .02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  text-align: center;
+  max-width: 640px;
+}
+
+.a7-figure svg,
+.a7-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.a7-figure figcaption {
+  margin-top: var(--sp-3);
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Grid pros 3 patognomônicos lado a lado em página de síntese */
+
+.a7-patognomonicos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+
+@media (min-width: 720px) {
+  .a7-patognomonicos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.a7-patognomonico-card {
+  padding: var(--sp-5);
+  background: rgba(52, 211, 153, .06);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  text-align: center;
+}
+
+.a7-patognomonico-card .pat-num {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  color: #0E2A2F;
+  font-weight: 700;
+  font-size: .85rem;
+  margin-bottom: var(--sp-2);
+}
+
+.a7-patognomonico-card h4 {
+  margin: var(--sp-2) 0;
+  font-size: 1rem;
+  color: var(--c-primary);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.a7-patognomonico-card .pat-registro {
+  font-size: .8rem;
+  color: var(--c-text-muted);
+  margin: 0 0 var(--sp-3);
+}
+
+.a7-patognomonico-card .pat-desc {
+  font-size: .9rem;
+  color: var(--c-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Grid pros 2 painéis de forma clínica em comparação visual rápida */
+
+.a7-formas-resumo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+
+@media (min-width: 720px) {
+  .a7-formas-resumo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.a7-forma-painel {
+  padding: var(--sp-5);
+  border-radius: var(--r-md);
+  border: 1px solid var(--glass-border);
+}
+
+.a7-forma-painel--aguda {
+  background: linear-gradient(135deg, rgba(96, 165, 250, .08), var(--c-bg-elev-1));
+  border-left: 3px solid var(--c-info);
+}
+
+.a7-forma-painel--cronica {
+  background: linear-gradient(135deg, var(--c-primary-soft), var(--c-bg-elev-1));
+  border-left: 3px solid var(--c-primary);
+}
+
+.a7-forma-painel h4 {
+  margin: 0 0 var(--sp-2);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.a7-forma-painel--aguda h4 {
+  color: var(--c-info);
+}
+
+.a7-forma-painel--cronica h4 {
+  color: var(--c-primary);
+}
+
+.a7-forma-painel .forma-prevalencia {
+  font-size: .85rem;
+  color: var(--c-text-muted);
+  margin: 0 0 var(--sp-3);
+  letter-spacing: .03em;
+}
+
+.a7-forma-painel ul {
+  margin: 0;
+  padding-left: var(--sp-4);
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--c-text);
+}
+
+.a7-forma-painel ul li {
+  margin-bottom: var(--sp-1);
+}
+
+/* Mobile ajustes finais */
+
+@media (max-width: 540px) {
+  .a7-meta-checklist {
+    padding: var(--sp-3) var(--sp-4);
+  }
+  .a7-figure {
+    padding: var(--sp-3);
+  }
+  .a7-patognomonico-card {
+    padding: var(--sp-4);
+  }
+}

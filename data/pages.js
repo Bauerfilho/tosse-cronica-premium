@@ -524,7 +524,117 @@ export const PAGES = [
     arquivo: 'pages/a5/aspergilose-sintese-transicao-paracoco.html',
   },
 
-  // Aulas A6-A7 são adicionadas aqui conforme processadas pela pipeline
+  // Aula 7 — Paracoccidioidomicose · segunda aula do Módulo 4 (Micoses Granulomatosas)
+  {
+    id: 'a7-1',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 1,
+    slug: 'paracoco-introducao',
+    titulo: 'A micose brasileira por excelência',
+    arquivo: 'pages/a7/paracoco-introducao.html',
+  },
+  {
+    id: 'a7-2',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 2,
+    slug: 'agente-ciclo-termodimorfico',
+    titulo: 'O fungo que troca de forma com a temperatura',
+    arquivo: 'pages/a7/agente-ciclo-termodimorfico.html',
+  },
+  {
+    id: 'a7-3',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 3,
+    slug: 'duas-formas-comparativo',
+    titulo: 'Duas formas, dois pacientes, dois cenários',
+    arquivo: 'pages/a7/duas-formas-comparativo.html',
+  },
+  {
+    id: 'a7-4',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 4,
+    slug: 'forma-aguda-juvenil-crianca5a',
+    titulo: 'Criança 5 anos: a forma aguda/juvenil',
+    arquivo: 'pages/a7/forma-aguda-juvenil-crianca5a.html',
+  },
+  {
+    id: 'a7-5',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 5,
+    slug: 'forma-cronica-adulto-moriforme',
+    titulo: 'Adulto rural: a forma crônica clássica',
+    arquivo: 'pages/a7/forma-cronica-adulto-moriforme.html',
+  },
+  {
+    id: 'a7-6',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 6,
+    slug: 'patognomonico-roda-de-leme',
+    titulo: 'Roda de leme — o patognomônico microscópico',
+    arquivo: 'pages/a7/patognomonico-roda-de-leme.html',
+  },
+  {
+    id: 'a7-7',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 7,
+    slug: 'patognomonico-asa-de-morcego',
+    titulo: 'Asa de morcego — o patognomônico radiológico',
+    arquivo: 'pages/a7/patognomonico-asa-de-morcego.html',
+  },
+  {
+    id: 'a7-8',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 8,
+    slug: 'acometimento-adrenal-caso-addison',
+    titulo: '50% têm adrenais acometidas — o caso Addison-like',
+    arquivo: 'pages/a7/acometimento-adrenal-caso-addison.html',
+  },
+  {
+    id: 'a7-9',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 9,
+    slug: 'diagnostico-laboratorial-sorologico',
+    titulo: 'Diagnóstico — microscopia primeiro, sorologia depois',
+    arquivo: 'pages/a7/diagnostico-laboratorial-sorologico.html',
+  },
+  {
+    id: 'a7-10',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 10,
+    slug: 'ddx-denso-tabela-comparativa',
+    titulo: 'DDx denso — 7 doenças, 5 eixos',
+    arquivo: 'pages/a7/ddx-denso-tabela-comparativa.html',
+  },
+  {
+    id: 'a7-11',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 11,
+    slug: 'tratamento-escalonado-gravidade',
+    titulo: 'Tratamento — sempre prolongado, escalonado pela gravidade',
+    arquivo: 'pages/a7/tratamento-escalonado-gravidade.html',
+  },
+  {
+    id: 'a7-12',
+    aula: 'A7',
+    aulaTitulo: 'Paracoccidioidomicose',
+    ordem: 12,
+    slug: 'sintese-cura-recidiva-transicao-a6',
+    titulo: 'Cura aparente, recidiva possível — e a histoplasmose chama',
+    arquivo: 'pages/a7/sintese-cura-recidiva-transicao-a6.html',
+  },
+
+  // Aula A6 será adicionada aqui conforme processada pela pipeline
 ];
 
 export const AULAS = [
@@ -533,6 +643,7 @@ export const AULAS = [
   { id: 'A3', titulo: 'Tratamento da TB', subtitulo: 'Aula 3 · RIPE e adversos' },
   { id: 'A4', titulo: 'Contactantes e controle da TB', subtitulo: 'Aula 4 · Vigilância' },
   { id: 'A5', titulo: 'Aspergilose — 3 formas', subtitulo: 'Aula 5 · Módulo 4 abre' },
+  { id: 'A7', titulo: 'Paracoccidioidomicose', subtitulo: 'Aula 7 · Módulo 4 fecha' },
 ];
 
 export function getPageBySlug(slug) {

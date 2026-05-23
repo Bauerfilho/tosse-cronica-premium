@@ -315,6 +315,38 @@
   color: var(--c-danger);
 }
 
+/* A7 — variantes pra casos paracoccidioidomicose (juvenil / adrenal / moriforme) */
+
+.card--clinical-case[data-case-origin="juvenil"] {
+  border-left-color: var(--c-info);
+  background: linear-gradient(135deg, rgba(96, 165, 250, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="juvenil"] .case-card__badge {
+  background: rgba(96, 165, 250, .14);
+  color: var(--c-info);
+}
+
+.card--clinical-case[data-case-origin="adrenal"] {
+  border-left-color: var(--c-danger);
+  background: linear-gradient(135deg, rgba(248, 113, 113, .08), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="adrenal"] .case-card__badge {
+  background: rgba(248, 113, 113, .14);
+  color: var(--c-danger);
+}
+
+.card--clinical-case[data-case-origin="moriforme"] {
+  border-left-color: var(--c-primary);
+  background: linear-gradient(135deg, var(--c-primary-soft), var(--c-bg-elev-1));
+}
+
+.card--clinical-case[data-case-origin="moriforme"] .case-card__badge {
+  background: rgba(52, 211, 153, .18);
+  color: var(--c-primary);
+}
+
 .card--clinical-case .case-card__badge::before {
   content: "";
   width: 6px;
