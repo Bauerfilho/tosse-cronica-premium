@@ -19,7 +19,7 @@ Este arquivo herda integralmente os contratos:
 | A1 — Tosse crônica e TB (intro) | ✅ implementada | 6 | case-timeline, duration-table, interactive-question, roadmap-card |
 | A2 — Dinâmica e diagnóstico TB | ✅ implementada | 14 | comparison-table, score-diagram, cross-link-card |
 | A3 — Tratamento TB | ✅ implementada | 13 | treatment-timeline, .comparison-table--drugs, .card--quote-alert, .card--capsule |
-| A4 — Contactantes e controle | pendente | — | — |
+| A4 — Contactantes e controle | ✅ implementada | 13 | decision-flow, risk-comparison, .comparison-table--regimens, .card--motivational, treatment-timeline (4 variantes novas), case-timeline (REFATORADO multi-caso), avatar Lucita |
 | A5 — Aspergilose | pendente | — | — |
 | A6 — Histoplasmose | pendente | — | — |
 | A7 — Paracoccidioidomicose | pendente | — | — |
@@ -39,7 +39,15 @@ Este arquivo herda integralmente os contratos:
   - `.comparison-table--drugs` (modificador CSS) → qualquer tabela farmacológica com ícone-cápsula + destaque visual da coluna "conduta"
   - `.card--quote-alert` (modificador CSS) → qualquer aula com citação literal preservada que precise virar alerta clínico
   - `.card--capsule` (modificador CSS) → cápsulas informativas compactas com ícone à esquerda + texto à direita (3 grupos pra piridoxina, etc.)
-- **Componentes adicionais previstos**: `decision-tree` (A4: contactante chegou na UBS) — A3 implementou versão minimalista inline (`.a3-decision-tree` em `css/pages/a3.css`); pode ser promovida a componente reusável em A4.
+- **Componentes adicionais previstos**: `decision-tree` (A4: contactante chegou na UBS) — A3 implementou versão minimalista inline (`.a3-decision-tree` em `css/pages/a3.css`); A4 entregou `decision-flow` (CSS+JS) responsivo (cards empilhados em mobile, bifurcação espacial em desktop) — promovida a componente reusável.
+- **Componentes reusáveis prontos (A4 criou)**:
+  - `decision-flow` (fluxograma decisional bifurcado responsivo, com 6 tipos de nó: root/question/branch/treat/monitor/result/action) → A5 (decisão "qual forma de aspergilose"), A6/A7 (decisão por forma de micose) — render via `initDecisionFlows(root)` no router
+  - `risk-comparison` (CSS-only, barras horizontais proporcionais com baseline) → comparações epidemiológicas, mortalidade comparada, qualquer hierarquia visual de razões de risco
+  - `.comparison-table--regimens` (modificador CSS pra tabela de esquemas terapêuticos com pill colorido + badge de adesão) → A5/A6/A7 (esquemas antifúngicos comparados)
+  - `.card--motivational` (modificador CSS, serif, paleta neutra) → qualquer aula com fechamento autoral discreto fora do fluxo médico
+  - Avatar Lucita (SVG inline em `case-timeline.js`) — pareado com Mariana (gradient invertido âmbar→verde, gola V uniforme, crachá implícito)
+  - **REFATORAÇÃO `case-timeline.js`** (paga dívida técnica de A1): aceita `data-case-id` com default `mariana`, suporta múltiplas instâncias na mesma página (intro A4 = Mariana fecha + Lucita abre lado a lado), avatar registry com 2 entries, aceita `data-case-timeline-pagina` pra override de página quando 2 timelines coexistem
+  - **Variantes novas em `treatment-timeline`**: `semanal-12doses` (3HP) + `diaria-9m` (9H) + `diaria-4m` (4R) + `diaria-3m-combinada` (3HR) + `rn-qpp-bcg` (RN sequencial); 3 phase types novos (`semanal`, `latente-diaria`, `qpp`, `bcg-marker`) + 3 legend swatches novos
 
 ## Convenções aplicadas
 
@@ -59,11 +67,15 @@ Este arquivo herda integralmente os contratos:
 - Quiz universal: ativado em A2 (28 perguntas, 2 por página)
 - Mariana ganhou 6 beats novos em A2 (ordens 10-15) cobrindo TB pós-primária + PCR/Xpert + isolamento por aerossol + transição A3; estrutura preservada por extensão
 - Mariana ganhou 6 beats novos em A3 (ordens 16-21) cobrindo início RIPE na UBS + fase intensiva + urina alaranjada (humor seco preservado) + baciloscopia mensal negativando + alta por cura + gancho narrativo pra A4 (Lucita como contactante de Mariana — colega de plantão); 2 perguntas novas em `mariana.perguntas`
-- Anti-metalinguagem grep validado em A2 e A3 (zero hits proibidos); "conforme" e "de acordo com" aparecem apenas em uso técnico válido ("conforme protocolo MS", "conforme A4")
-- Service worker incrementado v1→v2 em A2 → v2→v3 em A3 (dispara update-toast em quem usou versão anterior)
-- Cross-link cards apontam pra slugs futuras (A4 `triagem-contactantes`, A5 `aspergilose-formas`); router cai em fallback estilizado de "Página não encontrada" enquanto módulo destino não existe — quando entrar em `pages.js` ativa automaticamente
+- Anti-metalinguagem grep validado em A2, A3 e A4 (zero hits proibidos); "conforme" e "de acordo com" aparecem apenas em uso técnico válido ("conforme protocolo MS", "conforme A4")
+- Service worker incrementado v1→v2 em A2 → v2→v3 em A3 → v3→v4 em A4 (dispara update-toast em quem usou versão anterior)
+- Cross-link cards apontam pra slugs futuras (A5 `aspergilose-introducao`); router cai em fallback estilizado de "Página não encontrada" enquanto módulo destino não existe — quando entrar em `pages.js` ativa automaticamente
 - A3 introduziu 4 ilustrações didáticas farmacológicas (4 cápsulas R/I/P/E coloridas autorais) + 1 ilustração leve (frasco com urina alaranjada — humor visual sutil preservando autoral) + 1 esquema de neurite óptica (olho com escotoma central + alteração verde-vermelho) + 1 fluxograma sequencial de reintrodução R → I → P + 4 ícones de cápsula piridoxina/gestante/diabético/HIV+
-- Decisão Lucita = contactante de Mariana (não caso paralelo): consolidada via MICRO A3 §6.4 e confirmada no beat 21 (cross-link narrativo pra A4)
+- A4 introduziu 10 ilustrações didáticas: avatar Lucita (SVG inline pareado com Mariana) + ícone PPD aplicação intradérmica + ícone IGRA tubo verde QuantiFERON + ícone janela imunológica (gráfico temporal 0-8 sem) + ícone rifapentina (cápsula rosa-magenta) + esquema RN quimioprofilaxia sequencial (rifampicina 4m → BCG) + ilustração técnica BCG intradérmica deltoide direito + ilustração evolução cicatriz BCG 6-12 sem + ícone HIV-TB co-infecção (bacilo + vírus hexagonal) + ícone TDO supervisão profissional-paciente-cápsula
+- Decisão Lucita = contactante DE MARIANA confirmada e implementada: técnica de enfermagem 32a, colega de plantão no setor de emergência, contactante ocupacional. 6 beats em `data/cases/lucita.js` (chegada → triagem → PPD → resultado 12mm → critério alto risco → início 3HP). 2 perguntas em `lucita.perguntas`. Avatar SVG inline pareado com Mariana (gradient invertido)
+- Refatoração crítica do `case-timeline.js` paga em A4: agora aceita `data-case-id` com fallback Mariana; suporta múltiplas instâncias na mesma página (página intro tem 2 timelines lado a lado em desktop); aceita `data-case-timeline-pagina` pra override de página quando 2 casos coexistem; A1-A3 continuam funcionando sem modificação (default automático)
+- `decision-flow` é componente NOVO crítico: substitui SVG estático por estrutura responsiva (cards verticais em mobile, bifurcação 2D em desktop com bordas conectoras CSS). Estrutura semântica completa (role="note"/"group", aria-label automático extraído do texto). Pronto pra reuso em A5/A6/A7
+- A4 página motivacional opcional incluída em `sintese-transicao-modulo-micoses` (decisão Didata): card discreto serif paleta neutra, voz Bauer, conteúdo de fechamento "Uma palavra sobre o caminho" reescrito a partir da mensagem motivacional do professor sem atribuir ao palestrante
 
 ## Servir local
 
