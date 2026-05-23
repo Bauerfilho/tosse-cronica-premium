@@ -22,7 +22,7 @@ Este arquivo herda integralmente os contratos:
 | A4 — Contactantes e controle | ✅ implementada | 13 | decision-flow, risk-comparison, .comparison-table--regimens, .card--motivational, treatment-timeline (4 variantes novas), case-timeline (REFATORADO multi-caso), avatar Lucita |
 | A5 — Aspergilose (3 formas) | ✅ implementada | 11 | `.card--clinical-case` (modificador leve, cards one-shot HCPA/UFRJ/TMO sem evolução temporal), 10 SVGs autorais (3 esquemas radiológicos + 1 comparativo 3 formas + 1 diagrama tríade + 4 ícones azólicos/equinocandina + 1 esquema galactomanana) |
 | A6 — Histoplasmose | pendente | — | — |
-| A7 — Paracoccidioidomicose | pendente | — | — |
+| A7 — Paracoccidioidomicose | ✅ implementada | 12 | 3 novas variantes `.card--clinical-case` (`juvenil` azul / `adrenal` vermelho / `moriforme` verde), 2 novas variantes `treatment-timeline` (`antifungico-longo` 9-18m + `antifungico-grave` anfo-B IV + switch oral ≥ 24m), 8 SVGs autorais (3 patognomônicos OBRIGATÓRIOS — roda de leme microscopia + asa de morcego radiografia + estomatite moriforme oral + 3 didáticos opcionais — tríade mnemônica + ciclo termodimórfico + adrenais tropismo + 2 ícones farmacológicos — anfo-B IV + Bactrim) |
 
 ## Hooks pra aulas futuras
 
