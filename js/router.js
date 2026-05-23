@@ -5,6 +5,7 @@ import * as stateMod from './state.js';
 import { renderCaseTimeline } from './components/case-timeline.js';
 import { initInteractiveQuestions } from './components/interactive-question.js';
 import { initScoreDiagrams } from './components/score-diagram.js';
+import { initTreatmentTimelines } from './components/treatment-timeline.js';
 
 const HOME_SLUG = 'porta-clinica';
 
@@ -116,8 +117,10 @@ function enhancePage(slug) {
     const paginaSlug = el.dataset.caseTimeline;
     renderCaseTimeline(el, paginaSlug || slug);
   });
-  initInteractiveQuestions(document.querySelector('[data-app-root]'));
-  initScoreDiagrams(document.querySelector('[data-app-root]'));
+  const appRoot = document.querySelector('[data-app-root]');
+  initInteractiveQuestions(appRoot);
+  initScoreDiagrams(appRoot);
+  initTreatmentTimelines(appRoot);
 }
 
 export function start() {

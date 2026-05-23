@@ -1,0 +1,179 @@
+/* treatment-timeline.css — barra temporal de esquemas terapêuticos com fases visuais */
+
+.treatment-timeline {
+  margin: var(--sp-6) 0;
+  padding: var(--sp-5) var(--sp-5) var(--sp-4);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+}
+
+.treatment-timeline + .treatment-timeline {
+  margin-top: var(--sp-4);
+}
+
+.tt-caption {
+  display: block;
+  font-size: .8rem;
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-3);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 600;
+}
+
+.tt-track {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 56px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid var(--glass-border);
+}
+
+.tt-phase {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--sp-3);
+  color: var(--c-text-strong);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  flex: 0 0 auto;
+  width: var(--width, 50%);
+  min-width: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tt-phase + .tt-phase {
+  border-left: 1px dashed rgba(255, 255, 255, .25);
+}
+
+.tt-phase-label {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+}
+
+.tt-phase--intensive {
+  background: linear-gradient(135deg, var(--c-primary), color-mix(in srgb, var(--c-primary) 70%, #0E2A2F));
+}
+
+.tt-phase--maintenance {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--c-primary) 55%, transparent), color-mix(in srgb, var(--c-primary) 30%, transparent));
+}
+
+.tt-phase--corticoide {
+  background: linear-gradient(135deg, var(--c-secondary), color-mix(in srgb, var(--c-secondary) 70%, #0E2A2F));
+  color: #0E2A2F;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .25);
+}
+
+.tt-phase--step {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--c-primary) 65%, transparent), color-mix(in srgb, var(--c-primary) 40%, transparent));
+}
+
+.tt-phase--pause {
+  background: repeating-linear-gradient(135deg,
+    rgba(255, 255, 255, .04) 0 8px,
+    rgba(255, 255, 255, .08) 8px 16px);
+  color: var(--c-text-muted);
+  font-size: .72rem;
+}
+
+.tt-axis {
+  position: relative;
+  margin-top: var(--sp-3);
+  height: 24px;
+}
+
+.tt-marker {
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--c-text-muted);
+  white-space: nowrap;
+}
+
+.tt-marker::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  width: 1px;
+  height: 6px;
+  background: var(--glass-border-strong);
+  transform: translateX(-50%);
+}
+
+.tt-marker--start { transform: translateX(0); }
+.tt-marker--start::before { left: 1px; transform: none; }
+.tt-marker--end { transform: translateX(-100%); }
+.tt-marker--end::before { left: calc(100% - 1px); transform: none; }
+
+.tt-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+  font-size: .78rem;
+  color: var(--c-text-muted);
+}
+
+.tt-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.tt-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  border: 1px solid var(--glass-border);
+}
+
+.tt-legend-swatch--intensive {
+  background: linear-gradient(135deg, var(--c-primary), color-mix(in srgb, var(--c-primary) 70%, #0E2A2F));
+}
+
+.tt-legend-swatch--maintenance {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--c-primary) 55%, transparent), color-mix(in srgb, var(--c-primary) 30%, transparent));
+}
+
+.tt-legend-swatch--corticoide {
+  background: linear-gradient(135deg, var(--c-secondary), color-mix(in srgb, var(--c-secondary) 70%, #0E2A2F));
+}
+
+/* Variante "sequencial" pra reintrodução R → H → P */
+.treatment-timeline--sequential .tt-track {
+  height: 64px;
+}
+
+.treatment-timeline--sequential .tt-phase {
+  font-size: .88rem;
+  letter-spacing: .04em;
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  .treatment-timeline { padding: var(--sp-4) var(--sp-4) var(--sp-3); }
+  .tt-track { height: 48px; }
+  .tt-phase { font-size: .72rem; padding: 0 var(--sp-2); }
+  .tt-marker { font-size: .68rem; }
+  .tt-legend { gap: var(--sp-3); font-size: .72rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tt-phase, .tt-marker { transition: none; }
+}

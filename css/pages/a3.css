@@ -1,0 +1,263 @@
+/* a3.css — ajustes pontuais da aula A3 (Tratamento da TB) */
+
+/* Grid dos 4 fármacos (página A3-2) */
+.a3-drug-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+
+.a3-drug-card {
+  padding: var(--sp-5);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  border-top: 4px solid var(--c-primary);
+  transition: border-color .2s ease;
+}
+
+.a3-drug-card:hover { border-color: var(--c-primary-hover); }
+
+.a3-drug-card[data-drug="R"] { border-top-color: #FBBF24; }
+.a3-drug-card[data-drug="I"] { border-top-color: #34D399; }
+.a3-drug-card[data-drug="P"] { border-top-color: #60A5FA; }
+.a3-drug-card[data-drug="E"] { border-top-color: #A78BFA; }
+
+.a3-drug-card .drug-letter {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 38px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--c-text-strong);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid var(--glass-border-strong);
+  margin-bottom: var(--sp-3);
+}
+
+.a3-drug-card[data-drug="R"] .drug-letter { background: rgba(251, 191, 36, .2); color: #FBBF24; }
+.a3-drug-card[data-drug="I"] .drug-letter { background: rgba(52, 211, 153, .2); color: var(--c-primary); }
+.a3-drug-card[data-drug="P"] .drug-letter { background: rgba(96, 165, 250, .18); color: #93C5FD; }
+.a3-drug-card[data-drug="E"] .drug-letter { background: rgba(167, 139, 250, .18); color: #C4B5FD; }
+
+.a3-drug-card h3 {
+  margin: 0 0 var(--sp-2);
+  font-size: 1.05rem;
+  color: var(--c-text-strong);
+}
+
+.a3-drug-card .drug-mech {
+  font-size: .88rem;
+  color: var(--c-text);
+  line-height: 1.55;
+  margin: 0 0 var(--sp-3);
+}
+
+.a3-drug-card .drug-note {
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Fluxograma decisional encurtar/manter/prolongar (página A3-5) */
+.a3-decision-tree {
+  margin: var(--sp-5) 0;
+  padding: var(--sp-5);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+}
+
+.a3-decision-tree .dt-root {
+  text-align: center;
+  padding: var(--sp-3);
+  margin: 0 auto var(--sp-4);
+  max-width: 360px;
+  background: var(--c-primary-soft);
+  border: 1px solid var(--c-primary);
+  border-radius: var(--r-md);
+  font-weight: 600;
+  color: var(--c-text-strong);
+}
+
+.a3-decision-tree .dt-branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-4);
+  position: relative;
+}
+
+.a3-decision-tree .dt-branch {
+  padding: var(--sp-4);
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  position: relative;
+}
+
+.a3-decision-tree .dt-branch::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: var(--c-primary);
+  opacity: .45;
+}
+
+.a3-decision-tree .dt-branch-question {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--c-text-muted);
+  margin: 0 0 var(--sp-2);
+  font-weight: 600;
+}
+
+.a3-decision-tree .dt-branch-decision {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-primary);
+  margin: 0 0 var(--sp-2);
+}
+
+.a3-decision-tree .dt-branch-detail {
+  font-size: .88rem;
+  color: var(--c-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.a3-decision-tree .dt-branch[data-decision="encurtar"] { border-left: 3px solid var(--c-info); }
+.a3-decision-tree .dt-branch[data-decision="manter"] { border-left: 3px solid var(--c-primary); }
+.a3-decision-tree .dt-branch[data-decision="prolongar"] { border-left: 3px solid var(--c-secondary); }
+.a3-decision-tree .dt-branch[data-decision="encurtar"] .dt-branch-decision { color: var(--c-info); }
+.a3-decision-tree .dt-branch[data-decision="prolongar"] .dt-branch-decision { color: var(--c-secondary); }
+
+/* Lista numerada destacada (critérios de falência, página A3-12) */
+.a3-numbered-list {
+  counter-reset: a3-num;
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-5) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.a3-numbered-list li {
+  counter-increment: a3-num;
+  position: relative;
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-7) + 18px);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--c-secondary);
+  border-radius: var(--r-md);
+  font-size: .98rem;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.a3-numbered-list li::before {
+  content: counter(a3-num);
+  position: absolute;
+  left: var(--sp-4);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--c-secondary);
+  color: #0E2A2F;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border: 2px solid rgba(0, 0, 0, .1);
+}
+
+.a3-numbered-list li strong { color: var(--c-text-strong); }
+
+/* Tabela mini ddx (síntese da página A3-7 e outras) */
+.ddx-mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--sp-3);
+}
+
+.ddx-mini-table th,
+.ddx-mini-table td {
+  text-align: left;
+  padding: var(--sp-3);
+  border-bottom: 1px solid var(--glass-border);
+  font-size: .9rem;
+  vertical-align: top;
+}
+
+.ddx-mini-table th {
+  font-weight: 700;
+  color: var(--c-text-strong);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.ddx-mini-table tr:last-child td { border-bottom: none; }
+
+/* Headers de página A3 (text-block lead) */
+.page-leadin {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--c-text-strong);
+  margin: 0 0 var(--sp-5);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+.text-block {
+  margin: var(--sp-4) 0;
+}
+
+.text-block p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--c-text);
+  margin: 0 0 var(--sp-3);
+}
+
+.text-block p strong { color: var(--c-text-strong); }
+.text-block p:last-child { margin-bottom: 0; }
+
+/* Checklist meta-página Bauer (E5) */
+.a3-meta-checklist {
+  margin: var(--sp-5) 0 0;
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(52, 211, 153, .06);
+  border: 1px solid rgba(52, 211, 153, .2);
+  border-radius: var(--r-md);
+}
+
+.a3-meta-checklist .meta-label {
+  display: block;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--c-primary);
+  font-weight: 700;
+  margin-bottom: var(--sp-2);
+}
+
+.a3-meta-checklist .meta-text {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--c-text);
+  line-height: 1.6;
+}
+
+.a3-meta-checklist .meta-text strong { color: var(--c-text-strong); }

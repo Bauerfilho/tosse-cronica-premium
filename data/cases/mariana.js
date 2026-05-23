@@ -167,7 +167,70 @@ export const mariana = {
         'Diagnóstico confirmado. Cultura segue em andamento pra antibiograma completo, mas o tratamento pode começar — não há rifampicina-resistência sinalizada. Mariana recebe <strong>alta hospitalar com encaminhamento pra Unidade Básica de Saúde</strong> pra início do <strong>RIPE</strong> (rifampicina + isoniazida + pirazinamida + etambutol) — o que estrutura o próximo módulo da plataforma.',
       ancoragens: ['transição A3', 'RIPE', 'alta hospitalar'],
     },
-    // Beats das aulas A3/A4 acrescentados pelos executors respectivos
+    // === BEATS A3 — TRATAMENTO ===
+    {
+      id: 'm-a3-b1',
+      aula: 'A3',
+      pagina: 'mariana-inicia-ripe',
+      ordem: 16,
+      titulo: 'Início do RIPE na UBS',
+      texto:
+        'Após alta hospitalar com diagnóstico confirmado, Mariana é encaminhada à <strong>Unidade Básica de Saúde</strong> da sua região pra início do tratamento. Recebe o esquema padrão: <strong>RIPE</strong> em comprimido de dose fixa combinada (4DFC). Como adulta sem gestação, sem diabetes, sem HIV — <strong>não precisa de piridoxina profilática</strong>. Pesando ~55 kg (faixa 51-70 kg), toma <strong>4 cps/dia em jejum</strong> (1h antes ou 2h depois da primeira refeição) pra otimizar a absorção da rifampicina.',
+      ancoragens: ['RIPE', 'início tratamento', 'dose fixa combinada', '4DFC', 'sem piridoxina'],
+    },
+    {
+      id: 'm-a3-b2',
+      aula: 'A3',
+      pagina: 'mariana-inicia-ripe',
+      ordem: 17,
+      titulo: 'Fase intensiva — 2 meses com os 4 fármacos',
+      texto:
+        'Mariana entra nas <strong>primeiras 8 semanas</strong> tomando os 4 fármacos diariamente. É a fase em que a carga bacilar despenca rapidamente — depois de 15 dias com melhora clínica, a precaução por aerossol foi suspensa (assunto da próxima aula). A adesão é monitorada na UBS; doses observadas quando possível. Ela retoma plantões com prudência redobrada, agora ela mesma usando N95 quando atende paciente com tosse crônica.',
+      ancoragens: ['fase intensiva', '8 semanas', 'adesão', 'queda da bacilemia'],
+    },
+    {
+      id: 'm-a3-b3',
+      aula: 'A3',
+      pagina: 'mariana-inicia-ripe',
+      ordem: 18,
+      titulo: 'A urina ficou cor de laranja',
+      quote: '"Doutora, minha urina ficou laranja. Posso parar o remédio?"',
+      texto:
+        'Mariana liga assustada após 3 dias. A médica explica: <strong>coloração alaranjada da urina (e do suor, lágrimas e até lentes de contato) por rifampicina é esperada, inofensiva, e some quando o esquema termina</strong>. <em>Não suspender</em> — o aviso prévio teria evitado o susto.',
+      nota: 'Aviso obrigatório no momento da prescrição: rifampicina cora urina, suor, lágrimas e até lentes de contato (que podem ficar manchadas permanentemente). Inofensivo, mas precisa ser dito antes do paciente sair da consulta.',
+      ancoragens: ['rifampicina', 'coloração alaranjada', 'orientação ao paciente'],
+    },
+    {
+      id: 'm-a3-b4',
+      aula: 'A3',
+      pagina: 'monitoramento-pcr-vs-baciloscopia',
+      ordem: 19,
+      titulo: 'Baciloscopia mensal — negativando',
+      texto:
+        'Final do <strong>1º mês</strong>: baciloscopia diminui (de +++ pra +). Final do <strong>2º mês</strong>: baciloscopia <strong>negativa</strong>. A fase intensiva está cumprida com sucesso. Mariana entra na fase de manutenção (apenas rifampicina + isoniazida por mais 4 meses). <strong>PCR não é repetida</strong> — permaneceria positiva com bacilo morto e enganaria o seguimento.',
+      ancoragens: ['baciloscopia mensal', 'negativação', 'fase manutenção', 'PCR não para acompanhamento'],
+    },
+    {
+      id: 'm-a3-b5',
+      aula: 'A3',
+      pagina: 'mariana-alta-transicao-a4',
+      ordem: 20,
+      titulo: 'Alta clínica por cura',
+      texto:
+        'Sexto mês completado. Baciloscopia ao final do tratamento: <strong>negativa</strong>. Nenhum dos 3 critérios de falência preenchido. Mariana recebe <strong>alta por cura</strong>. Ganhou peso, está bem disposta, voltou plenamente aos plantões. O caso vira história — agora a atenção da Vigilância vai pra <strong>quem conviveu com ela no período bacilífero</strong>.',
+      ancoragens: ['alta por cura', 'sem critérios de falência', 'transição A4', 'contactantes'],
+    },
+    {
+      id: 'm-a3-b6',
+      aula: 'A3',
+      pagina: 'mariana-alta-transicao-a4',
+      ordem: 21,
+      titulo: 'A pergunta que vem em seguida',
+      texto:
+        'Mariana é <strong>caso-fonte</strong>: durante as semanas em que esteve bacilífera (antes do diagnóstico), conviveu com colegas de plantão, familiares e uma colega específica que vai aparecer no próximo módulo — <strong>Lucita</strong>, técnica de enfermagem que foi sua parceira de setor em vários plantões pré-diagnóstico. Contactante assintomática, vai precisar de avaliação com PPD/IGRA pra definir se é portadora de TB latente e se deve receber quimioprofilaxia. Essa é a aula que vem.',
+      ancoragens: ['caso-fonte', 'Lucita', 'transição A4', 'contactante'],
+    },
+    // Beats da aula A4 acrescentados pelo executor A4
   ],
   perguntas: [
     {
@@ -196,6 +259,25 @@ export const mariana = {
         'Por que o teste molecular rápido (Xpert MTB/RIF Ultra) é preferido como exame inicial em vez da baciloscopia tradicional, especialmente em paciente bacilífero como Mariana?',
       resposta:
         '<p>Três razões principais:</p><ol><li><strong>Velocidade</strong>: resultado em ~2 horas (vs 14-60 dias da cultura, e horas-dias da baciloscopia técnico-dependente);</li><li><strong>Sensibilidade superior</strong>: detecta cargas bacilares menores que a baciloscopia (~88-98% em escarro positivo, ~77% em paucibacilar; vs ~50-60% da BAR);</li><li><strong>Detecção de resistência à rifampicina</strong> simultânea — informação crítica que muda imediatamente a decisão terapêutica.</li></ol><p>A cultura segue obrigatória <strong>em paralelo</strong> pra antibiograma completo, mas o início do RIPE não precisa esperar.</p>',
+    },
+    // === PERGUNTAS A3 ===
+    {
+      id: 'p-a3-q1',
+      aula: 'A3',
+      pagina: 'mariana-inicia-ripe',
+      enunciado:
+        'Mariana liga assustada porque a urina ficou laranja. Qual é a conduta correta e por que não suspender o RIPE?',
+      resposta:
+        '<p>Conduta: <strong>tranquilizar e manter o esquema</strong>. A coloração alaranjada da urina, suor, lágrima e secreções pela rifampicina é um efeito esperado, inofensivo, e desaparece quando o tratamento termina.</p><p>Por que não suspender:</p><ul><li>É um efeito <strong>cosmético</strong>, não um marcador de toxicidade;</li><li>Suspender o RIPE por isso aumentaria o risco de <strong>seleção de resistência</strong> (bacilo "esmagado" parcialmente pode rebrotar resistente);</li><li>Adesão errática à fase intensiva é o <strong>maior fator de falência terapêutica</strong>.</li></ul><p><strong>Regra de ouro pro prescritor</strong>: avisar ANTES do paciente sair da consulta de prescrição. Aviso simples evita susto e evita suspensão desnecessária.</p>',
+    },
+    {
+      id: 'p-a3-q2',
+      aula: 'A3',
+      pagina: 'monitoramento-pcr-vs-baciloscopia',
+      enunciado:
+        'Por que NÃO se repete o teste molecular rápido (PCR / Xpert) pra acompanhar a evolução do tratamento, mesmo tendo sido o exame que confirmou o diagnóstico?',
+      resposta:
+        '<p>Porque o PCR <strong>detecta sequência genética do bacilo — vivo ou morto</strong>. Após semanas de RIPE, a maior parte dos bacilos está morta, mas o DNA ainda é detectável por dias-semanas. O PCR continuaria <strong>positivo</strong>, criando a falsa impressão de persistência infecciosa.</p><p>A <strong>baciloscopia</strong> (microscopia com coloração Ziehl-Neelsen / fluorescência) detecta o <strong>bacilo inteiro</strong> — proxy razoável de bacilo viável. Quando a baciloscopia negativa, é razoável presumir que a carga viável caiu.</p><p>Por isso a regra é:</p><ul><li><strong>PCR para diagnóstico</strong> (sensibilidade alta + detecção de resistência à rifampicina em horas);</li><li><strong>Baciloscopia para acompanhamento</strong> (mensal ideal, bimestral mínimo).</li></ul>',
     },
   ],
 };

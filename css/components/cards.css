@@ -114,3 +114,147 @@
 .card--destaque blockquote strong {
   color: var(--c-primary);
 }
+
+/* Card quote-alert — citação literal destacada (A3 etambutol) */
+
+.card--quote-alert {
+  padding: var(--sp-6);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .14), var(--c-bg-elev-1));
+  border: 1px solid var(--glass-border-strong);
+  border-left: 4px solid var(--c-secondary);
+  box-shadow: 0 0 24px rgba(251, 191, 36, .15);
+}
+
+.card--quote-alert .card-tag {
+  color: var(--c-secondary);
+  background: rgba(251, 191, 36, .2);
+}
+
+.card--quote-alert blockquote {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: var(--sp-3) 0 var(--sp-4);
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--c-text-strong);
+  position: relative;
+  padding-left: var(--sp-5);
+}
+
+.card--quote-alert blockquote::before {
+  content: "“";
+  position: absolute;
+  left: -8px;
+  top: -22px;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--c-secondary);
+  opacity: .4;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.card--quote-alert .quote-context {
+  color: var(--c-text-muted);
+  font-size: .92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.card--quote-alert .quote-context strong {
+  color: var(--c-text-strong);
+}
+
+@media (max-width: 540px) {
+  .card--quote-alert blockquote { font-size: 1.3rem; padding-left: var(--sp-4); }
+  .card--quote-alert blockquote::before { font-size: 3.6rem; top: -14px; }
+}
+
+/* Card-capsule — cápsula compacta horizontal (A3 piridoxina, coloração alaranjada, etc.) */
+
+.card--capsule {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--r-xl);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  margin: var(--sp-4) 0;
+}
+
+.card--capsule.card--capsule-primary {
+  background: linear-gradient(135deg, var(--c-primary-soft), var(--c-bg-elev-1));
+  border-color: rgba(52, 211, 153, .35);
+}
+
+.card--capsule.card--capsule-secondary {
+  background: linear-gradient(135deg, var(--c-secondary-soft), var(--c-bg-elev-1));
+  border-color: rgba(251, 191, 36, .35);
+}
+
+.card--capsule .capsule-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid var(--glass-border);
+}
+
+.card--capsule .capsule-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.card--capsule .capsule-body { flex: 1; min-width: 0; }
+
+.card--capsule .capsule-title {
+  margin: 0 0 var(--sp-1);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+}
+
+.card--capsule .capsule-text {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--c-text);
+  line-height: 1.5;
+}
+
+.card--capsule .capsule-icons-row {
+  display: flex;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.card--capsule .capsule-icons-row .group-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(52, 211, 153, .1);
+  border: 1px solid rgba(52, 211, 153, .25);
+  font-size: .78rem;
+  color: var(--c-text-strong);
+  font-weight: 500;
+}
+
+.card--capsule .capsule-icons-row .group-pill svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 540px) {
+  .card--capsule { flex-direction: column; align-items: flex-start; }
+  .card--capsule .capsule-icon { width: 48px; height: 48px; }
+  .card--capsule .capsule-icon svg { width: 28px; height: 28px; }
+}
