@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-label="Esquema didático do líquido pleural na TB: 4 parâmetros bioquímico-citológicos">
+  <defs>
+    <linearGradient id="lpbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity=".06"/>
+    </linearGradient>
+    <linearGradient id="lpliquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="360" height="320" rx="14" fill="url(#lpbg)"/>
+
+  <!-- Frasco/tubo -->
+  <g transform="translate(180, 160)">
+    <!-- Corpo do tubo -->
+    <path d="M -32,-90 L -32,80 Q -32,96 -16,96 L 16,96 Q 32,96 32,80 L 32,-90 Z" fill="rgba(255,255,255,.04)" stroke="#C9D6D9" stroke-width="1.6"/>
+    <!-- Tampa -->
+    <rect x="-36" y="-100" width="72" height="14" rx="3" fill="#8FA1A6" opacity=".5"/>
+    <!-- Líquido (amarelo-citrino) -->
+    <path d="M -30,-30 L -30,78 Q -30,94 -16,94 L 16,94 Q 30,94 30,78 L 30,-30 Z" fill="url(#lpliquid)"/>
+    <!-- Reflexo -->
+    <path d="M -24,-20 L -24,60" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+
+    <!-- Células flutuando: PMN inicial vira linfomononuclear -->
+    <g>
+      <!-- PMN (multilobulados) -->
+      <circle cx="-12" cy="0" r="4" fill="none" stroke="#34D399" stroke-width=".8" opacity=".7"/>
+      <circle cx="14" cy="14" r="4" fill="none" stroke="#34D399" stroke-width=".8" opacity=".5"/>
+      <!-- Linfomononuclear (núcleo redondo) -->
+      <circle cx="-10" cy="40" r="3.5" fill="#34D399" opacity=".65"/>
+      <circle cx="10" cy="50" r="3.5" fill="#34D399" opacity=".65"/>
+      <circle cx="-14" cy="62" r="3.5" fill="#34D399" opacity=".65"/>
+      <circle cx="6" cy="74" r="3.5" fill="#34D399" opacity=".65"/>
+      <circle cx="-4" cy="84" r="3.5" fill="#34D399" opacity=".65"/>
+    </g>
+  </g>
+
+  <!-- Anotações laterais — lado esquerdo -->
+  <g font-family="-apple-system, SF Pro Display, system-ui, sans-serif">
+    <!-- Aspecto -->
+    <line x1="120" y1="80" x2="148" y2="80" stroke="#FBBF24" stroke-width="1.4"/>
+    <circle cx="148" cy="80" r="3" fill="#FBBF24"/>
+    <text x="115" y="76" text-anchor="end" font-size="10" fill="#FBBF24" font-weight="700" letter-spacing=".04em">ASPECTO</text>
+    <text x="115" y="90" text-anchor="end" font-size="9" fill="#C9D6D9">amarelo-citrino</text>
+
+    <!-- Proteína -->
+    <line x1="120" y1="140" x2="148" y2="140" stroke="#FBBF24" stroke-width="1.4"/>
+    <circle cx="148" cy="140" r="3" fill="#FBBF24"/>
+    <text x="115" y="136" text-anchor="end" font-size="10" fill="#FBBF24" font-weight="700" letter-spacing=".04em">PROTEÍNA</text>
+    <text x="115" y="150" text-anchor="end" font-size="9" fill="#C9D6D9">↑ &gt; 4 g/dL · exsudato</text>
+
+    <!-- ADA -->
+    <line x1="120" y1="200" x2="148" y2="200" stroke="#FBBF24" stroke-width="1.4"/>
+    <circle cx="148" cy="200" r="3" fill="#FBBF24"/>
+    <text x="115" y="196" text-anchor="end" font-size="10" fill="#FBBF24" font-weight="700" letter-spacing=".04em">ADA</text>
+    <text x="115" y="210" text-anchor="end" font-size="9" fill="#C9D6D9">≥ 40 U/L · sugestivo</text>
+  </g>
+
+  <!-- Anotações laterais — lado direito -->
+  <g font-family="-apple-system, SF Pro Display, system-ui, sans-serif">
+    <!-- Glicose -->
+    <line x1="212" y1="110" x2="240" y2="110" stroke="#34D399" stroke-width="1.4"/>
+    <circle cx="212" cy="110" r="3" fill="#34D399"/>
+    <text x="245" y="106" font-size="10" fill="#34D399" font-weight="700" letter-spacing=".04em">GLICOSE</text>
+    <text x="245" y="120" font-size="9" fill="#C9D6D9">↓ &lt; 60 mg/dL</text>
+
+    <!-- Células -->
+    <line x1="212" y1="180" x2="240" y2="180" stroke="#34D399" stroke-width="1.4"/>
+    <circle cx="212" cy="180" r="3" fill="#34D399"/>
+    <text x="245" y="176" font-size="10" fill="#34D399" font-weight="700" letter-spacing=".04em">CÉLULAS</text>
+    <text x="245" y="190" font-size="9" fill="#C9D6D9">PMN → linfomono</text>
+    <text x="245" y="202" font-size="8" fill="#8FA1A6" font-style="italic">em 1-2 semanas</text>
+  </g>
+
+  <!-- Legenda inferior -->
+  <text x="180" y="298" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="10" fill="#C9D6D9" font-weight="600">Líquido pleural na TB · padrão clássico</text>
+</svg>

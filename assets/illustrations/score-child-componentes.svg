@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Esquema dos 5 componentes do escore CHILD para diagnóstico empírico de TB em criança">
+  <defs>
+    <linearGradient id="chbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34D399" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity=".05"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="480" height="200" rx="14" fill="url(#chbg)"/>
+
+  <!-- 5 letras CHILD em destaque -->
+  <g transform="translate(40, 70)" font-family="-apple-system, SF Pro Display, system-ui, sans-serif">
+    <!-- C -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#34D399"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="800" fill="#0B1220">C</text>
+      <text x="32" y="84" text-anchor="middle" font-size="9" fill="#34D399" font-weight="600" letter-spacing=".06em">CLÍNICA</text>
+      <text x="32" y="98" text-anchor="middle" font-size="9" fill="#8FA1A6">15 pts</text>
+    </g>
+
+    <!-- H -->
+    <g transform="translate(80, 0)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#34D399" opacity=".85"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="800" fill="#0B1220">H</text>
+      <text x="32" y="84" text-anchor="middle" font-size="9" fill="#34D399" font-weight="600" letter-spacing=".06em">HISTÓRIA</text>
+      <text x="32" y="98" text-anchor="middle" font-size="9" fill="#8FA1A6">10 pts</text>
+    </g>
+
+    <!-- I -->
+    <g transform="translate(160, 0)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#34D399" opacity=".7"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="800" fill="#0B1220">I</text>
+      <text x="32" y="84" text-anchor="middle" font-size="9" fill="#34D399" font-weight="600" letter-spacing=".06em">IMAGEM</text>
+      <text x="32" y="98" text-anchor="middle" font-size="9" fill="#8FA1A6">15 pts</text>
+    </g>
+
+    <!-- L -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#FBBF24" opacity=".85"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="800" fill="#0B1220">L</text>
+      <text x="32" y="84" text-anchor="middle" font-size="9" fill="#FBBF24" font-weight="600" letter-spacing=".06em">LATENTE</text>
+      <text x="32" y="98" text-anchor="middle" font-size="9" fill="#8FA1A6">5–10 pts</text>
+    </g>
+
+    <!-- D -->
+    <g transform="translate(320, 0)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#FBBF24" opacity=".7"/>
+      <text x="32" y="44" text-anchor="middle" font-size="34" font-weight="800" fill="#0B1220">D</text>
+      <text x="32" y="84" text-anchor="middle" font-size="9" fill="#FBBF24" font-weight="600" letter-spacing=".06em">DESNUTRIÇÃO</text>
+      <text x="32" y="98" text-anchor="middle" font-size="9" fill="#8FA1A6">5 pts</text>
+    </g>
+  </g>
+
+  <!-- Legenda inferior -->
+  <text x="240" y="34" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="12" fill="#C9D6D9" font-weight="600">Escore CHILD · 5 componentes</text>
+  <text x="240" y="48" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="9" fill="#8FA1A6" font-style="italic">≥ 40 tratar · 30-39 considerar · &lt; 30 microbiologia</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" role="img" aria-label="Radiografia esquemática de TB pós-primária adulta: cavitação apical">
+  <defs>
+    <linearGradient id="rxcbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34D399" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#0E2A2F" stop-opacity=".05"/>
+    </linearGradient>
+    <radialGradient id="rxcinfilt" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="320" height="360" rx="14" fill="url(#rxcbg)"/>
+
+  <!-- Silhueta torácica -->
+  <g transform="translate(160, 180)" stroke="#8FA1A6" stroke-width="1.4" fill="none">
+    <path d="M -110,-110 Q -120,-30 -110,80 L -90,110 L 90,110 L 110,80 Q 120,-30 110,-110 L 70,-130 L -70,-130 Z" opacity=".55"/>
+    <path d="M -100,-60 Q -50,-50 0,-55" opacity=".25"/>
+    <path d="M 100,-60 Q 50,-50 0,-55" opacity=".25"/>
+    <path d="M -100,-20 Q -50,-10 0,-15" opacity=".25"/>
+    <path d="M 100,-20 Q 50,-10 0,-15" opacity=".25"/>
+    <path d="M -100,20 Q -50,30 0,25" opacity=".25"/>
+    <path d="M 100,20 Q 50,30 0,25" opacity=".25"/>
+    <line x1="0" y1="-130" x2="0" y2="110" stroke="#8FA1A6" stroke-width="1" opacity=".4" stroke-dasharray="3,3"/>
+    <path d="M -8,40 Q -38,30 -42,70 Q -38,100 0,100 Q 30,100 25,70 Q 22,30 -8,40 Z" opacity=".5"/>
+    <path d="M -100,90 Q -50,110 0,100 Q 50,90 100,90" stroke="#8FA1A6" stroke-width="1.5" opacity=".7"/>
+  </g>
+
+  <!-- CAVITAÇÃO APICAL DIREITA (ápice direito, alto na imagem) -->
+  <g transform="translate(120, 85)">
+    <!-- Infiltrado adjacente (sombra ao redor) -->
+    <circle r="32" fill="url(#rxcinfilt)"/>
+    <!-- Cavidade: parede densa + interior hipertransparente -->
+    <circle r="18" fill="#0E2A2F" stroke="#34D399" stroke-width="2"/>
+    <!-- Pequeno realce de irregularidade da parede -->
+    <path d="M -14,-10 Q -18,-2 -14,8 M 14,-10 Q 18,-2 14,8" stroke="#34D399" stroke-width="1" fill="none" opacity=".6"/>
+  </g>
+
+  <!-- CAVITAÇÃO APICAL ESQUERDA (sutilmente menor — não obrigatoriamente bilateral, mas comum) -->
+  <g transform="translate(200, 95)">
+    <circle r="26" fill="url(#rxcinfilt)" opacity=".7"/>
+    <circle r="13" fill="#0E2A2F" stroke="#34D399" stroke-width="1.6"/>
+  </g>
+
+  <!-- Indicador / Marker -->
+  <g transform="translate(120, 85)">
+    <line x1="-30" y1="-30" x2="-60" y2="-50" stroke="#34D399" stroke-width="1.4"/>
+    <circle cx="-30" cy="-30" r="3" fill="#34D399"/>
+  </g>
+  <text x="20" y="32" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="9" fill="#34D399" font-weight="600" letter-spacing=".03em">CAVITAÇÃO</text>
+  <text x="20" y="46" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="9" fill="#34D399" font-weight="600" letter-spacing=".03em">APICAL</text>
+
+  <!-- Anatomia -->
+  <text x="280" y="60" text-anchor="end" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="10" fill="#8FA1A6" font-weight="600">R</text>
+  <text x="40" y="60" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="10" fill="#8FA1A6" font-weight="600">L</text>
+
+  <!-- Legenda inferior -->
+  <text x="160" y="335" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="11" fill="#C9D6D9" font-weight="600">TB pós-primária adulta</text>
+  <text x="160" y="349" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="9" fill="#8FA1A6" font-style="italic">Cavitação apical (frequentemente bilateral) · paciente bacilífero</text>
+</svg>

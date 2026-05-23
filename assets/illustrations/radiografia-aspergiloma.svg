@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-label="Radiografia esquemática: aspergiloma em cavidade tuberculosa com sinal do menisco">
+  <defs>
+    <linearGradient id="rxabg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#0E2A2F" stop-opacity=".05"/>
+    </linearGradient>
+    <radialGradient id="rxafungus" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity=".6"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="320" height="280" rx="14" fill="url(#rxabg)"/>
+
+  <!-- Recorte ampliado do ápice pulmonar com cavidade -->
+  <g transform="translate(160, 140)">
+    <!-- Cavidade tuberculosa antiga — parede densa fibrótica -->
+    <ellipse cx="0" cy="0" rx="86" ry="74" fill="#0E2A2F" stroke="#C9D6D9" stroke-width="2.5"/>
+    <!-- Realce sutil de fibrose na parede -->
+    <ellipse cx="0" cy="0" rx="86" ry="74" fill="none" stroke="#8FA1A6" stroke-width="1" opacity=".4" stroke-dasharray="4,3"/>
+
+    <!-- Sinal do menisco / lua crescente — faixa de ar entre a bola e a parede superior -->
+    <!-- A "bola fúngica" fica em posição inferior (caída por gravidade); ar permanece na parte superior -->
+    <path d="M -78,-8 Q 0,-58 78,-8 Q 0,-22 -78,-8 Z" fill="#0E2A2F" stroke="#FBBF24" stroke-width="0.8" opacity=".95"/>
+
+    <!-- Bola fúngica (aspergiloma) — ovalada, em posição inferior -->
+    <ellipse cx="0" cy="20" rx="72" ry="44" fill="url(#rxafungus)" stroke="#FBBF24" stroke-width="1.6"/>
+
+    <!-- Textura interna da bola (estrutura de hifas micela) -->
+    <g stroke="#92632A" stroke-width=".8" opacity=".55" fill="none">
+      <path d="M -50,5 Q -30,18 -10,12 Q 12,6 32,18"/>
+      <path d="M -40,30 Q -10,22 18,32 Q 38,38 56,28"/>
+      <path d="M -28,42 Q 0,38 28,46"/>
+      <path d="M -55,18 L -45,38"/>
+      <path d="M 48,8 L 56,30"/>
+    </g>
+  </g>
+
+  <!-- Indicadores -->
+  <g transform="translate(160, 80)">
+    <line x1="0" y1="0" x2="0" y2="20" stroke="#FBBF24" stroke-width="1.4"/>
+    <circle cx="0" cy="0" r="3" fill="#FBBF24"/>
+  </g>
+  <text x="160" y="74" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="10" fill="#FBBF24" font-weight="700" letter-spacing=".04em">SINAL DO MENISCO</text>
+
+  <g transform="translate(160, 220)">
+    <line x1="0" y1="0" x2="0" y2="-20" stroke="#FBBF24" stroke-width="1.4"/>
+    <circle cx="0" cy="0" r="3" fill="#FBBF24"/>
+  </g>
+  <text x="160" y="240" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="10" fill="#FBBF24" font-weight="700" letter-spacing=".04em">BOLA FÚNGICA</text>
+
+  <!-- Legenda inferior -->
+  <text x="160" y="262" text-anchor="middle" font-family="-apple-system, SF Pro Display, system-ui, sans-serif" font-size="9" fill="#8FA1A6" font-style="italic">Aspergiloma em cavidade tuberculosa antiga · detalhe em A5</text>
+</svg>
