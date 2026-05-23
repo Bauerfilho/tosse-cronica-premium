@@ -121,6 +121,11 @@ main.app-main {
 .aula-nav {
   position: sticky;
   top: calc(var(--header-h) + var(--sp-5));
+  max-height: calc(100dvh - var(--header-h) - var(--sp-5) * 2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
   padding: var(--sp-4);
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
