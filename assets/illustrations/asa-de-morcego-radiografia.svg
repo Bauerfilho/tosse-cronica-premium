@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Radiografia esquemática de tórax mostrando padrão asa de morcego: infiltrado perilar bilateral simétrico característico de paracoccidioidomicose">
+  <title>Asa de morcego — radiografia esquemática</title>
+  <desc>Padrão radiológico clássico da paracoccidioidomicose crônica: infiltrado perilar bilateral simétrico distribuído peribroncovascularmente, lembrando asas de morcego abertas.</desc>
+
+  <defs>
+    <radialGradient id="rx-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1d22"/>
+      <stop offset="100%" stop-color="#0a0c0f"/>
+    </radialGradient>
+    <radialGradient id="infiltrado" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#94a3b8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0.05"/>
+    </radialGradient>
+    <linearGradient id="pulmao" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3035" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a1d22" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo radiografia -->
+  <rect width="600" height="400" fill="url(#rx-bg)"/>
+
+  <!-- Silhueta torácica simplificada PA -->
+  <!-- Caixa torácica (contorno) -->
+  <path d="M 130 80 Q 100 100 95 160 Q 90 220 110 290 Q 130 340 180 360 L 420 360 Q 470 340 490 290 Q 510 220 505 160 Q 500 100 470 80"
+        fill="url(#pulmao)" stroke="#475569" stroke-width="1.5" opacity="0.85"/>
+
+  <!-- Costelas (apenas algumas pra orientação, suaves) -->
+  <g stroke="#475569" stroke-width="1" fill="none" opacity="0.32">
+    <path d="M 100 130 Q 200 110 295 125"/>
+    <path d="M 100 170 Q 200 150 295 165"/>
+    <path d="M 100 215 Q 200 195 295 210"/>
+    <path d="M 100 260 Q 200 240 295 255"/>
+    <path d="M 100 305 Q 200 285 295 300"/>
+
+    <path d="M 305 125 Q 400 110 500 130"/>
+    <path d="M 305 165 Q 400 150 500 170"/>
+    <path d="M 305 210 Q 400 195 500 215"/>
+    <path d="M 305 255 Q 400 240 500 260"/>
+    <path d="M 305 300 Q 400 285 500 305"/>
+  </g>
+
+  <!-- Coluna vertebral central (sombra sutil) -->
+  <rect x="295" y="80" width="10" height="280" fill="#0a0c0f" opacity="0.6"/>
+
+  <!-- Hilo esquerdo (do paciente — direita da imagem) -->
+  <ellipse cx="370" cy="200" rx="18" ry="22" fill="#5a6470" opacity="0.5"/>
+  <!-- Hilo direito (do paciente — esquerda da imagem) -->
+  <ellipse cx="230" cy="200" rx="18" ry="22" fill="#5a6470" opacity="0.5"/>
+
+  <!-- INFILTRADO PERILAR BILATERAL SIMÉTRICO — "ASA DE MORCEGO" -->
+  <!-- Asa esquerda (paciente esquerda — direita da imagem) -->
+  <ellipse cx="395" cy="210" rx="95" ry="55" fill="url(#infiltrado)" opacity="0.9"/>
+  <ellipse cx="395" cy="210" rx="75" ry="42" fill="url(#infiltrado)" opacity="0.85"/>
+  <ellipse cx="395" cy="200" rx="55" ry="35" fill="url(#infiltrado)" opacity="0.8"/>
+
+  <!-- Asa direita (paciente direita — esquerda da imagem) -->
+  <ellipse cx="205" cy="210" rx="95" ry="55" fill="url(#infiltrado)" opacity="0.9"/>
+  <ellipse cx="205" cy="210" rx="75" ry="42" fill="url(#infiltrado)" opacity="0.85"/>
+  <ellipse cx="205" cy="200" rx="55" ry="35" fill="url(#infiltrado)" opacity="0.8"/>
+
+  <!-- Bordas das asas suavemente (peribroncovascular extensivo) -->
+  <ellipse cx="395" cy="210" rx="90" ry="50" fill="none" stroke="#94a3b8" stroke-width="0.8" opacity="0.35"/>
+  <ellipse cx="205" cy="210" rx="90" ry="50" fill="none" stroke="#94a3b8" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Sombras adicionais peribroncovasculares (textura) -->
+  <g opacity="0.4">
+    <path d="M 240 195 Q 270 180 290 195" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+    <path d="M 240 220 Q 270 235 290 220" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+    <path d="M 310 195 Q 340 180 360 195" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+    <path d="M 310 220 Q 340 235 360 220" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+  </g>
+
+  <!-- Diafragma -->
+  <path d="M 130 340 Q 200 320 295 340 L 305 340 Q 400 320 470 340" stroke="#475569" stroke-width="1.5" fill="none" opacity="0.65"/>
+
+  <!-- Coração (silhueta) -->
+  <path d="M 295 240 Q 295 260 300 290 Q 320 320 340 320 Q 355 320 360 305 Q 360 280 350 250" fill="#0a0c0f" stroke="#475569" stroke-width="1" opacity="0.55"/>
+
+  <!-- Marcação âncora "D" e "E" pra orientação clínica -->
+  <text x="120" y="105" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" opacity="0.7">D</text>
+  <text x="475" y="105" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" opacity="0.7">E</text>
+
+  <!-- Legenda inferior -->
+  <text x="300" y="385" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="500" letter-spacing="0.05em" opacity="0.78">
+    Padrão asa de morcego — infiltrado perilar bilateral simétrico (PCM crônica)
+  </text>
+</svg>

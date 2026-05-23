@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Comprimido de sulfametoxazol-trimetoprim (Bactrim)">
+  <title>Bactrim — sulfametoxazol-trimetoprim</title>
+  <defs>
+    <linearGradient id="bactrim-pill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4f7fb" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#cad5dd" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="bactrim-pill-half" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#d8941a" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Comprimido oval bipartido (sulfa branca + TMP âmbar) -->
+  <ellipse cx="32" cy="32" rx="26" ry="14" fill="url(#bactrim-pill)" stroke="#5a6470" stroke-width="1.4"/>
+
+  <!-- Metade direita (TMP âmbar) -->
+  <path d="M 32 18 A 26 14 0 0 1 32 46 L 32 18 Z" fill="url(#bactrim-pill-half)" opacity="0.85"/>
+
+  <!-- Linha bipartição central (sulco) -->
+  <line x1="32" y1="20" x2="32" y2="44" stroke="#5a6470" stroke-width="1.5"/>
+
+  <!-- Sombra inferior pra dar profundidade -->
+  <ellipse cx="32" cy="44" rx="22" ry="3" fill="#1a1d22" opacity="0.18"/>
+
+  <!-- Label SMX | TMP -->
+  <text x="20" y="36" text-anchor="middle" fill="#3a4148" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="700" letter-spacing="0.02em">SMX</text>
+  <text x="44" y="36" text-anchor="middle" fill="#3a2208" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="700" letter-spacing="0.02em">TMP</text>
+</svg>

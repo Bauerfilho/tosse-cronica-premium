@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Tríade mnemônica dos 3 patognomônicos da paracoccidioidomicose: roda de leme (microscopia), asa de morcego (radiografia) e estomatite moriforme (clínica oral)">
+  <title>Tríade mnemônica dos 3 patognomônicos da PCM</title>
+  <desc>Composição visual unindo os 3 achados patognômicos em 3 registros visuais distintos — microscopia, radiografia e clínica oral.</desc>
+
+  <defs>
+    <linearGradient id="bg-triade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(52,211,153,0.05)"/>
+      <stop offset="100%" stop-color="rgba(251,191,36,0.05)"/>
+    </linearGradient>
+    <radialGradient id="mini-cell-mae" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f4f7fb" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#8f9bad" stop-opacity="0.6"/>
+    </radialGradient>
+    <radialGradient id="mini-infiltrado" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="mini-lesao" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c4595e" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#5a1f28" stop-opacity="0.85"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bg-triade)"/>
+
+  <!-- Linhas conectoras triangulares (sutis) -->
+  <g stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 6" opacity="0.35" fill="none">
+    <line x1="150" y1="130" x2="450" y2="130"/>
+    <line x1="150" y1="130" x2="300" y2="320"/>
+    <line x1="450" y1="130" x2="300" y2="320"/>
+  </g>
+
+  <!-- 1. RODA DE LEME (esquerda superior) -->
+  <g transform="translate(150, 130)">
+    <circle cx="0" cy="0" r="60" fill="#1a3437" opacity="0.4"/>
+    <!-- 8 brotamentos circunferenciais simplificados -->
+    <g>
+      <circle cx="42" cy="0" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="30" cy="-30" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="0" cy="-42" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="-30" cy="-30" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="-42" cy="0" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="-30" cy="30" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="0" cy="42" r="8" fill="url(#mini-cell-mae)"/>
+      <circle cx="30" cy="30" r="8" fill="url(#mini-cell-mae)"/>
+    </g>
+    <!-- Célula-mãe central -->
+    <circle cx="0" cy="0" r="22" fill="url(#mini-cell-mae)" stroke="#3a5358" stroke-width="1.5"/>
+  </g>
+  <text x="150" y="220" text-anchor="middle" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em">RODA DE LEME</text>
+  <text x="150" y="238" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500">Microscopia · KOH</text>
+
+  <!-- 2. ASA DE MORCEGO (direita superior) -->
+  <g transform="translate(450, 130)">
+    <!-- Mini-caixa torácica -->
+    <rect x="-65" y="-50" width="130" height="100" rx="20" fill="#1a1d22" opacity="0.55"/>
+    <!-- Coluna central -->
+    <rect x="-3" y="-50" width="6" height="100" fill="#0a0c0f" opacity="0.5"/>
+    <!-- Infiltrado perilar bilateral -->
+    <ellipse cx="-30" cy="0" rx="32" ry="20" fill="url(#mini-infiltrado)" opacity="0.85"/>
+    <ellipse cx="30" cy="0" rx="32" ry="20" fill="url(#mini-infiltrado)" opacity="0.85"/>
+    <!-- Hilos -->
+    <ellipse cx="-15" cy="0" rx="5" ry="7" fill="#5a6470" opacity="0.6"/>
+    <ellipse cx="15" cy="0" rx="5" ry="7" fill="#5a6470" opacity="0.6"/>
+    <!-- Diafragma -->
+    <path d="M -55 35 Q -25 25 0 35 L 0 35 Q 25 25 55 35" stroke="#475569" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+  <text x="450" y="220" text-anchor="middle" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em">ASA DE MORCEGO</text>
+  <text x="450" y="238" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500">Radiografia tórax</text>
+
+  <!-- 3. ESTOMATITE MORIFORME (inferior central) -->
+  <g transform="translate(300, 320)">
+    <!-- Cavidade oral simplificada -->
+    <ellipse cx="0" cy="0" rx="75" ry="35" fill="#1a0c0f" opacity="0.92"/>
+    <!-- Gengiva superior -->
+    <path d="M -60 -15 Q 0 -5 60 -15 Q 55 5 50 8 Q 0 18 -50 8 Q -55 5 -60 -15 Z" fill="#a64457" opacity="0.85"/>
+    <!-- Lesão moriforme central -->
+    <ellipse cx="0" cy="-8" rx="35" ry="10" fill="url(#mini-lesao)" stroke="#5a1f28" stroke-width="1"/>
+    <!-- Pontilhado hemorrágico -->
+    <g fill="#5a0d18">
+      <circle cx="-20" cy="-10" r="1.2"/>
+      <circle cx="-12" cy="-8" r="1"/>
+      <circle cx="-5" cy="-11" r="1.3"/>
+      <circle cx="3" cy="-7" r="1.1"/>
+      <circle cx="10" cy="-10" r="1.2"/>
+      <circle cx="18" cy="-7" r="1.1"/>
+      <circle cx="-15" cy="-5" r="1"/>
+      <circle cx="-7" cy="-4" r="1.2"/>
+      <circle cx="2" cy="-3" r="1.1"/>
+      <circle cx="12" cy="-4" r="1"/>
+      <circle cx="20" cy="-3" r="1.1"/>
+    </g>
+  </g>
+  <text x="300" y="385" text-anchor="middle" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em">ESTOMATITE MORIFORME</text>
+
+  <!-- Título superior -->
+  <text x="300" y="35" text-anchor="middle" fill="#f4f7fb" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" letter-spacing="-0.005em">Tríade patognomônica da paracoccidioidomicose</text>
+  <text x="300" y="55" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="400">3 patognomônicos em 3 registros visuais distintos</text>
+</svg>

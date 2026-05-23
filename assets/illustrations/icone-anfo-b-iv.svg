@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Frasco-ampola intravenoso de anfotericina B">
+  <title>Anfotericina B IV</title>
+  <defs>
+    <linearGradient id="amb-frasco" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4f7fb" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#b8c0cc" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="amb-conteudo" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#b9851a" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tampa de borracha (cinza escura) -->
+  <rect x="22" y="6" width="20" height="6" rx="1" fill="#4a5258" stroke="#2a3035" stroke-width="0.8"/>
+
+  <!-- Pescoço do frasco (alumínio) -->
+  <rect x="20" y="10" width="24" height="8" rx="1" fill="#cad5dd" stroke="#5a6470" stroke-width="0.7"/>
+
+  <!-- Frasco principal (vidro com glow âmbar) -->
+  <rect x="14" y="16" width="36" height="42" rx="3" fill="url(#amb-frasco)" stroke="#5a6470" stroke-width="1.2"/>
+
+  <!-- Conteúdo (anfo B = solução amarela) -->
+  <rect x="17" y="26" width="30" height="29" rx="2" fill="url(#amb-conteudo)" opacity="0.85"/>
+
+  <!-- Linha de "menisco" superior do líquido -->
+  <ellipse cx="32" cy="26" rx="15" ry="2" fill="none" stroke="#b9851a" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- Símbolo IV (gota com seta) no canto inferior direito -->
+  <g transform="translate(46, 44)">
+    <path d="M 0 0 Q 4 -4 4 -8 Q 4 -10 2 -10 Q 0 -10 0 -8 Q 0 -4 0 0 Z" fill="#34d399" opacity="0.92"/>
+  </g>
+
+  <!-- Label "AMB" no centro -->
+  <text x="32" y="44" text-anchor="middle" fill="#0e2a2f" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" letter-spacing="0.04em">AMB</text>
+
+  <!-- Tubo IV saindo discretamente -->
+  <line x1="32" y1="5" x2="32" y2="2" stroke="#34d399" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

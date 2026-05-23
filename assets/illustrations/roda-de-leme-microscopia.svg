@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Microscopia da levedura de Paracoccidioides brasiliensis com aspecto de roda de leme: célula-mãe central com múltiplos brotamentos circunferenciais">
+  <title>Roda de leme — microscopia de P. brasiliensis</title>
+  <desc>Aspecto patognomônico da fase leveduriforme: célula-mãe central com múltiplos brotamentos arranjados como radiais de um leme/timão de navio. Visualização sob microscopia óptica 400× com KOH.</desc>
+
+  <defs>
+    <radialGradient id="koh-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a3437" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0a1c1f" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="cell-mae" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f4f7fb" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#cad5dd" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#8f9bad" stop-opacity="0.6"/>
+    </radialGradient>
+    <radialGradient id="broto" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f4f7fb" stop-opacity="0.95"/>
+      <stop offset="80%" stop-color="#b8c0cc" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#6c7784" stop-opacity="0.7"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo simulando lâmina KOH -->
+  <rect width="400" height="400" fill="url(#koh-bg)"/>
+
+  <!-- Refringência sutil (pequenos pontos dispersos simulando debris) -->
+  <g opacity="0.18" fill="#f4f7fb">
+    <circle cx="60" cy="80" r="1.2"/>
+    <circle cx="340" cy="70" r="1"/>
+    <circle cx="80" cy="320" r="1.4"/>
+    <circle cx="350" cy="340" r="1.1"/>
+    <circle cx="320" cy="200" r="0.9"/>
+    <circle cx="50" cy="200" r="1.2"/>
+    <circle cx="120" cy="50" r="0.8"/>
+    <circle cx="290" cy="370" r="1"/>
+    <circle cx="380" cy="180" r="1.3"/>
+    <circle cx="30" cy="280" r="0.9"/>
+  </g>
+
+  <!-- Brotamentos circunferenciais (12 brotos) -->
+  <g stroke="#3a5358" stroke-width="1.8">
+    <!-- 12 brotos a 30° de espaçamento -->
+    <!-- 0° (direita) -->
+    <line x1="270" y1="200" x2="320" y2="200" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="335" cy="200" r="22" fill="url(#broto)"/>
+    <!-- 30° -->
+    <line x1="261" y1="165" x2="305" y2="143" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="320" cy="135" r="20" fill="url(#broto)"/>
+    <!-- 60° -->
+    <line x1="235" y1="139" x2="265" y2="105" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="278" cy="92" r="21" fill="url(#broto)"/>
+    <!-- 90° (cima) -->
+    <line x1="200" y1="130" x2="200" y2="80" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="200" cy="62" r="22" fill="url(#broto)"/>
+    <!-- 120° -->
+    <line x1="165" y1="139" x2="135" y2="105" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="122" cy="92" r="20" fill="url(#broto)"/>
+    <!-- 150° -->
+    <line x1="139" y1="165" x2="95" y2="143" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="82" cy="135" r="22" fill="url(#broto)"/>
+    <!-- 180° (esquerda) -->
+    <line x1="130" y1="200" x2="80" y2="200" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="65" cy="200" r="21" fill="url(#broto)"/>
+    <!-- 210° -->
+    <line x1="139" y1="235" x2="95" y2="257" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="82" cy="265" r="20" fill="url(#broto)"/>
+    <!-- 240° -->
+    <line x1="165" y1="261" x2="135" y2="295" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="122" cy="308" r="22" fill="url(#broto)"/>
+    <!-- 270° (baixo) -->
+    <line x1="200" y1="270" x2="200" y2="320" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="200" cy="338" r="21" fill="url(#broto)"/>
+    <!-- 300° -->
+    <line x1="235" y1="261" x2="265" y2="295" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="278" cy="308" r="20" fill="url(#broto)"/>
+    <!-- 330° -->
+    <line x1="261" y1="235" x2="305" y2="257" stroke="#cad5dd" stroke-width="2.2" opacity="0.7"/>
+    <circle cx="320" cy="265" r="22" fill="url(#broto)"/>
+  </g>
+
+  <!-- Célula-mãe central -->
+  <circle cx="200" cy="200" r="70" fill="url(#cell-mae)" stroke="#3a5358" stroke-width="2.5"/>
+  <!-- Núcleo da célula-mãe (sutil) -->
+  <circle cx="195" cy="195" r="18" fill="#8f9bad" opacity="0.35"/>
+  <circle cx="220" cy="210" r="10" fill="#8f9bad" opacity="0.25"/>
+
+  <!-- Membrana espessa (anel duplo) -->
+  <circle cx="200" cy="200" r="68" fill="none" stroke="#cad5dd" stroke-width="0.8" opacity="0.55"/>
+
+  <!-- Legenda inferior discreta -->
+  <text x="200" y="385" text-anchor="middle" fill="#cad5dd" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="500" letter-spacing="0.05em" opacity="0.78">
+    Microscopia 400× · KOH · P. brasiliensis
+  </text>
+</svg>
