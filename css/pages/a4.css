@@ -1,0 +1,123 @@
+/* a4.css — ajustes pontuais da aula A4 (Contactantes e Controle da TB) */
+
+/* Meta checklist (mesmo padrão A3) */
+.a4-meta-checklist {
+  margin-top: var(--sp-6);
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(255, 255, 255, .02);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--r-md);
+}
+
+.a4-meta-checklist .meta-label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: var(--sp-2);
+}
+
+.a4-meta-checklist .meta-text {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--c-text);
+  line-height: 1.6;
+}
+
+.a4-meta-checklist .meta-text strong {
+  color: var(--c-text-strong);
+}
+
+/* Layout especial pra página intro com dois case-timelines lado a lado em desktop */
+.a4-dual-cases {
+  display: grid;
+  gap: var(--sp-4);
+  margin: var(--sp-6) 0;
+}
+
+@media (min-width: 880px) {
+  .a4-dual-cases {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .a4-dual-cases .case-timeline {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+/* Pequenos rótulos pra distinguir Mariana fecha / Lucita abre */
+.a4-case-label {
+  display: block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+}
+
+.a4-case-label--mariana {
+  color: var(--c-text-muted);
+}
+
+.a4-case-label--lucita {
+  color: var(--c-secondary);
+}
+
+/* Tabela de dose mini (reuso A3) */
+.a4-mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--sp-3);
+  font-size: .88rem;
+}
+
+.a4-mini-table th,
+.a4-mini-table td {
+  text-align: left;
+  padding: var(--sp-2) var(--sp-3);
+  border-top: 1px solid var(--glass-border);
+}
+
+.a4-mini-table thead th {
+  background: rgba(255, 255, 255, .04);
+  font-weight: 700;
+  color: var(--c-text-strong);
+  border-top: none;
+  border-bottom: 1px solid var(--glass-border-strong);
+}
+
+.a4-mini-table tbody tr:hover {
+  background: rgba(52, 211, 153, .04);
+}
+
+/* Card pra densificação textual densa (HIV-TB, BCG) */
+.a4-dense-card {
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+  margin: var(--sp-5) 0;
+}
+
+.a4-dense-card h4 {
+  margin: 0 0 var(--sp-3);
+  font-size: 1rem;
+  color: var(--c-text-strong);
+  font-weight: 700;
+}
+
+.a4-dense-card ul,
+.a4-dense-card ol {
+  margin: 0;
+  padding-left: var(--sp-5);
+  line-height: 1.65;
+}
+
+.a4-dense-card ul li + li,
+.a4-dense-card ol li + li {
+  margin-top: var(--sp-2);
+}

@@ -1,0 +1,95 @@
+/* risk-comparison.css — barras horizontais proporcionais para riscos relativos (CSS-only) */
+
+.risk-comparison {
+  margin: var(--sp-6) 0;
+  padding: var(--sp-5);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.rc-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 64px;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: .9rem;
+}
+
+.rc-label {
+  color: var(--c-text-strong);
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: -0.005em;
+}
+
+.rc-bar-track {
+  position: relative;
+  height: 24px;
+  background: rgba(255, 255, 255, .04);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+
+.rc-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-secondary));
+  border-radius: var(--r-sm);
+  /* Largura proporcional: 56× = 100%; outros escalonados pela mesma régua */
+  width: calc(var(--risk, 1) / 56 * 100%);
+  min-width: 6px;
+  box-shadow: 0 0 12px var(--c-primary-glow);
+  transition: width .3s ease;
+}
+
+.rc-value {
+  color: var(--c-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  letter-spacing: -0.01em;
+}
+
+/* Linha de baseline (população geral = 1×) */
+.rc-row--baseline .rc-bar {
+  background: rgba(255, 255, 255, .25);
+  box-shadow: none;
+  height: 8px;
+  margin-top: 8px;
+}
+
+.rc-row--baseline .rc-value {
+  color: var(--c-text-muted);
+  font-weight: 500;
+  font-size: .85rem;
+}
+
+.rc-row--baseline .rc-label {
+  color: var(--c-text-muted);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@media (max-width: 540px) {
+  .rc-row {
+    grid-template-columns: 110px 1fr 52px;
+    gap: var(--sp-2);
+    font-size: .82rem;
+  }
+  .rc-label {
+    font-size: .8rem;
+  }
+  .rc-bar-track {
+    height: 20px;
+  }
+  .rc-value {
+    font-size: .88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc-bar { transition: none; }
+}

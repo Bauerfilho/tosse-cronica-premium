@@ -6,6 +6,7 @@ import { renderCaseTimeline } from './components/case-timeline.js';
 import { initInteractiveQuestions } from './components/interactive-question.js';
 import { initScoreDiagrams } from './components/score-diagram.js';
 import { initTreatmentTimelines } from './components/treatment-timeline.js';
+import { initDecisionFlows } from './components/decision-flow.js';
 
 const HOME_SLUG = 'porta-clinica';
 
@@ -121,6 +122,7 @@ function enhancePage(slug) {
   initInteractiveQuestions(appRoot);
   initScoreDiagrams(appRoot);
   initTreatmentTimelines(appRoot);
+  initDecisionFlows(appRoot);
 }
 
 export function start() {

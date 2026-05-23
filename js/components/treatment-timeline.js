@@ -5,6 +5,11 @@ const VARIANT_CAPTIONS = {
   'prolongado-12m': 'Esquema prolongado · 12 meses (meníngea, osteoarticular)',
   'pediatrico-4m': 'Esquema pediátrico encurtado · 4 meses (HPMZ, SHINE 2022)',
   'sequencial-rhp': 'Reintrodução pós-hepatotoxicidade · R → H → P',
+  'semanal-12doses': 'Esquema 3HP · semanal · 3 meses · 12 doses totais',
+  'diaria-9m': 'Esquema 9H · isoniazida diária · 9 meses · 270 doses',
+  'diaria-4m': 'Esquema 4R · rifampicina diária · 4 meses · 120 doses',
+  'diaria-3m-combinada': 'Esquema 3HR · isoniazida + rifampicina diárias · 3 meses · 90 doses',
+  'rn-qpp-bcg': 'Quimioprofilaxia RN · rifampicina 4 meses → BCG ao final',
 };
 
 const VARIANT_ARIA = {
@@ -16,6 +21,16 @@ const VARIANT_ARIA = {
     'Esquema pediátrico encurtado de 4 meses (esquema HPMZ, validado pelo ensaio SHINE 2022): 2 meses de intensiva com rifampicina, isoniazida e pirazinamida, seguidos de 2 meses de manutenção com rifampicina e isoniazida.',
   'sequencial-rhp':
     'Sequência de reintrodução dos fármacos após hepatotoxicidade: rifampicina primeiro, depois isoniazida, depois pirazinamida, com pausa de 3 a 7 dias entre cada introdução para reavaliar transaminases.',
+  'semanal-12doses':
+    'Esquema 3HP de tratamento da tuberculose latente: rifapentina mais isoniazida administradas uma vez por semana durante três meses, totalizando doze doses. Esquema preferido por adesão alta.',
+  'diaria-9m':
+    'Esquema 9H de tratamento da tuberculose latente: isoniazida diária durante nove meses, totalizando duzentas e setenta doses. Alternativa histórica, adesão baixa.',
+  'diaria-4m':
+    'Esquema 4R de tratamento da tuberculose latente: rifampicina diária durante quatro meses, totalizando cento e vinte doses. Alternativa intermediária.',
+  'diaria-3m-combinada':
+    'Esquema 3HR de tratamento da tuberculose latente: isoniazida mais rifampicina diárias durante três meses, totalizando noventa doses.',
+  'rn-qpp-bcg':
+    'Quimioprofilaxia primária no recém-nascido contactante de bacilífera: rifampicina diária durante quatro meses, seguida da vacinação com BCG ao final dos quatro meses. Inversão da ordem padrão (BCG normalmente nas primeiras horas de vida).',
 };
 
 function ensureCaption(el, variant) {

@@ -88,6 +88,33 @@
   font-size: .72rem;
 }
 
+.tt-phase--semanal {
+  background: linear-gradient(135deg,
+    var(--c-primary),
+    color-mix(in srgb, var(--c-primary) 50%, var(--c-secondary)));
+}
+
+.tt-phase--latente-diaria {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-primary) 80%, transparent),
+    color-mix(in srgb, var(--c-primary) 45%, transparent));
+}
+
+.tt-phase--qpp {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-secondary) 75%, var(--c-primary)),
+    color-mix(in srgb, var(--c-secondary) 45%, var(--c-primary)));
+  color: #0E2A2F;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .25);
+}
+
+.tt-phase--bcg-marker {
+  background: var(--c-secondary);
+  color: #0E2A2F;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .35);
+  border-left: 2px solid #0E2A2F;
+}
+
 .tt-axis {
   position: relative;
   margin-top: var(--sp-3);
@@ -153,6 +180,23 @@
 
 .tt-legend-swatch--corticoide {
   background: linear-gradient(135deg, var(--c-secondary), color-mix(in srgb, var(--c-secondary) 70%, #0E2A2F));
+}
+
+.tt-legend-swatch--semanal {
+  background: linear-gradient(135deg,
+    var(--c-primary),
+    color-mix(in srgb, var(--c-primary) 50%, var(--c-secondary)));
+}
+
+.tt-legend-swatch--qpp {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--c-secondary) 75%, var(--c-primary)),
+    color-mix(in srgb, var(--c-secondary) 45%, var(--c-primary)));
+}
+
+.tt-legend-swatch--bcg {
+  background: var(--c-secondary);
+  border-left: 2px solid #0E2A2F;
 }
 
 /* Variante "sequencial" pra reintrodução R → H → P */

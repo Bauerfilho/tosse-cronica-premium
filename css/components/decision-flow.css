@@ -1,0 +1,155 @@
+/* decision-flow.css — fluxograma decisional bifurcado responsivo */
+
+.decision-flow {
+  margin: var(--sp-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.df-node {
+  position: relative;
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--c-bg-elev-1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  color: var(--c-text-strong);
+  text-align: center;
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+.df-node small {
+  display: block;
+  margin-top: 4px;
+  font-size: .8rem;
+  color: var(--c-text-muted);
+  font-weight: 400;
+}
+
+.df-node--root {
+  background: var(--c-primary-soft);
+  border-color: var(--c-primary);
+  font-weight: 600;
+}
+
+.df-node--question {
+  background: rgba(251, 191, 36, .08);
+  border-color: var(--c-secondary);
+  font-weight: 600;
+}
+
+.df-node--branch {
+  background: rgba(52, 211, 153, .06);
+}
+
+.df-node--treat {
+  background: var(--c-primary-soft);
+  border-color: var(--c-primary);
+  font-weight: 700;
+}
+
+.df-node--monitor {
+  background: rgba(255, 255, 255, .04);
+  color: var(--c-text);
+}
+
+.df-node--result {
+  background: rgba(52, 211, 153, .1);
+  border-color: var(--c-primary);
+  font-weight: 600;
+}
+
+.df-node--action {
+  background: rgba(251, 191, 36, .06);
+  border-color: rgba(251, 191, 36, .35);
+}
+
+/* Conector visual entre nós empilhados */
+.df-node + .df-node::before,
+.df-branch-group + .df-node::before,
+.df-node + .df-branch-group::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: var(--glass-border-strong);
+  transform: translateX(-50%);
+}
+
+.df-branch-group + .df-node::before {
+  top: -18px;
+  height: 14px;
+}
+
+.df-edge-label {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-bg);
+  padding: 1px 8px;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--c-secondary);
+  text-transform: uppercase;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  z-index: 1;
+}
+
+.df-branch-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  position: relative;
+}
+
+.df-branch-group::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: var(--glass-border-strong);
+  transform: translateX(-50%);
+}
+
+/* Desktop: bifurcações lado a lado */
+@media (min-width: 720px) {
+  .df-branch-group {
+    flex-direction: row;
+    gap: var(--sp-4);
+    align-items: stretch;
+  }
+  .df-branch-group > .df-node {
+    flex: 1;
+  }
+  /* No desktop, esconder o conector inferior do par bifurcado (porque já se ligaram acima) */
+  .df-branch-group > .df-node::before {
+    display: none;
+  }
+}
+
+/* Mobile: ajustes de densidade */
+@media (max-width: 540px) {
+  .df-node {
+    padding: var(--sp-3) var(--sp-4);
+    font-size: .88rem;
+  }
+  .df-node small {
+    font-size: .74rem;
+  }
+  .df-edge-label {
+    font-size: .6rem;
+    padding: 1px 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .df-node { transition: none; }
+}

@@ -183,3 +183,79 @@
   background: var(--c-secondary);
   opacity: .35;
 }
+
+/* Variante regimens — tabela de esquemas terapêuticos de TB latente (A4) */
+.comparison-table--regimens .ct-table {
+  min-width: 760px;
+}
+
+.comparison-table--regimens .ct-table tbody th {
+  background: rgba(52, 211, 153, .05);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
+  white-space: normal;
+  font-size: .9rem;
+  min-width: 140px;
+}
+
+.comparison-table--regimens .ct-regimen-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+  border: 1px solid rgba(52, 211, 153, .35);
+  font-weight: 700;
+  font-size: .88rem;
+  letter-spacing: .03em;
+}
+
+.comparison-table--regimens .ct-regimen-pill--preferred {
+  background: var(--c-primary);
+  color: #0E2A2F;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 14px var(--c-primary-glow);
+}
+
+.comparison-table--regimens .ct-regimen-row--preferred {
+  background: rgba(52, 211, 153, .05);
+}
+
+.comparison-table--regimens .ct-regimen-row--preferred td,
+.comparison-table--regimens .ct-regimen-row--preferred th {
+  border-top-color: rgba(52, 211, 153, .25);
+}
+
+.comparison-table--regimens .ct-doses-cell {
+  font-weight: 700;
+  color: var(--c-text-strong);
+  white-space: nowrap;
+}
+
+.comparison-table--regimens .ct-adesao-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--r-sm);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.comparison-table--regimens .ct-adesao-badge--alta {
+  background: rgba(52, 211, 153, .15);
+  color: var(--c-primary);
+  border: 1px solid rgba(52, 211, 153, .35);
+}
+
+.comparison-table--regimens .ct-adesao-badge--moderada {
+  background: rgba(251, 191, 36, .15);
+  color: var(--c-secondary);
+  border: 1px solid rgba(251, 191, 36, .35);
+}
+
+.comparison-table--regimens .ct-adesao-badge--baixa {
+  background: rgba(248, 113, 113, .12);
+  color: var(--c-danger);
+  border: 1px solid rgba(248, 113, 113, .35);
+}
