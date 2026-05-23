@@ -1,0 +1,120 @@
+/* comparison-table.css — tabela comparativa responsiva 2-5 colunas */
+
+.comparison-table {
+  margin: var(--sp-5) 0;
+}
+
+.ct-scroll {
+  overflow-x: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--glass-border);
+  background: var(--c-bg-elev-1);
+  -webkit-overflow-scrolling: touch;
+}
+
+.ct-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .92rem;
+  min-width: 560px;
+}
+
+.ct-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--c-bg-elev-2);
+  color: var(--c-text-strong);
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: -0.005em;
+  text-align: left;
+  padding: var(--sp-4) var(--sp-4);
+  border-bottom: 1px solid var(--glass-border-strong);
+  z-index: 2;
+}
+
+.ct-table thead th:first-child {
+  border-top-left-radius: var(--r-lg);
+}
+
+.ct-table thead th:last-child {
+  border-top-right-radius: var(--r-lg);
+}
+
+.ct-table tbody td {
+  padding: var(--sp-3) var(--sp-4);
+  border-top: 1px solid var(--glass-border);
+  vertical-align: top;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.ct-table tbody th {
+  text-align: left;
+  padding: var(--sp-3) var(--sp-4);
+  border-top: 1px solid var(--glass-border);
+  font-weight: 600;
+  color: var(--c-text-strong);
+  background: rgba(255, 255, 255, .02);
+  white-space: nowrap;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.ct-table tbody tr:hover {
+  background: rgba(52, 211, 153, .04);
+}
+
+.ct-table tbody td strong {
+  color: var(--c-text-strong);
+}
+
+.ct-table tbody td em {
+  font-style: normal;
+  color: var(--c-primary);
+  font-weight: 600;
+}
+
+.ct-cell-emphasis {
+  background: var(--c-primary-soft);
+  color: var(--c-text-strong);
+  font-weight: 600;
+}
+
+.ct-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 0 0 var(--sp-3);
+  color: var(--c-text-muted);
+  font-size: .8rem;
+  font-style: italic;
+}
+
+/* Variante 2 colunas — primária × pós-primária */
+.comparison-table--2col .ct-table {
+  min-width: 480px;
+}
+
+/* Variante 5 colunas — métodos diagnósticos (mais wide) */
+.comparison-table--5col .ct-table {
+  min-width: 920px;
+}
+
+.comparison-table--5col .ct-table thead th,
+.comparison-table--5col .ct-table tbody td {
+  font-size: .85rem;
+}
+
+/* Mobile: tabela vira cards empilhados via scroll horizontal preservando legibilidade */
+@media (max-width: 720px) {
+  .ct-table {
+    font-size: .86rem;
+  }
+  .ct-table thead th,
+  .ct-table tbody td,
+  .ct-table tbody th {
+    padding: var(--sp-3);
+  }
+}

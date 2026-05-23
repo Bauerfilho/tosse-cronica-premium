@@ -1,0 +1,140 @@
+/* a2.css — estilos específicos da aula 2 */
+
+.illu-rx {
+  display: block;
+  max-width: 360px;
+  margin: var(--sp-5) auto;
+}
+
+.illu-rx figcaption {
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  text-align: center;
+  margin-top: var(--sp-2);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.illu-rx--wide {
+  max-width: 420px;
+}
+
+.illu-schema {
+  display: block;
+  max-width: 480px;
+  margin: var(--sp-5) auto;
+}
+
+.illu-schema figcaption {
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  text-align: center;
+  margin-top: var(--sp-2);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* Mini-tabela DDx dentro de card */
+.ddx-mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--sp-3) 0 var(--sp-2);
+  font-size: .88rem;
+}
+
+.ddx-mini-table th,
+.ddx-mini-table td {
+  padding: var(--sp-2) var(--sp-3);
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.ddx-mini-table th {
+  font-weight: 600;
+  color: var(--c-text-strong);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--c-text-muted);
+}
+
+.ddx-mini-table tr:last-child td { border-bottom: none; }
+
+/* Panorama grid extrapulmonar */
+.panorama-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+
+.panorama-card {
+  padding: var(--sp-4);
+  background: linear-gradient(135deg, rgba(52, 211, 153, .04), var(--c-bg-elev-1));
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.panorama-card:hover {
+  border-color: var(--glass-border-strong);
+  border-left-color: var(--c-primary);
+  transform: translateY(-2px);
+}
+
+.panorama-card-title {
+  margin: 0;
+  font-size: .98rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+  letter-spacing: -0.005em;
+}
+
+.panorama-card-anchor {
+  font-size: .85rem;
+  color: var(--c-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.panorama-card-anchor strong {
+  color: var(--c-text-strong);
+}
+
+.panorama-card-dx {
+  font-size: .8rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  margin: 0;
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--glass-border);
+  line-height: 1.45;
+}
+
+/* Card de atualização (variante do card-conceito) */
+.card--atualizacao {
+  border-left: 3px solid var(--c-info);
+  background: linear-gradient(135deg, rgba(96, 165, 250, .06), var(--c-bg-elev-1));
+}
+
+.card--atualizacao .card-tag {
+  color: var(--c-info);
+  background: rgba(96, 165, 250, .14);
+}
+
+.card--atualizacao .card-tag::before {
+  content: "↻";
+  width: auto;
+  height: auto;
+  background: transparent;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .illu-rx, .illu-schema { max-width: 100%; }
+  .panorama-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
+}

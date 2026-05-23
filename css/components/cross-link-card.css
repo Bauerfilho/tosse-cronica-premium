@@ -1,0 +1,110 @@
+/* cross-link-card.css — card discreto pra link cruzado entre módulos */
+
+.cross-link-card {
+  position: relative;
+  margin: var(--sp-5) 0;
+  padding: var(--sp-4) var(--sp-5);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .06), var(--c-bg-elev-1));
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--c-secondary);
+  border-radius: var(--r-md);
+  transition: border-color .18s ease, background .18s ease;
+}
+
+.cross-link-card:hover {
+  border-color: var(--glass-border-strong);
+  border-left-color: var(--c-secondary);
+  background: linear-gradient(135deg, rgba(251, 191, 36, .1), var(--c-bg-elev-2));
+}
+
+.clc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-secondary);
+  padding: 2px var(--sp-2);
+  background: rgba(251, 191, 36, .14);
+  border-radius: 999px;
+  margin-bottom: var(--sp-3);
+}
+
+.clc-tag::before {
+  content: "↔";
+  font-weight: 800;
+}
+
+.clc-title {
+  margin: 0 0 var(--sp-2);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+  line-height: 1.4;
+}
+
+.clc-text {
+  margin: 0 0 var(--sp-3);
+  font-size: .9rem;
+  color: var(--c-text);
+  line-height: 1.55;
+}
+
+.clc-text strong {
+  color: var(--c-text-strong);
+}
+
+.clc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  min-height: 36px;
+  background: var(--c-secondary);
+  color: #0B1220;
+  font-weight: 600;
+  font-size: .85rem;
+  border-radius: var(--r-sm);
+  transition: background .15s ease, transform .15s ease;
+}
+
+.clc-link:hover {
+  background: #FCD34D;
+  color: #0B1220;
+  transform: translateY(-1px);
+}
+
+.clc-link::after {
+  content: "→";
+  font-weight: 700;
+  transition: transform .15s ease;
+}
+
+.clc-link:hover::after {
+  transform: translateX(2px);
+}
+
+.clc-link:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 3px;
+}
+
+/* Variante "em construção" — usar quando módulo destino não estiver pronto */
+.cross-link-card--future .clc-link {
+  background: var(--glass-bg-strong);
+  color: var(--c-text-muted);
+  cursor: help;
+}
+
+.cross-link-card--future .clc-link::after {
+  content: "…";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clc-link,
+  .clc-link::after,
+  .cross-link-card { transition: none; }
+  .clc-link:hover { transform: none; }
+}
